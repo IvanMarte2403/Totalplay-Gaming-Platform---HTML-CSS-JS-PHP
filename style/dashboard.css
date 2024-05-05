@@ -31,7 +31,7 @@ body{
 .player-container{
     display: flex;
     flex-direction:column ;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     background-color: rgba(38, 37, 79, 0.9); /* 50% de transparencia */
     width: 25%;
@@ -59,7 +59,7 @@ body{
 
 .photo-container img{
     width: 50%;
-    border-radius: 4rem;
+    border-radius: 2rem;
 }
 
 /* ==========Informacion Jugador======== */
@@ -89,6 +89,16 @@ body{
 
 /* =============Puntaje Usuario========== */
 
+.puntaje-player {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    color: var(--color-primary);
+    font-family: var(--font-third);
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 1rem;
+}
 
 /* ================Dashoard============== */
 
@@ -97,6 +107,82 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 75%;
-    padding: 1rem;
+    padding: 2rem;
     background-image: url(../img/portada/portada-champions.png);
+    color: var(--color-primary);
+    font-family: var(--font-third);
+}
+
+
+/* =====Titulo DashBoard====== */
+
+.titulo-dashboard{
+    font-size: 1.2rem;
+}
+
+
+/* =========Nav DashBoard========== */
+
+.nuestros-juegos-personajes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+    cursor: pointer;
+}
+
+.nav-dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.logout-icon{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+
+
+
+/* =============Seccion Nuestros Juegos Personajes============ */
+
+.contenedor-juego-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.imagen-juego-personajes img{
+    width: 100%;
+}
+
+.contenedor-juego-1 h3{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.contenedor-juego-1 p{
+    width: 70%;
+    margin-top: 0.2rem;
+    padding: 0.5rem;
+}
+
+/* =============Carousel de Juegos================ */
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel .contenedor-juego-1 {
+    flex: 0 0 auto;
+    margin-right: 16px;
+    scroll-snap-align: start;
+    width: 100%;  /* Ajusta este valor según tus necesidades */
 }
