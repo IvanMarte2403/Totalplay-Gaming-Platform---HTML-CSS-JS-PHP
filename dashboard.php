@@ -32,10 +32,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 </div>
 
                 <div id="infoUsuarioContainer" class="info-usuario">
-                    <h2>Ivan </br> Marte</h2>
-                    <p>#123123</p>
+                    <h2><?php echo $_SESSION['nombre_apellidos']; ?></h2>
+                    <p>#<?php echo $_SESSION['id']; ?></p>
                 </div>
 
+            </div>
+
+            <div class="puntaje-player">
+                <p>Mi Puntaje Total : </p>
+                <h2> 10002</h2>
             </div>
 
         </div>
