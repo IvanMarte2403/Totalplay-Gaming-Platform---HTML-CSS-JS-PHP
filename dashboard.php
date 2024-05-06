@@ -189,7 +189,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     </div>
                     <h3>Big Trivia </h3>
                     <p>
-uego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.                    </p>
+                        Juego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.                    </p>
 
                     <div class="calificacion-estrellas">
                         <i class="fas fa-star"></i>
@@ -215,7 +215,7 @@ uego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas c
                     </div>
                     <h3>Soccer Invade</h3>
                     <p>
-                        Juego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.                   
+                       Detén enemigos, mejora cañonazos, acumula puntos.                  
                      </p>
 
                     <div class="calificacion-estrellas">
