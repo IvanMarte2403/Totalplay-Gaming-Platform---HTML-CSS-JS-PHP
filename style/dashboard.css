@@ -34,7 +34,7 @@ body{
     justify-content: start;
     align-items: center;
     background-color: rgba(38, 37, 79, 0.9); /* 50% de transparencia */
-    width: 25%;
+    width: 20%;
     padding: 1rem;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
@@ -49,16 +49,13 @@ body{
 /* ======Fotografia de Jugador======= */
 
 .photo-container{
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .photo-container img{
-    width: 50%;
+    width: 100%;
     border-radius: 2rem;
 }
 
@@ -68,22 +65,20 @@ body{
 .info-usuario{
     display: flex;
     flex-direction: column;
-    justify-content: center;    
-    align-items: center;
+    padding: 1rem;
 }
 
 .info-usuario h2{
     color: var(--color-primary);
     font-family: var(--font-third);
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .info-usuario p{
-    color: var(--color-primary);
+    color: gray;
     font-family: var(--font-third);
     font-size: 1rem;
-    margin-bottom: 1rem;
 }
 
 
@@ -92,7 +87,7 @@ body{
 .puntaje-player {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 5rem;
     color: var(--color-primary);
     font-family: var(--font-third);
     font-size: 1.1rem;
@@ -106,7 +101,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 75%;
+    width: 80%;
     padding: 2rem;
     background-image: url(../img/portada/portada-champions.png);
     color: var(--color-primary);
@@ -118,7 +113,7 @@ body{
 
 .titulo-dashboard{
     font-size: 1.2rem;
-}
+    }
 
 
 /* =========Nav DashBoard========== */
@@ -128,7 +123,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 15vh;
     cursor: pointer;
 }
 
@@ -172,17 +167,9 @@ body{
 }
 
 /* =============Carousel de Juegos================ */
-
-.carousel {
+.catalogo-juegos {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-.carousel .contenedor-juego-1 {
-    flex: 0 0 auto;
-    margin-right: 16px;
-    scroll-snap-align: start;
-    width: 100%;  /* Ajusta este valor según tus necesidades */
-}
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    }

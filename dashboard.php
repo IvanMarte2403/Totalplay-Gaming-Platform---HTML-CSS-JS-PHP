@@ -15,10 +15,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/portada-juegos.css">
     <link rel="stylesheet" href="style/dashboard.css">
+    <link rel="stylesheet" href="style/casousel.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <title>TotalPlayGaming</title>
     
 </head>
@@ -56,6 +58,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                  <p>¡Gana & Vive la experiencia de las Champions con <b>Totalplay!</b></p>
             </div>
            
+            <div class="catalogo-juegos">
+                <figure class="icon-cards mt-3">
+                <div class="icon-cards__content">
+                  <div class="icon-cards__item d-flex align-items-center justify-content-center juego-1"></div>
+                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-2"></div>
+
+                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-3"></div>
+                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-4"></div>
+                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-5"></div>
+                 </div>
+                </figure>
+             </div>
 
             <!-- =========Lista de Personajes Por Jugador====== -->
             <div class="nuestros-juegos-personajes ">
@@ -83,7 +97,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             
             </div>
+            
+
+
+            <!-- ============Caroulsel 3D============ -->
+           
+
+
+        </div>
+
         </div>
     </div>
 </body>
+
+<script src="main/casousel.js"></script>
 </html>
