@@ -112,12 +112,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="catalogo-juegos">
                 <figure class="icon-cards mt-3">
                 <div class="icon-cards__content">
-                  <div class="icon-cards__item d-flex align-items-center justify-content-center juego-1"></div>
-                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-2"></div>
 
-                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-3"></div>
-                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-4"></div>
-                 <div class="icon-cards__item d-flex align-items-center justify-content-center juego-5"></div>
+
+                <a href="game.php" class="icon-cards__item d-flex align-items-center justify-content-center juego-1"></a>
+
+                 <a href="game2.php" class="icon-cards__item d-flex align-items-center justify-content-center juego-2"></a>
+
+                 <a href="game3.php" class="icon-cards__item d-flex align-items-center justify-content-center juego-3"></a>
+                 <a href="game4.php"  class="icon-cards__item d-flex align-items-center justify-content-center juego-4"></a>
+                 <a href="game5.php"  class="icon-cards__item d-flex align-items-center justify-content-center juego-5"></a>
                  </div>
                 </figure>
              </div>

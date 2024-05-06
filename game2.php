@@ -45,7 +45,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <section class="game-zone">
         <div class="game">
-            <iframe src="juegos/juego-1/index.html"></iframe>
+            <iframe src="juegos/juego-2/index.html"></iframe>
         </div>
     </section>
 
@@ -55,20 +55,21 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <div class="instrucciones-juego">
             <div>
                  <h2>
-                    ¿CÓMO JUGAR A BIG TRIVIA?
+                    ¿CÓMO JUGAR A SOCCER INVADE
                  </h2>
               </div>
 
              <div>
                     <p>
-                  Descubre BigTrvia, el juego de preguntas que combina diversión y aprendizaje. Gira la ruleta y enfréntate a desafíos en cinco categorías: Historia, Ciencia, Geografía, Arte y Deporte. Responde correctamente y acumula puntos para subir de nivel. Ideal para jugadores que buscan poner a prueba sus conocimientos y habilidades.
+                    Soccer Invade es un emocionante juego donde debes evitar que los enemigos alcancen el centro de la cancha. Elimínalos para acumular puntos y potencia tu cañonazo. A medida que avances, mejora el poder, la velocidad de disparo y la precisión. ¡Cuanto más resistas, más puntos ganarás!
+
                   </p>
              </div>
         </div>
 
         <div class="catalogo-juegos">
             <div class="arriba-catalogo">
-                <a href="game2.php"><img src="img/juegos/portada/juego-portada-general-2.png" alt=""> </a>
+                <a href="game.php"><img src="img/juegos/portada/juego-portada-general-1.png" alt=""> </a>
                 <a href="game3.php"><img src="img/juegos/portada/juego-portada-general-3.png" alt=""> </a>
             </div>
             <div class="arriba-catalogo">
@@ -76,7 +77,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <a href="game5.php"><img src="img/juegos/portada/juego-portada-general-5.png" alt=""> </a>
             </div>
         </div>
-        
+        .
         
     </section>
 </body>
