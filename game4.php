@@ -47,7 +47,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <section class="game-zone">
         <div class="game">
-            <iframe  scrolling="no" height="100vh" src="juegos/juego-5/index.html"></iframe>
+            <iframe  scrolling="no" height="100vh" src="juegos/juego-4/index.html"></iframe>
         </div>
     </section>
 
@@ -57,14 +57,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <div class="instrucciones-juego">
             <div>
                  <h2>
-                    Memorama
+                    Ball Champions   
                 </h2>
               </div>
 
              <div>
                     <p>
-                    Explora el emocionante mundo del fútbol con nuestro memorama de la Champions, diseñado con ilustraciones únicas de cada club. Desafía tu memoria y descubre parejas de tarjetas que celebran momentos históricos y figuras legendarias del torneo. Ideal para aficionados al fútbol que buscan poner a prueba su conocimiento y agilidad mental.
-                  </p>
+                    Ball Champions es un juego  donde debes evitar que los bloques alcancen la parte inferior de la pantalla. Utiliza estratégicamente el multiplicador de balones y el extra balón para eliminar más bloques y mantenerte en juego. Perfecto para quienes buscan acción continua y desafíos dinámicos. ¡Prepárate para romper récords!
+                </p>
              </div>
         </div>
 
@@ -74,8 +74,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <a href="game2.php"><img src="img/juegos/portada/juego-portada-general-2.png" alt=""> </a>
             </div>
             <div class="arriba-catalogo">
-                <!-- <a href="game3.php"><img src="img/juegos/portada/juego-portada-general-3.png" alt=""> </a> -->
-                <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a>
+                <a href="game5.php"><img src="img/juegos/portada/juego-portada-general-5.png" alt=""> </a>
+                <!-- <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a> -->
             </div>
         </div>
         .

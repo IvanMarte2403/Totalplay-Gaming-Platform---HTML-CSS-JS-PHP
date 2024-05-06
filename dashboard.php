@@ -178,9 +178,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <div class="seccion-juegos">
             <!-- ==============Juego 1 ============== -->
             <div class="contenedor-juego-explicacion">
-                <div class="imagen-juego-explicacion">
+                <a href="game.php" class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
-                </div>
+                </a>
 
                 <div class="explicacion-texto">
                     <div class="temporada-game">
@@ -188,8 +188,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     </div>
                     <h3>Big Trivia </h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
-                    </p>
+uego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.                    </p>
 
                     <div class="calificacion-estrellas">
                         <i class="fas fa-star"></i>
@@ -205,9 +204,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
          
             <!-- ==============Juego 2 ============== -->
             <div class="contenedor-juego-explicacion">
-                <div class="imagen-juego-explicacion">
+                <a  href="game2.php"  class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
-                </div>
+                </a>
 
                 <div class="explicacion-texto">
                     <div class="temporada-game">
@@ -215,8 +214,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     </div>
                     <h3>Soccer Invade</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
-                    </p>
+                        Juego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.                   
+                     </p>
 
                     <div class="calificacion-estrellas">
                         <i class="fas fa-star"></i>
@@ -230,17 +229,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
             <!-- ==============Juego 3 ============== -->
             <div class="contenedor-juego-explicacion">
-                <div class="imagen-juego-explicacion">
+                <a  href="game3.php"  class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-3.png" alt="">
-                </div>
+                </a>
 
                 <div class="explicacion-texto">
                     <div class="temporada-game">
-                        <p>CHAMPIONS PLATFORM</p>
+                        <p>CHAMPIONS </p>
                     </div>
-                    <h3>Big Trivia </h3>
+                    <h3>Champions Platformer</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                        Detén enemigos, mejora cañonazos, acumula puntos.
                     </p>
 
                     <div class="calificacion-estrellas">
@@ -255,17 +254,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
             <!-- ==============Juego 4 ============== -->
             <div class="contenedor-juego-explicacion">
-                <div class="imagen-juego-explicacion">
+                <a   href="game4.php" class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
-                </div>
-
+                </a>
+ 
                 <div class="explicacion-texto">
                     <div class="temporada-game">
                         <p>CHAMPIONS</p>
                     </div>
                     <h3>Ball - Champions</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                    Aventura de plataformas en estadio. Salta obstáculos, alcanza la meta.
+
                     </p>
 
                     <div class="calificacion-estrellas">
@@ -279,9 +279,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
             <!-- ==============Juego 5 ============== -->
             <div class="contenedor-juego-explicacion">
-                <div class="imagen-juego-explicacion">
+                <a  href="game5.php"  class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
-                </div>
+                </a>
 
                 <div class="explicacion-texto">
                     <div class="temporada-game">
@@ -289,7 +289,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     </div>
                     <h3>MEMORAMA</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                    Juego de memoria con tarjetas únicas de la Champions League.
                     </p>
 
                     <div class="calificacion-estrellas">

@@ -46,9 +46,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </nav>
 
     <section class="game-zone">
-        <div class="game">
-            <iframe  scrolling="no" height="100vh" src="juegos/juego-5/index.html"></iframe>
-        </div>
+            <h1 class="mensaje-niveles">ESTAMOS TRABAJANDO EN NUEVOS NIVELES PARA TI</h1>
     </section>
 
 
@@ -57,14 +55,16 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <div class="instrucciones-juego">
             <div>
                  <h2>
-                    Memorama
+                    Champions Platformer   
                 </h2>
               </div>
 
              <div>
                     <p>
-                    Explora el emocionante mundo del fútbol con nuestro memorama de la Champions, diseñado con ilustraciones únicas de cada club. Desafía tu memoria y descubre parejas de tarjetas que celebran momentos históricos y figuras legendarias del torneo. Ideal para aficionados al fútbol que buscan poner a prueba su conocimiento y agilidad mental.
-                  </p>
+                    Champions Platformer te pone en la piel de un jugador de fútbol que debe atravesar el estadio en un emocionante juego de plataformas. Salta sobre la cancha, esquiva obstáculos en las butacas y supera diversos desafíos para llegar al final del estadio. Ideal para los aficionados al deporte que disfrutan de una aventura llena de acción y habilidad.
+
+
+                    </p>
              </div>
         </div>
 
@@ -74,8 +74,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <a href="game2.php"><img src="img/juegos/portada/juego-portada-general-2.png" alt=""> </a>
             </div>
             <div class="arriba-catalogo">
-                <!-- <a href="game3.php"><img src="img/juegos/portada/juego-portada-general-3.png" alt=""> </a> -->
-                <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a>
+                <a href="game5.php"><img src="img/juegos/portada/juego-portada-general-5.png" alt=""> </a>
+                <!-- <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a> -->
             </div>
         </div>
         .

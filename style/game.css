@@ -76,6 +76,12 @@ nav a{
 
 }
 
+.mensaje-niveles{
+    font-family: var(--font-third);
+    text-align: center;
+    color: #fff !important;
+}
+
 
 .game iframe {
     width: 100%;
