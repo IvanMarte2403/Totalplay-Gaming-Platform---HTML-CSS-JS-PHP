@@ -103,7 +103,7 @@ function girar(){
 }
 }
 
-let puntuacion = 0; 
+var puntuacion = 0; 
 
 function mostrarPreguntas(categoria) {
   let preguntasSeleccionadas = [...preguntas[categoria]];
@@ -124,13 +124,8 @@ function mostrarPreguntas(categoria) {
     // Comprueba si ya se han mostrado todas las preguntas
     if (preguntaActual >= preguntasSeleccionadas.length) {
       contenedorPreguntas.innerHTML = 'La categoría ha finalizado.';
+     
       contenedorRespuestas.innerHTML = ''; // Limpia las respuestas
-      console.log('Se esta ejecutando');
-      // Supongamos que `puntuacion` es la variable que contiene el puntaje del juego
-      localStorage.setItem('puntaje', puntuacion);
-
-      var evento = new CustomEvent('juegoCompletado');
-      document.dispatchEvent(evento);
       return;
     }
 
@@ -153,6 +148,9 @@ function mostrarPreguntas(categoria) {
           p.classList.add('correcto_respuesta');
           puntuacion += 500; // Incrementa la puntuación
           puntajeTotal.textContent = 'Puntuación total: ' + puntuacion; // Actualiza la puntuación total
+          window.parent.postMessage(puntuacion, '*');
+        
+    
         } else {
           p.classList.add('incorrecto_respuesta');
         }

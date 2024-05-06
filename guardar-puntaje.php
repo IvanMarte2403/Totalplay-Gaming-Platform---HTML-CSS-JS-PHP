@@ -1,21 +1,36 @@
 <?php
+// Iniciar la sesión
+session_start();
+
+// Incluir la conexión a la base de datos
 include 'db_conexion.php';
 
 // Recibe el puntaje y el ID del usuario desde la solicitud AJAX
 $puntaje = $_POST['puntaje'];
-$id_usuario = $_POST['id_usuario'];
+$id_usuario = $_SESSION['id'];
 
 // Prepara la consulta SQL para insertar el puntaje en la base de datos
-$sql = "INSERT INTO juego_1 (id_puntaje, id, fecha_hora) VALUES (?, ?, NOW())";
+$sql = "INSERT INTO juego_1 (id, puntaje, fecha_hora) VALUES (?, ?, NOW())";
 
 // Prepara la declaración
 $stmt = $conexion->prepare($sql);
 
 // Vincula los parámetros
-$stmt->bind_param("ii", $puntaje, $id_usuario);
+$stmt->bind_param("ii", $id_usuario, $puntaje);
 
 // Ejecuta la declaración
 $stmt->execute();
 
-echo "Puntaje guardado: " . $puntaje;
+// Verifica si se insertó el puntaje
+if ($stmt->affected_rows > 0) {
+    // Devuelve el puntaje
+    echo $puntaje;
+} else {
+    // Devuelve un error
+    echo 'Error al guardar el puntaje';
+}
+
+// Cierra la declaración y la conexión
+$stmt->close();
+$conexion->close();
 ?>
