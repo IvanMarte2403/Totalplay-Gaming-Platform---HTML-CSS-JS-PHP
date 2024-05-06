@@ -95,6 +95,62 @@ body{
     padding: 1rem;
 }
 
+/* ==================Puntaje Individual Juego======== */
+
+.puntaje-individual-juego{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-top: 10vh;
+}
+
+.titulo-puntaje-juego-individual{
+    color: #000;
+    font-weight: 600;
+    font-family: var(--font-third);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor-puntaje-juego{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2vh;
+}
+
+.contenedor-puntaje-juego img{
+    width: 30%;
+    height: auto;
+}
+
+.texto-puntaje{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-puntaje-juego p{
+    color: #000;
+    font-weight: 800;
+    font-family: var(--font-third);
+    font-size: 1.2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+
 /* ================Dashoard============== */
 
 .dashboard-container{
@@ -166,6 +222,15 @@ body{
     padding: 0.5rem;
 }
 
+
+.black-juegos-personaje{
+    color: red !important;
+}
+
+
+.black2-juegos-personaje{
+    color: #0063c1 !important;
+}
 /* =============Carousel de Juegos================ */
 .catalogo-juegos {
     display: flex;
@@ -173,3 +238,101 @@ body{
     align-items: center;
     margin-top: 10vh;
     }
+
+
+/* =====================Frase Premios==================== */
+
+ .frase-premios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-third);
+ }
+
+ .titulo-premios{
+    font-family: var(--font-third);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 5vh;
+    margin-bottom: 2vh;    
+    padding: 1rem;
+    color: #fff;
+}
+
+/* =================Animacion Iframe============ */
+
+.animacion-frame{
+    background-color: #000!important;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animacion-frame img{
+    width: 10%;
+}
+
+
+/* ==============Seccion Premios========= */
+
+.premios{
+    background-color: #000;
+}
+
+.calificacion-estrellas{
+    display: inline-block;
+    color: yellow;
+}
+
+.seccion-juegos{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.contenedor-juego-explicacion{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 2rem 8rem;
+
+}
+
+.imagen-juego-explicacion{
+    width: 25%;
+
+}
+
+.imagen-juego-explicacion img{
+    width: 100%;
+    padding: 2rem;
+}
+
+.explicacion-texto{
+    font-family: var(--font-third);
+    padding: 2rem;
+}
+
+.temporada-game p{
+    background-color: #26254f;
+    border-radius: 1rem;
+    width: auto;
+    padding: 1rem;
+    width: 30% !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;  
+}
+.explicacion-texto h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.explicacion-texto p{
+    width: 40%;
+}

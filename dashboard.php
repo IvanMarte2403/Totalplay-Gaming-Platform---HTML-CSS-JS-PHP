@@ -42,7 +42,58 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <div class="puntaje-player">
                 <p>Mi Puntaje Total : </p>
-                <h2> 10002</h2>
+                <h2>9800</h2>
+            </div>
+
+
+            <div class="puntaje-individual-juego">
+                <div class="titulo-puntaje-juego-individual">
+                <p>SCORE</p>
+                </div>
+
+                <!-- =====Juego 1===== -->
+                <div class="contenedor-puntaje-juego">
+                    <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
+                    <div class="texto-puntaje">
+                    <p>1000</p>
+                    </div>
+
+                </div>
+
+                <div class="contenedor-puntaje-juego">
+                    <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
+                    <div class="texto-puntaje">
+                    <p>2500</p>
+                    </div>
+
+                </div>
+
+                <!-- =========Juego 2========= -->
+                <div class="contenedor-puntaje-juego">
+                    <img src="img/juegos/portada/juego-portada-general-3.png" alt="">
+                    <div class="texto-puntaje">
+                    <p>3000</p>
+                    </div>
+
+                </div>
+
+                <!-- ===============Juego 3========== -->
+                <div class="contenedor-puntaje-juego">
+                    <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
+                    <div class="texto-puntaje">
+                    <p>2400</p>
+                    </div>
+
+                </div>
+
+                <!-- =========Juego 4========= -->
+                <div class="contenedor-puntaje-juego">
+                    <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
+                    <div class="texto-puntaje">
+                    <p>900</p>
+                    </div>
+
+                </div>
             </div>
 
         </div>
@@ -79,7 +130,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     </div>
 
                     <h3>
-                        Soccer Invade
+                        <b class="black-juegos-personaje">¡Personaje Nuevo! </b>   en Soccer Invade
                     </h3>
                     <p>¡No dejes que lleguen al centro de la porteria! Ve aumentando tu puntaje</p>
                 </div>
@@ -90,24 +141,172 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     </div>
 
                     <h3>
-                        Champions Platform
+                       <b class="black2-juegos-personaje">¡Nuevo Nivel! </b> Champions Platform
                     </h3>
                     <p>¡Vas tarde al partido! Salta para poder llegar </p>
                 </div>
 
             
             </div>
-            
+          
+               
 
 
-            <!-- ============Caroulsel 3D============ -->
-           
-
-
-        </div>
+            </div>
 
         </div>
+
     </div>
+
+
+    <section class="premios">
+         <div class="animacion-frame">
+            <img src="img/recursos/personajes/cono.gif" alt="">
+         </div>'
+
+    <div class="seccion-premios">
+                <div class="titulo-premios">
+                    <h1>OBTEN EL PUNTAJE MAS ALTO Y GANA INCREIBLES PREMIOS</h1>
+                </div>
+
+    </div>
+
+    <div class="explicacion-juegos">
+        <div class="seccion-juegos">
+            <!-- ==============Juego 1 ============== -->
+            <div class="contenedor-juego-explicacion">
+                <div class="imagen-juego-explicacion">
+                    <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
+                </div>
+
+                <div class="explicacion-texto">
+                    <div class="temporada-game">
+                        <p>CHAMPIONS</p>
+                    </div>
+                    <h3>Big Trivia </h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                    </p>
+
+                    <div class="calificacion-estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+           
+         
+            <!-- ==============Juego 2 ============== -->
+            <div class="contenedor-juego-explicacion">
+                <div class="imagen-juego-explicacion">
+                    <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
+                </div>
+
+                <div class="explicacion-texto">
+                    <div class="temporada-game">
+                        <p>CHAMPIONS</p>
+                    </div>
+                    <h3>Soccer Invade</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                    </p>
+
+                    <div class="calificacion-estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ==============Juego 3 ============== -->
+            <div class="contenedor-juego-explicacion">
+                <div class="imagen-juego-explicacion">
+                    <img src="img/juegos/portada/juego-portada-general-3.png" alt="">
+                </div>
+
+                <div class="explicacion-texto">
+                    <div class="temporada-game">
+                        <p>CHAMPIONS PLATFORM</p>
+                    </div>
+                    <h3>Big Trivia </h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                    </p>
+
+                    <div class="calificacion-estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ==============Juego 4 ============== -->
+            <div class="contenedor-juego-explicacion">
+                <div class="imagen-juego-explicacion">
+                    <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
+                </div>
+
+                <div class="explicacion-texto">
+                    <div class="temporada-game">
+                        <p>CHAMPIONS</p>
+                    </div>
+                    <h3>Ball - Champions</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                    </p>
+
+                    <div class="calificacion-estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ==============Juego 5 ============== -->
+            <div class="contenedor-juego-explicacion">
+                <div class="imagen-juego-explicacion">
+                    <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
+                </div>
+
+                <div class="explicacion-texto">
+                    <div class="temporada-game">
+                        <p>CHAMPIONS</p>
+                    </div>
+                    <h3>MEMORAMA</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus quod a natus animi dolorum! Eligendi, voluptatem ex. Dolore vero quo recusandae odio aliquam nesciunt?
+                    </p>
+
+                    <div class="calificacion-estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>
+        
+    </div>
+
+
+    </section>
+    
 </body>
 
 <script src="main/casousel.js"></script>
