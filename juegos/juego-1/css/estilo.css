@@ -1,0 +1,219 @@
+
+:root{
+    --background-color-1: #060e63;
+    --color-1: #593cbc;
+    --font-1: 'Press Start 2P';
+    --font-2: 'Jersey 15';
+    --font-3: 'Anton';
+    --font-4: 'Roboto Condensed';
+    --historia-color: #ff6961;
+    --deportes-color: #77dd77;
+    --arte-color: #fdfd96;
+    --ciencia-color: #84b6f4;
+    --geografia-color: #fdcae1;
+     --font-secondary: 'Rubik';
+    --font-third: 'Roboto';
+
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: vh;
+}
+.vara {
+    height: 40px;
+    width: 15px;
+    background-color: var(--color-1);
+    margin: auto;
+    position: relative;
+    top: 10px;
+    border-radius: 0px 0px 8px 8px;
+    border: 1px solid #000;
+    border-top: 5px solid #000;
+    z-index: 1000;
+}
+
+
+
+.contenedor-imagen{
+    width: 100%;
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho del contenedor */
+    padding: 0 2rem;
+}
+
+.contenedor-imagen img {
+    z-index: 100;
+    transition: all 5s;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    width: 30%;
+    }
+
+#premio {
+    color: white;
+    position: absolute;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 20px;
+    padding: 20px;
+   
+}
+
+
+/* =========Estilos Por Categorias========= */
+
+.quizzSeleccionado{
+    font-family: var(--font-third);
+    width: 70%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.historia-text{
+    color: var(--historia-color) !important; 
+    font-size: 2.2rem;
+    text-shadow: -1px 0 black;
+    text-align: center;
+}
+
+.deporte-text{
+    color: var(--deportes-color) !important; 
+    font-size: 2.2rem;
+    text-shadow: -1px 0 black;
+    text-align: center;
+
+}
+
+.arte-text{
+    color: var(--arte-color) !important; 
+    font-size: 2.7rem;
+    text-shadow: -1px 0 black;
+    text-align: center;
+}
+
+.ciencia-text{
+    color: var(--ciencia-color) !important; 
+    font-size: 2.2rem;
+    text-shadow: -1px 0 black;
+    text-align: center;
+}
+
+.geografia-text{
+    color: var(--geografia-color) !important; 
+    font-size: 2.2rem;
+    text-shadow: -1px 0 black;
+
+}
+
+
+
+.premio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.correcto_respuesta{
+    color: #fff;
+    background-color: var(--deportes-color);
+}
+
+
+.incorrecto_respuesta{
+    color: #fff;
+    background-color: #ff6961;
+}
+
+
+
+#puntaje-total{
+    color: #000;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    font-family: var(--font-4);
+}
+/* =======Contenedores Preguntas===== */
+
+
+#contenedor-preguntas {
+    font-size: 2rem;
+    width: 80%;
+    margin-top: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: var(--font-2);
+}
+
+#contenedor-respuestas p{
+    font-size: 1.5rem;
+    padding: 1rem 8rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    font-family: var(--font-4);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#temporizador-pregunta{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    font-family: var(--font-4);
+}
+
+/* =========Responsive Design ======= */
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 76%;
+    }
+
+    .contenedor-imagen img {
+        width: 100%;
+    }
+
+    .quizzSeleccionado{
+        width: 90%;
+    }
+
+    #contenedor-preguntas {
+        font-size: 1.5rem;
+    }
+
+    #contenedor-respuestas p{
+        font-size: 1.2rem;
+    }
+
+    #temporizador-pregunta{
+        font-size: 1.2rem;
+    }
+}

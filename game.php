@@ -45,7 +45,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <section class="game-zone">
         <div class="game">
-
+            <iframe src="juegos/juego-1/index.html"></iframe>
         </div>
     </section>
 
@@ -80,4 +80,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         
     </section>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="main/puntaje.js"></script>
 </html>
