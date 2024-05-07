@@ -8,43 +8,72 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header('Location: index.php');
     exit;
 }
+
 // Incluir la conexión a la base de datos
 include 'db_conexion.php';
 
 // Obtiene el ID del usuario actual
 $id_usuario = $_SESSION['id'];
 
-// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual
-$sql = "SELECT SUM(puntaje) AS puntaje_total FROM juego_1 WHERE id = ?";
+// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual en el juego 1
+$sql1 = "SELECT SUM(puntaje) AS puntaje_total FROM juego_1 WHERE id = ?";       
 
 // Prepara la declaración
-$stmt = $conexion->prepare($sql);
+$stmt1 = $conexion->prepare($sql1);
 
 // Vincula los parámetros
-$stmt->bind_param("i", $id_usuario);
+$stmt1->bind_param("i", $id_usuario);
 
 // Ejecuta la declaración
-$stmt->execute();
+$stmt1->execute();
 
 // Obtiene el resultado
-$result = $stmt->get_result();
+$result1 = $stmt1->get_result();
 
 // Obtiene la fila del resultado
-$row = $result->fetch_assoc();
+$row1 = $result1->fetch_assoc();
 
-// Obtiene el puntaje total
-$puntaje_total = $row['puntaje_total'];
+// Obtiene el puntaje total del juego 1
+$puntaje_total1 = $row1['puntaje_total'];
 
 // Si el puntaje total es NULL, lo establece a 0
-if ($puntaje_total === NULL) {
-    $puntaje_total = 0;
+if ($puntaje_total1 === NULL) {
+    $puntaje_total1 = 0;
+}
+
+// Cierra la declaración
+$stmt1->close();
+
+// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual en el juego 5
+$sql5 = "SELECT SUM(puntaje) AS puntaje_total FROM juego_5 WHERE id = ?";
+
+// Prepara la declaración
+$stmt5 = $conexion->prepare($sql5);
+
+// Vincula los parámetros
+$stmt5->bind_param("i", $id_usuario);
+
+// Ejecuta la declaración
+$stmt5->execute();
+
+// Obtiene el resultado
+$result5 = $stmt5->get_result();
+
+// Obtiene la fila del resultado
+$row5 = $result5->fetch_assoc();
+
+// Obtiene el puntaje total del juego 5
+$puntaje_total5 = $row5['puntaje_total'];
+
+// Si el puntaje total es NULL, lo establece a 0
+if ($puntaje_total5 === NULL) {
+    $puntaje_total5 = 0;
 }
 
 // Cierra la declaración y la conexión
-$stmt->close();
+$stmt5->close();
 $conexion->close();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +121,7 @@ $conexion->close();
                 <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
                     <div class="texto-puntaje">
-                    <p><?php echo $puntaje_total; ?></p>
+                    <p><?php echo $puntaje_total1; ?></p>
                     </div>
 
                 </div>
@@ -127,7 +156,7 @@ $conexion->close();
                 <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
                     <div class="texto-puntaje">
-                    <p>900</p>
+                    <p><?php echo $puntaje_total5; ?></p>
                     </div>
 
                 </div>

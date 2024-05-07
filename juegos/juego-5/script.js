@@ -8,7 +8,6 @@
         function actualizarPuntaje(){
             let divPuntaje = document.getElementById('puntaje');
             divPuntaje.textContent = 'PUNTAJE: ' + puntaje;
-            console.log('actualizarPuntaje fue llamada, puntaje' + puntaje);
         }    
         generarTablero()
 
@@ -27,6 +26,11 @@
         }
 
         function generarTablero() {
+            if (puntaje > 0) {
+                window.parent.postMessage(puntaje, '*');
+
+            }
+            window.parent.postMessage(puntaje, '*');
             puntaje = 0; //Inicializar puntjae
             actualizarPuntaje(); //Actualizar puntaje en la pantalla
             cargarIconos()
@@ -50,7 +54,9 @@
                 }
             }
             tarjetas.sort(() => Math.random() - 0.5)
-            tablero.innerHTML = tarjetas.join(" ")
+            tablero.innerHTML = tarjetas.join(" ");
+
+
         }
 
         function seleccionarTarjeta(i) {
@@ -77,7 +83,7 @@
                 }else{
                     trasera1.style.background = "plum"
                     trasera2.style.background = "plum"
-                    puntaje += 1000; 
+                    puntaje += 50; 
                     actualizarPuntaje();
                 }
             }, 1000);
