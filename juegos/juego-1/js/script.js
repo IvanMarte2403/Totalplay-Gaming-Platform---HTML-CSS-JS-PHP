@@ -121,13 +121,35 @@ function mostrarPreguntas(categoria) {
       clearInterval(temporizador);
     }
 
-    // Comprueba si ya se han mostrado todas las preguntas
-    if (preguntaActual >= preguntasSeleccionadas.length) {
-      contenedorPreguntas.innerHTML = 'La categoría ha finalizado.';
-     
-      contenedorRespuestas.innerHTML = ''; // Limpia las respuestas
-      return;
-    }
+  // Comprueba si ya se han mostrado todas las preguntas
+if (preguntaActual >= preguntasSeleccionadas.length) {
+  contenedorPreguntas.innerHTML = 'La categoría ha finalizado. </br> Gira Nuevamente';
+  contenedorRespuestas.innerHTML = ''; // Limpia las respuestas
+
+  // Encuentra el contenedor del botón y el enlace dentro del contenedor
+  var contenedorBoton = document.getElementById('contenedor-boton');
+  var enlace =  document.getElementById('boton-guardar');
+
+  // Muestra el contenedor del botón
+  contenedorBoton.style.display = 'block';
+
+  // Agrega un evento de clic al enlace
+  enlace.addEventListener('click', function(event) {
+    // Previene la acción por defecto del enlace
+    event.preventDefault();
+
+    // Imprime "Guardar & Salir" en la consola
+    window.parent.postMessage(puntuacion, '*');
+    puntuacion = 0; // Reinicia la puntuación
+    puntajeTotal.textContent = 'Puntuación total: ' + puntuacion; // Actualiza la puntuación total
+
+    // Muestra un mensaje de éxito
+    enlace.textContent = 'Puntuación guardada';
+    enlace.style.color = 'green';
+  });
+
+  return;
+}
 
     // Selecciona la pregunta actual
     let pregunta = preguntasSeleccionadas[preguntaActual];
@@ -148,7 +170,6 @@ function mostrarPreguntas(categoria) {
           p.classList.add('correcto_respuesta');
           puntuacion += 500; // Incrementa la puntuación
           puntajeTotal.textContent = 'Puntuación total: ' + puntuacion; // Actualiza la puntuación total
-          window.parent.postMessage(puntuacion, '*');
         
     
         } else {

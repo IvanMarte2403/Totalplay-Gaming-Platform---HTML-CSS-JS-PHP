@@ -190,6 +190,17 @@ body {
     font-family: var(--font-4);
 }
 
+
+
+    /* ==============Display Contenedor Boton============= */
+
+    #boton-guardar{
+        text-decoration: none;
+        color: #000;
+        font-family: var(--font-4);
+        font-size: 1.5rem;
+    }
+
 /* =========Responsive Design ======= */
 
 @media screen and (max-width: 768px){

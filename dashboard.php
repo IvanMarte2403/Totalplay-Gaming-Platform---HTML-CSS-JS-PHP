@@ -8,8 +8,44 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header('Location: index.php');
     exit;
 }
+// Incluir la conexión a la base de datos
+include 'db_conexion.php';
 
+// Obtiene el ID del usuario actual
+$id_usuario = $_SESSION['id'];
+
+// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual
+$sql = "SELECT SUM(puntaje) AS puntaje_total FROM juego_1 WHERE id = ?";
+
+// Prepara la declaración
+$stmt = $conexion->prepare($sql);
+
+// Vincula los parámetros
+$stmt->bind_param("i", $id_usuario);
+
+// Ejecuta la declaración
+$stmt->execute();
+
+// Obtiene el resultado
+$result = $stmt->get_result();
+
+// Obtiene la fila del resultado
+$row = $result->fetch_assoc();
+
+// Obtiene el puntaje total
+$puntaje_total = $row['puntaje_total'];
+
+// Si el puntaje total es NULL, lo establece a 0
+if ($puntaje_total === NULL) {
+    $puntaje_total = 0;
+}
+
+// Cierra la declaración y la conexión
+$stmt->close();
+$conexion->close();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +92,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
                     <div class="texto-puntaje">
-                    <p>1000</p>
+                    <p><?php echo $puntaje_total; ?></p>
                     </div>
 
                 </div>

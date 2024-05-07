@@ -5,7 +5,7 @@ session_start();
 // Incluir la conexión a la base de datos
 include 'db_conexion.php';
 
-// Recibe el puntaje y el ID del usuario desde la solicitud AJAX
+// Recibe el puntaje desde la solicitud AJAX
 $puntaje = $_POST['puntaje'];
 $id_usuario = $_SESSION['id'];
 
@@ -27,7 +27,7 @@ if ($stmt->affected_rows > 0) {
     echo $puntaje;
 } else {
     // Devuelve un error
-    echo 'Error al guardar el puntaje';
+    echo 'Error al guardar el puntaje: ' . $conexion->error;
 }
 
 // Cierra la declaración y la conexión
