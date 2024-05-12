@@ -111,7 +111,7 @@ $conexion->close();
                 <h2>9800</h2>
             </div>
 
-
+                <!-- ======Puntajes Individuales de Juego=========== -->
             <div class="puntaje-individual-juego">
                 <div class="titulo-puntaje-juego-individual">
                 <p>SCORE</p>
@@ -126,31 +126,35 @@ $conexion->close();
 
                 </div>
 
-                <div class="contenedor-puntaje-juego">
+                <!-- Puntaje Número 2  -->
+
+                <!-- <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
                     <div class="texto-puntaje">
                     <p>2500</p>
                     </div>
 
-                </div>
+                </div> -->
 
-                <!-- =========Juego 2========= -->
-                <div class="contenedor-puntaje-juego">
+                <!-- =========Juego 3========= -->
+                <!-- <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-3.png" alt="">
                     <div class="texto-puntaje">
                     <p>3000</p>
                     </div>
 
-                </div>
+                </div> -->
 
                 <!-- ===============Juego 3========== -->
-                <div class="contenedor-puntaje-juego">
+
+                
+                <!-- <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
                     <div class="texto-puntaje">
                     <p>2400</p>
                     </div>
 
-                </div>
+                </div> -->
 
                 <!-- =========Juego 4========= -->
                 <div class="contenedor-puntaje-juego">

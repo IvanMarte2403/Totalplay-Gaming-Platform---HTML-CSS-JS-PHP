@@ -16,6 +16,11 @@
 }   
 
 body{
+
+
+    background-image: url('../img/portada/portada-champions.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: var(--background-color);
 }
 
