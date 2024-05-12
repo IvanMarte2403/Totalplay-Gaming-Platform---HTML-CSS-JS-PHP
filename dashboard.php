@@ -108,7 +108,7 @@ $conexion->close();
 
             <div class="puntaje-player">
                 <p>Mi Puntaje Total : </p>
-                <h2>9800</h2>
+                <h2><?php echo $puntaje_total1 + $puntaje_total5; ?></h2>
             </div>
 
                 <!-- ======Puntajes Individuales de Juego=========== -->
@@ -147,7 +147,7 @@ $conexion->close();
 
                 <!-- ===============Juego 3========== -->
 
-                
+
                 <!-- <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
                     <div class="texto-puntaje">
@@ -214,7 +214,7 @@ $conexion->close();
                     </div>
 
                     <h3>
-                       <b class="black2-juegos-personaje">¡Nuevo Nivel! </b> Champions Platform
+                       <b class="black2-juegos-personaje">¡Nuevo Nivel! </b>   
                     </h3>
                     <p>¡Vas tarde al partido! Salta para poder llegar </p>
                 </div>
@@ -246,16 +246,18 @@ $conexion->close();
 
     <div class="explicacion-juegos">
         <div class="seccion-juegos">
-            <!-- ==============Juego 1 ============== -->
-            <div class="contenedor-juego-explicacion">
+
+        <div class="contenedor-seccion-juegos">
+             <!-- ==============Juego 1 ============== -->
+             <div class="contenedor-juego-explicacion">
                 <a href="game.php" class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
                 </a>
 
                 <div class="explicacion-texto">
-                    <div class="temporada-game">
-                        <p>CHAMPIONS</p>
-                    </div>
+                    <a href="game.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                     <h3>Big Trivia </h3>
                     <p>
                         Juego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.                    </p>
@@ -270,8 +272,6 @@ $conexion->close();
                     </div>
                 </div>
             </div>
-           
-         
             <!-- ==============Juego 2 ============== -->
             <div class="contenedor-juego-explicacion">
                 <a  href="game2.php"  class="imagen-juego-explicacion">
@@ -279,9 +279,9 @@ $conexion->close();
                 </a>
 
                 <div class="explicacion-texto">
-                    <div class="temporada-game">
-                        <p>CHAMPIONS</p>
-                    </div>
+                    <a href="game2.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                     <h3>Soccer Invade</h3>
                     <p>
                        Detén enemigos, mejora cañonazos, acumula puntos.                  
@@ -293,21 +293,23 @@ $conexion->close();
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
                     </div>
                 </div>
             </div>
-            <!-- ==============Juego 3 ============== -->
-            <div class="contenedor-juego-explicacion">
+        </div>
+         
+        <div class="contenedor-seccion-juegos">
+             <!-- ==============Juego 3 ============== -->
+             <div class="contenedor-juego-explicacion">
                 <a  href="game3.php"  class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-3.png" alt="">
                 </a>
 
                 <div class="explicacion-texto">
-                    <div class="temporada-game">
-                        <p>CHAMPIONS </p>
-                    </div>
-                    <h3>Champions Platformer</h3>
+                    <a href="game3.php" class="temporada-game mantenimiento-game">
+                        <p>Mantenimiento</p>
+                    </a>
+                    <h3>Platformer Game</h3>
                     <p>
                         Detén enemigos, mejora cañonazos, acumula puntos.
                     </p>
@@ -329,9 +331,9 @@ $conexion->close();
                 </a>
  
                 <div class="explicacion-texto">
-                    <div class="temporada-game">
-                        <p>CHAMPIONS</p>
-                    </div>
+                    <a href="game4.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                     <h3>Ball - Champions</h3>
                     <p>
                     Aventura de plataformas en estadio. Salta obstáculos, alcanza la meta.
@@ -347,6 +349,11 @@ $conexion->close();
                     </div>
                 </div>
             </div>
+
+        </div>
+           
+
+        <div class="contenedor-seccion-juegos">
             <!-- ==============Juego 5 ============== -->
             <div class="contenedor-juego-explicacion">
                 <a  href="game5.php"  class="imagen-juego-explicacion">
@@ -354,9 +361,9 @@ $conexion->close();
                 </a>
 
                 <div class="explicacion-texto">
-                    <div class="temporada-game">
-                        <p>CHAMPIONS</p>
-                    </div>
+                    <a href="game5.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                     <h3>MEMORAMA</h3>
                     <p>
                     Juego de memoria con tarjetas únicas de la Champions League.
@@ -370,6 +377,8 @@ $conexion->close();
                     </div>
                 </div>
             </div>
+        </div>
+            
 
 
             

@@ -76,10 +76,19 @@
         flex-direction: column;
     }
 
+
+    .contenedor-seccion-juegos{
+        padding: 1rem;
+        flex-direction: column;
+    }
+
     .imagen-juego-explicacion{
         width: 100%;
     }
 
+    .explicacion-texto{
+        width: 100%;
+    }
 
     .explicacion-texto p{
         width: 70%;
