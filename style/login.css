@@ -6,6 +6,7 @@
     --background-color: #060f38;
     --background-color-2: #ffff;
     --font-secondary: 'Rubik';
+    --font-gamer: 'Press Start 2P';
 }
 
 
@@ -22,13 +23,14 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--background-color);
+    cursor: url('../img/recursos/balon-cursor.png'),auto;
+    height: auto;
 }
 
 .container{
     display: flex;
     flex-direction: row;
     background-color: var(--background-color);
-    padding: 2rem;
 }
 
 
@@ -41,6 +43,7 @@ body{
 .totalplay-phase-register{
     display: flex;
     flex-direction: column;
+    background-image: url('../img/portada/portada-register.jpg') !important;
 }
 
 .nav-logo{
@@ -51,7 +54,8 @@ body{
 }
 
 .nav-logo img{
-    width: 40%;
+    width: 30%;
+    height: auto;
 }
 /* ================Contenendor Registro================ */
 
@@ -106,6 +110,7 @@ body{
     display: flex;
     flex-direction: row;
     width: 100% !important;
+    cursor: pointer;
 }
 
 
@@ -127,7 +132,18 @@ body{
 
 .phase-totalplay{
     width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
 }
+
+.phase-totalplay img{
+    width: 60% !important;
+}
+
+
 
 .banner-personajes{
     width: 100% !important;
@@ -140,4 +156,47 @@ body{
 
 .hide-form {
     display: none;
+}
+
+
+.contenedor-animacion-personaje{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogo-texto {
+    font-family: var(--font-gamer) !important;  
+    font-size: 1rem;
+    color: #000!important;
+    padding: 10px 20px !important; /* Añade padding para dar espacio al texto */
+    width: auto !important; /* Cambia a auto para permitir que el tamaño del contenedor se ajuste al texto */
+    line-height: 1.9;
+    border-radius: 10px; /* Redondea las esquinas */
+    position: relative; /* Necesario para posicionar correctamente la cola de la nube de diálogo */
+    background-color: #fff; /* Cambia según tus necesidades */
+}
+
+.dialogo-texto::before {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Posiciona la cola en la parte inferior del contenedor */
+    left: 50%; /* Centra la cola */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Crea la forma de la cola */
+    border-right: 10px solid transparent; /* Crea la forma de la cola */
+    border-top: 10px solid #fff; /* Crea la forma de la cola y establece su color */
+}
+
+.dialogo-texto span {
+    opacity: 0;
+    animation: escribir 0.2s forwards;
+}
+
+@keyframes escribir {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

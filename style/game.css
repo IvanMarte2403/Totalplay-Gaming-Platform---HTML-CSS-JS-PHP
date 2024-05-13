@@ -74,16 +74,27 @@ nav a{
 }
 
 
-.game{
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 5vh;
     background-color: var(--color-primary) !important;
     width: 80%;
-    height: 140vh;
+    height: 120vh;
     overflow: hidden; /* Oculta cualquier contenido que se desborde */
-
-    overflow-y: hidden;
-
+    background-color: var(--background-color);
 }
+
+.game iframe {
+    width: 100%;
+    height: auto;
+    border: none;
+    overflow: hidden;
+    min-height: 130vh;
+}
+
 
 .mensaje-niveles{
     font-family: var(--font-third);
@@ -92,12 +103,7 @@ nav a{
 }
 
 
-.game iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    overflow: hidden;
-}
+
 /* =============Descripcion Game============== */
 
 
@@ -153,4 +159,18 @@ nav a{
 }
 .catalogo-juegos img{
     width: 90%;
+}
+
+@media only screen and (max-width: 600px){
+
+.descripcion-game{
+    padding: 0 !important;
+    flex-direction: column;
+    padding: 1rem;   
+}
+
+.instrucciones-juego{
+    width: 100% !important;
+}
+
 }

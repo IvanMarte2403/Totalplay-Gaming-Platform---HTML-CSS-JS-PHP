@@ -17,6 +17,7 @@
 
 body{
     background-color: var(--background-color);
+    cursor: url('../img/recursos/balon-cursor.png'),auto;
 }
 
 /* =========Container Principal ======== */

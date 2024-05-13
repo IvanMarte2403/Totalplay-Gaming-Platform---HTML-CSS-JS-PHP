@@ -84,8 +84,10 @@ $conexion->close();
     <link rel="stylesheet" href="style/dashboard.css">
     <link rel="stylesheet" href="style/responsive/responsive-dashboard.css">
     <link rel="stylesheet" href="style/casousel.css">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>TotalPlayGaming</title>
     
@@ -188,7 +190,7 @@ $conexion->close();
 
                  <a href="game2.php" class="icon-cards__item d-flex align-items-center justify-content-center juego-2"></a>
 
-                 <a href="game3.php" class="icon-cards__item d-flex align-items-center justify-content-center juego-3"></a>
+                 <!-- <a href="#" class="icon-cards__item d-flex align-items-center justify-content-center juego-3"></a> -->
                  <a href="game4.php"  class="icon-cards__item d-flex align-items-center justify-content-center juego-4"></a>
                  <a href="game5.php"  class="icon-cards__item d-flex align-items-center justify-content-center juego-5"></a>
                  </div>
@@ -300,13 +302,13 @@ $conexion->close();
          
         <div class="contenedor-seccion-juegos">
              <!-- ==============Juego 3 ============== -->
-             <div class="contenedor-juego-explicacion">
-                <a  href="game3.php"  class="imagen-juego-explicacion">
+             <!-- <div class="contenedor-juego-explicacion">
+                <a  href="#"  class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-3.png" alt="">
                 </a>
 
                 <div class="explicacion-texto">
-                    <a href="game3.php" class="temporada-game mantenimiento-game">
+                    <a href="#" class="temporada-game mantenimiento-game">
                         <p>Mantenimiento</p>
                     </a>
                     <h3>Platformer Game</h3>
@@ -323,7 +325,7 @@ $conexion->close();
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- ==============Juego 4 ============== -->
             <div class="contenedor-juego-explicacion">
                 <a   href="game4.php" class="imagen-juego-explicacion">
@@ -334,10 +336,10 @@ $conexion->close();
                     <a href="game4.php" class="temporada-game">
                         <p>JUGAR</p>
                     </a>
-                    <h3>Ball - Champions</h3>
+                    <h3>Ball Broke</h3>
                     <p>
-                    Aventura de plataformas en estadio. Salta obstáculos, alcanza la meta.
 
+                        ¡Obten el punta mas alto, golpea y no dejes que lleguen al suelo! 
                     </p>
 
                     <div class="calificacion-estrellas">
@@ -350,11 +352,7 @@ $conexion->close();
                 </div>
             </div>
 
-        </div>
-           
-
-        <div class="contenedor-seccion-juegos">
-            <!-- ==============Juego 5 ============== -->
+                <!-- ==============Juego 5 ============== -->
             <div class="contenedor-juego-explicacion">
                 <a  href="game5.php"  class="imagen-juego-explicacion">
                     <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
@@ -377,7 +375,10 @@ $conexion->close();
                     </div>
                 </div>
             </div>
+
         </div>
+           
+
             
 
 

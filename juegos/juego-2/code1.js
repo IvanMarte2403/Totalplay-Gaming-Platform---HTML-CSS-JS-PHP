@@ -303,7 +303,7 @@ gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDShadowO
 gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDDropObjects3Objects = Hashtable.newFrom({"Drop": gdjs.Untitled_32sceneCode.GDDropObjects3});
 gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDSpiderEnemyObjects4Objects = Hashtable.newFrom({"SpiderEnemy": gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects4});
 gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDHealthBar_95959595EnemyObjects4Objects = Hashtable.newFrom({"HealthBar_Enemy": gdjs.Untitled_32sceneCode.GDHealthBar_9595EnemyObjects4});
-gdjs.Untitled_32sceneCode.asyncCallback13066164 = function (runtimeScene, asyncObjectsList) {
+gdjs.Untitled_32sceneCode.asyncCallback17931940 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(asyncObjectsList.getObjects("SpiderSpawnPoints"), gdjs.Untitled_32sceneCode.GDSpiderSpawnPointsObjects4);
 
 gdjs.Untitled_32sceneCode.GDHealthBar_9595EnemyObjects4.length = 0;
@@ -329,7 +329,7 @@ gdjs.Untitled_32sceneCode.eventsList4 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 for (const obj of gdjs.Untitled_32sceneCode.GDSpiderSpawnPointsObjects3) asyncObjectsList.addObject("SpiderSpawnPoints", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Untitled_32sceneCode.asyncCallback13066164(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Untitled_32sceneCode.asyncCallback17931940(runtimeScene, asyncObjectsList)));
 }
 }
 

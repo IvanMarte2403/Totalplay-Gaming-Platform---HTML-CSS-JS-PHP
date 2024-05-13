@@ -67,6 +67,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </div>
 
         <div class="catalogo-juegos">
+            <div class="titulo-catalogo">
+                ¡SIGUE PARTICIPANDO CON NUESTRO CATÁLOGO DE JUEGOS! 1
+            </div>
             <div class="arriba-catalogo">
                 <a href="game2.php"><img src="img/juegos/portada/juego-portada-general-2.png" alt=""> </a>
                 <a href="game3.php"><img src="img/juegos/portada/juego-portada-general-3.png" alt=""> </a>

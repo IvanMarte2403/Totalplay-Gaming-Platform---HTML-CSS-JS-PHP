@@ -43,10 +43,13 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
+    width: 100%;
+    height: 100%;
 }
 
 .container{
-    width: 90%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,18 +163,22 @@ body {
     flex-direction: column;
 }
 
-
 .correcto_respuesta{
     color: #fff;
-    background-color: var(--deportes-color);
+    background-image: linear-gradient(144deg, #4CAF50, #388E3C 50%, #1B5E20) !important;
+
+box-shadow: rgba(0, 128, 0, 0.2) 0 15px 30px -5px !important;
+
+
 }
 
 
 .incorrecto_respuesta{
     color: #fff;
-    background-color: #ff6961;
-}
+    background-image: linear-gradient(144deg, #FF5733, #FF2D00 50%, #D62000) !important;
+    box-shadow: rgba(255, 0, 0, 0.2) 0 15px 30px -5px !important;
 
+}
 
 
 #puntaje-total{
@@ -213,29 +220,29 @@ body {
 
 /* CSS */
 #contenedor-respuestas p {
-  align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-family: var(--font-fourth);
-  font-size: 20px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-  margin-bottom: 2rem;
-}
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: var(--font-fourth);
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 19px 24px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
 
 #contenedor-respuestas p:active,
 #contenedor-respuestas p:hover {

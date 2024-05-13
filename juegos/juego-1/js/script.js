@@ -114,6 +114,9 @@ function mostrarPreguntas(categoria) {
   let puntajeTotal = document.querySelector('#puntaje-total'); // Selecciona el elemento de puntuación total
   let preguntaActual = 0;
   let temporizador;
+  
+  contenedorPreguntas.style.display = 'block';
+
 
   function mostrarPregunta() {
     // Detiene el temporizador anterior si existe
