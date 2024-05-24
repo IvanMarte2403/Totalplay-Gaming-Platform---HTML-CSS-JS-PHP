@@ -50,35 +50,33 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </section>
 
 
+   
+    <section class="portada-juego">
+            <h1>MEMORIA</h1>
+    </section>
     <section class="descripcion-game">
-
-        <div class="instrucciones-juego">
-            <div>
-                 <h2>
-                    Champions Platformer   
-                </h2>
-              </div>
-
-             <div>
-                    <p>
-                    Champions Platformer te pone en la piel de un jugador de fútbol que debe atravesar el estadio en un emocionante juego de plataformas. Salta sobre la cancha, esquiva obstáculos en las butacas y supera diversos desafíos para llegar al final del estadio. Ideal para los aficionados al deporte que disfrutan de una aventura llena de acción y habilidad.
-
-
-                    </p>
-             </div>
+        <div class="titulo-catalogo-juegos">
+            <h2>
+                Continua jugando en los siguientes juegos:
+            </h2>
         </div>
 
-        <div class="catalogo-juegos">
-            <div class="arriba-catalogo">
-                <a href="game.php"><img src="img/juegos/portada/juego-portada-general-1.png" alt=""> </a>
-                <a href="game2.php"><img src="img/juegos/portada/juego-portada-general-2.png" alt=""> </a>
-            </div>
-            <div class="arriba-catalogo">
-                <a href="game5.php"><img src="img/juegos/portada/juego-portada-general-5.png" alt=""> </a>
-                <!-- <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a> -->
-            </div>
+        <div class="catalogo-juegos-contenedor">
+            <a href="game.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
+            </a>
+            <a href="game2.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
+            </a>
+            <a href="game4.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
+            </a>
+          
+
+
         </div>
-        .
+            
+    </section>
         
     </section>
 </body>

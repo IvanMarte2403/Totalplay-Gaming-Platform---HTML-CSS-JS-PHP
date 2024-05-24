@@ -205,7 +205,7 @@ $conexion->close();
                     </div>
 
                     <h3>
-                        <b class="black-juegos-personaje">¡Personaje Nuevo! </b>   en Soccer Invade
+                        <b class="black-juegos-personaje">¡Personaje Nuevo! </b>   en Te Reto
                     </h3>
                     <p>¡No dejes que lleguen al centro de la porteria! Ve aumentando tu puntaje</p>
                 </div>
@@ -216,9 +216,9 @@ $conexion->close();
                     </div>
 
                     <h3>
-                       <b class="black2-juegos-personaje">¡Nuevo Nivel! </b>   
+                       <b class="black2-juegos-personaje">¡Nuevo Pull De Preguntas! </b>   
                     </h3>
-                    <p>¡Vas tarde al partido! Salta para poder llegar </p>
+                    <p>¡Solo tienes una oportunidad para jugar!</p>
                 </div>
 
             
@@ -284,7 +284,7 @@ $conexion->close();
                     <a href="game2.php" class="temporada-game">
                         <p>JUGAR</p>
                     </a>
-                    <h3>Soccer Invade</h3>
+                    <h3>Te Reto</h3>
                     <p>
                        Detén enemigos, mejora cañonazos, acumula puntos.                  
                      </p>
@@ -362,9 +362,9 @@ $conexion->close();
                     <a href="game5.php" class="temporada-game">
                         <p>JUGAR</p>
                     </a>
-                    <h3>MEMORAMA</h3>
+                    <h3>Memoria</h3>
                     <p>
-                    Juego de memoria con tarjetas únicas de la Champions League.
+                    Juego de memoria con tarjetas únicas sobre football soccer  
                     </p>
 
                     <div class="calificacion-estrellas">

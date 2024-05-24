@@ -50,36 +50,33 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </section>
 
 
+   
+    <section class="portada-juego">
+            <h1>MEMORIA</h1>
+    </section>
     <section class="descripcion-game">
-
-        <div class="instrucciones-juego">
-            <div>
-                 <h2>
-                    ¿CÓMO JUGAR A BIG TRIVIA?
-                 </h2>
-              </div>
-
-             <div>
-                    <p>
-                  Descubre BigTrvia, el juego de preguntas que combina diversión y aprendizaje. Gira la ruleta y enfréntate a desafíos en cinco categorías: Historia, Ciencia, Geografía, Arte y Deporte. Responde correctamente y acumula puntos para subir de nivel. Ideal para jugadores que buscan poner a prueba sus conocimientos y habilidades.
-                  </p>
-             </div>
+        <div class="titulo-catalogo-juegos">
+            <h2>
+                Continua jugando en los siguientes juegos:
+            </h2>
         </div>
 
-        <div class="catalogo-juegos">
-            <div class="titulo-catalogo">
-                ¡SIGUE PARTICIPANDO CON NUESTRO CATÁLOGO DE JUEGOS! 1
-            </div>
-            <div class="arriba-catalogo">
-                <a href="game2.php"><img src="img/juegos/portada/juego-portada-general-2.png" alt=""> </a>
-                <a href="game3.php"><img src="img/juegos/portada/juego-portada-general-3.png" alt=""> </a>
-            </div>
-            <div class="arriba-catalogo">
-                <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a>
-                <a href="game5.php"><img src="img/juegos/portada/juego-portada-general-5.png" alt=""> </a>
-            </div>
+        <div class="catalogo-juegos-contenedor">
+            <a href="game.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
+            </a>
+            <a href="game2.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
+            </a>
+            <a href="game4.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
+            </a>
+          
+
+
         </div>
-        
+            
+    </section>
         
     </section>
 </body>

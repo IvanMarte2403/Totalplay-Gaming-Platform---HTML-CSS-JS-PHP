@@ -50,35 +50,32 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </section>
 
 
+   
+    <section class="portada-juego">
+            <h1>MEMORIA</h1>
+    </section>
     <section class="descripcion-game">
-
-        <div class="instrucciones-juego">
-            <div>
-                 <h2>
-                    ¿CÓMO JUGAR A SOCCER INVADE
-                 </h2>
-              </div>
-
-             <div>
-                    <p>
-                    Soccer Invade es un emocionante juego donde debes evitar que los enemigos alcancen el centro de la cancha. Elimínalos para acumular puntos y potencia tu cañonazo. A medida que avances, mejora el poder, la velocidad de disparo y la precisión. ¡Cuanto más resistas, más puntos ganarás!
-
-                  </p>
-             </div>
+        <div class="titulo-catalogo-juegos">
+            <h2>
+                Continua jugando en los siguientes juegos:
+            </h2>
         </div>
 
-        <div class="catalogo-juegos">
-            <div class="arriba-catalogo">
-                <a href="game.php"><img src="img/juegos/portada/juego-portada-general-1.png" alt=""> </a>
-                <a href="game3.php"><img src="img/juegos/portada/juego-portada-general-3.png" alt=""> </a>
-            </div>
-            <div class="arriba-catalogo">
-                <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a>
-                <a href="game5.php"><img src="img/juegos/portada/juego-portada-general-5.png" alt=""> </a>
-            </div>
+        <div class="catalogo-juegos-contenedor">
+            <a href="game.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
+            </a>
+            <a href="game2.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
+            </a>
+            <a href="game4.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
+            </a>
+          
+
+
         </div>
-        .
-        
+            
     </section>
 </body>
 

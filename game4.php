@@ -51,34 +51,32 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </section>
 
 
+  
+    <section class="portada-juego">
+            <h1>MEMORIA</h1>
+    </section>
     <section class="descripcion-game">
-
-        <div class="instrucciones-juego">
-            <div>
-                 <h2>
-                    Ball Champions   
-                </h2>
-              </div>
-
-             <div>
-                    <p>
-                    Ball Champions es un juego  donde debes evitar que los bloques alcancen la parte inferior de la pantalla. Utiliza estratégicamente el multiplicador de balones y el extra balón para eliminar más bloques y mantenerte en juego. Perfecto para quienes buscan acción continua y desafíos dinámicos. ¡Prepárate para romper récords!
-                </p>
-             </div>
+        <div class="titulo-catalogo-juegos">
+            <h2>
+                Continua jugando en los siguientes juegos:
+            </h2>
         </div>
 
-        <div class="catalogo-juegos">
-            <div class="arriba-catalogo">
-                <a href="game.php"><img src="img/juegos/portada/juego-portada-general-1.png" alt=""> </a>
-                <a href="game2.php"><img src="img/juegos/portada/juego-portada-general-2.png" alt=""> </a>
-            </div>
-            <div class="arriba-catalogo">
-                <a href="game5.php"><img src="img/juegos/portada/juego-portada-general-5.png" alt=""> </a>
-                <!-- <a href="game4.php"><img src="img/juegos/portada/juego-portada-general-4.png" alt=""> </a> -->
-            </div>
+        <div class="catalogo-juegos-contenedor">
+            <a href="game.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
+            </a>
+            <a href="game2.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
+            </a>
+            <a href="game4.php" class="contenedor-imagen">
+                <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
+            </a>
+          
+
+
         </div>
-        .
-        
+            
     </section>
 </body>
 
