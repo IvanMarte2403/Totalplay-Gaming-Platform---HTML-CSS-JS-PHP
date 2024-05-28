@@ -207,7 +207,7 @@ $conexion->close();
                     <h3>
                         <b class="black-juegos-personaje">¡Personaje Nuevo! </b>   en Te Reto
                     </h3>
-                    <p>¡No dejes que lleguen al centro de la porteria! Ve aumentando tu puntaje</p>
+                    <p>¡No permitas que lleguen al centro!</p>
                 </div>
 
                 <div class="contenedor-juego-1">
@@ -218,7 +218,7 @@ $conexion->close();
                     <h3>
                        <b class="black2-juegos-personaje">¡Nuevo Pool De Preguntas! </b>   
                     </h3>
-                    <p>¡Solo tienes una oportunidad para jugar!</p>
+                    <p>¡Solo tienes una oportunidad!</p>
                 </div>
 
             
