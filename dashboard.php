@@ -216,7 +216,7 @@ $conexion->close();
                     </div>
 
                     <h3>
-                       <b class="black2-juegos-personaje">¡Nuevo Pull De Preguntas! </b>   
+                       <b class="black2-juegos-personaje">¡Nuevo Pool De Preguntas! </b>   
                     </h3>
                     <p>¡Solo tienes una oportunidad para jugar!</p>
                 </div>
@@ -241,7 +241,7 @@ $conexion->close();
 
     <div class="seccion-premios">
                 <div class="titulo-premios">
-                    <h1>OBTEN EL PUNTAJE MAS ALTO Y GANA INCREIBLES PREMIOS</h1>
+                    <h1>OBTÉN EL PUNTAJE MÁS ALTO Y GANA INCREÍBLES PREMIOS</h1>
                 </div>
 
     </div>
@@ -336,7 +336,7 @@ $conexion->close();
                     <a href="game4.php" class="temporada-game">
                         <p>JUGAR</p>
                     </a>
-                    <h3>Ball Broke</h3>
+                    <h3>Misión</h3>
                     <p>
 
                         ¡Obten el punta mas alto, golpea y no dejes que lleguen al suelo! 

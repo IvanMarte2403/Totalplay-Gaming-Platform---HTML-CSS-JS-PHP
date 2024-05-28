@@ -52,7 +52,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
    
     <section class="portada-juego">
-            <h1>MEMORIA</h1>
+            <h1>TE RETO</h1>
     </section>
     <section class="descripcion-game">
         <div class="titulo-catalogo-juegos">
