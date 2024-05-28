@@ -98,4 +98,18 @@
     top: 10px;
     right: 10px;
     z-index: 1001; /* Asegúrate de que el botón esté por encima del resto del contenido */
+    color: #fff;
+    background: transparent;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px){
+
+    #pantalla-carga h1{
+        font-size: 4rem;
+    }
+    .contenedor-instrucciones{
+        width: 95%;
+    }
+
 }

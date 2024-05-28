@@ -88,8 +88,8 @@ nav a{
 }
 
 .game iframe {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
     border: none;
     overflow: hidden;
     min-height: 130vh;
@@ -248,6 +248,11 @@ nav a{
     width: 60% !important;
     margin-top: 2vh;
 }
+
+nav div{
+    width: 40%;
+}
+
 
 
 }
