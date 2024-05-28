@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const pantallaCarga = document.querySelector('#pantalla-carga');
     const botonJugar = document.querySelector('#boton-jugar');
     const botonPantallaCompleta = document.querySelector('#boton-pantalla-completa');
-    const iframe = document.querySelector('iframe');
+    let iframe = document.querySelector('#iframe');
 
     let esPantallaCompleta = false; // Variable para rastrear el estado del iframe
 

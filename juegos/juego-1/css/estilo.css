@@ -84,7 +84,7 @@ body {
     z-index: 100;
     transition: all 5s;
     object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
-    width: 30%;
+    width:20%;
     }
 
 #premio {
@@ -109,7 +109,7 @@ body {
 
 .historia-text{
     /* color: var(--historia-color) !important;  */
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     /* color: var(--background-color-1); */
     color: var(--color-primary);
 
@@ -122,7 +122,7 @@ body {
     /* color: var(--background-color-1); */
     color: var(--color-primary);
 
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     text-shadow: -1px 0 var(--color-primary);
     text-align: center;
 
@@ -133,7 +133,7 @@ body {
     /* color: var(--background-color-1); */
     color: var(--color-primary);
 
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     text-shadow: -1px 0 var(--color-primary);
     text-align: center;
 }
@@ -141,7 +141,7 @@ body {
 .ciencia-text{
     /* color: var(--ciencia-color) !important;  */
     color: var(--color-primary);
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     text-shadow: -1px 0 var(--color-primary);
     text-align: center;
 }
@@ -149,7 +149,7 @@ body {
 .geografia-text{
     /* color: var(--geografia-color) !important;  */
     color: var(--color-primary);
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     text-shadow: -1px 0 var(--color-primary);
 }
 
@@ -192,8 +192,8 @@ box-shadow: rgba(0, 128, 0, 0.2) 0 15px 30px -5px !important;
 
 
 #contenedor-preguntas {
-    font-size: 2rem;
-    width: 80%;
+    font-size: 1.5rem;
+    width: 40%;
     margin-top: 2rem;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -229,7 +229,7 @@ box-shadow: rgba(0, 128, 0, 0.2) 0 15px 30px -5px !important;
     color: #FFFFFF;
     display: flex;
     font-family: var(--font-fourth);
-    font-size: 20px;
+    font-size: 15px;
     justify-content: center;
     line-height: 1em;
     max-width: 100%;
@@ -251,7 +251,7 @@ box-shadow: rgba(0, 128, 0, 0.2) 0 15px 30px -5px !important;
 
 @media (min-width: 768px) {
     #contenedor-respuestas p {
-    font-size: 24px;
+    font-size: 15px;
     min-width: 196px;
   }
 }

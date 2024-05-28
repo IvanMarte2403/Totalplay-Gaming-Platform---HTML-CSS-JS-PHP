@@ -33,18 +33,30 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <!-- ===============Pantalla de Carga=============== -->
 
 <div id="pantalla-carga">
-        <h1>Big Trivia</h1>
+        <h1>Memoria</h1>
         <div class="contenedor-instrucciones">
+
+            <img src="img/recursos/play.png" id="boton-jugar" alt="">
+
             <h2>
-                ¿Cómo Jugar BigTrivia?
+                ¿Cómo Jugar Memoria?
                
             </h2>
 
-            <p>¿Estás seguro de conocer todos los secretos del deporte? Demuestra tu conocimiento en las siguientes categorías. Recuerda, ¡solo tienes una oportunidad para participar!</p>
-            
-            <p>Gira la ruleta y selecciona las respuestas correctas </p>
+            <p>¡Es hora de poner en práctica esa Memoria! Encuentra las cartas iguales, en tiempo record y acumula punots</p>
 
-            <button id="boton-jugar">JUGAR</button>
+            <p>Recuerda darle click en 'Guardar Puntaje'para guardar tus resultados en tu perfil</p>
+            <div class="contenedor-instrucciones-teclas">
+        
+
+            <div class="instrucciones-movimiento">
+                <img src="img/recursos/instrucciones/left-click.png" alt="">
+                <p>Para Seleccionar una tarjeta</p>
+            </div>
+            
+            </div>
+            
+
 
         </div>
     </div>
@@ -76,7 +88,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <section class="game-zone">
         <div class="game">
-            <iframe  scrolling="no" height="100vh" src="juegos/juego-5/index.html"></iframe>
+            <iframe id="iframe" scrolling="no" height="100vh" src="juegos/juego-5/index.html"></iframe>
         </div>
     </section>
 
@@ -84,7 +96,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <section class="portada-juego">
             <h1>MEMORIA</h1>
     </section>
-    <section class="descripcion-game">
+    <section class="descripcion-game"> 
         <div class="titulo-catalogo-juegos">
             <h2>
                 Continua jugando en los siguientes juegos:

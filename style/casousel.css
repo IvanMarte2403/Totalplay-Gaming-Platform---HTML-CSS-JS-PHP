@@ -47,31 +47,37 @@
 
 .icon-cards__item:nth-child(2) {
   background: #F87949;
-  transform: rotateY(72deg) translateZ(35vw);
+  transform: rotateY(90deg) translateZ(35vw);
 }
 
 .icon-cards__item:nth-child(3) {
   background: #FBAB48;
-  transform: rotateY(144deg) translateZ(35vw);
+  transform: rotateY(180deg) translateZ(35vw);
 }
 
 .icon-cards__item:nth-child(4) {
-  transform: rotateY(216deg) translateZ(35vw);
+  transform: rotateY(270deg) translateZ(35vw);
 }
-
-.icon-cards__item:nth-child(5) {
+/* .icon-cards__item:nth-child(5) {
   transform: rotateY(288deg) translateZ(35vw);
-}
+} */
 
-@keyframes carousel {
+/* @keyframes carousel {
   0%, 15% { transform: translateZ(-35vw) rotateY(0deg); }
   25%, 40% { transform: translateZ(-35vw) rotateY(-72deg); }
   50%, 65% { transform: translateZ(-35vw) rotateY(-144deg); }
   75%, 90% { transform: translateZ(-35vw) rotateY(-216deg); }
   95%, 100% { transform: translateZ(-35vw) rotateY(-288deg); }
 
-}
+} */
 
+
+@keyframes carousel {
+  0%, 20% { transform: translateZ(-35vw) rotateY(0deg); }
+  30%, 50% { transform: translateZ(-35vw) rotateY(-90deg); }
+  60%, 80% { transform: translateZ(-35vw) rotateY(-180deg); }
+  90%, 100% { transform: translateZ(-35vw) rotateY(-270deg); }
+}
 
 
 @keyframes jelly {

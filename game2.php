@@ -18,7 +18,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/game.css">
     <link rel="stylesheet" href="style/pantalla-carga.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <title>Game</title>
@@ -26,22 +29,38 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 </head>
 <body>
 
-
-<!-- ===============Pantalla de Carga=============== -->
+    <!-- ===============Pantalla de Carga=============== -->
 
     <div id="pantalla-carga">
-        <h1>Big Trivia</h1>
+        <h1>Te Reto</h1>
         <div class="contenedor-instrucciones">
+
+            <img src="img/recursos/play.png" id="boton-jugar" alt="">
+
             <h2>
-                ¿Cómo Jugar BigTrivia?
+                ¿Cómo jugar Soccer Invade?
                
             </h2>
 
-            <p>¿Estás seguro de conocer todos los secretos del deporte? Demuestra tu conocimiento en las siguientes categorías. Recuerda, ¡solo tienes una oportunidad para participar!</p>
-            
-            <p>Gira la ruleta y selecciona las respuestas correctas </p>
+            <p>¡No permitas que lleguen al centro! Dispara y acumula puntos para mejorar tu tiro y fuerza</p>
 
-            <button id="boton-jugar">JUGAR</button>
+            <div class="contenedor-instrucciones-teclas">
+
+
+            <div class="instrucciones-movimiento">
+                <img src="img/recursos/instrucciones/left-click.png" alt="">
+                <p>Disparo</p>
+            </div>
+            
+            </div>
+            
+            <div class="instrucciones-movimiento rotacion-telefono" style="display: none;" >
+                <img  src="img/recursos/instrucciones/rotate.png" alt="">
+                <p>¡Rota tu telefono, para una mejor experiencia!</p>
+            </div>
+
+    
+
 
         </div>
     </div>
@@ -49,6 +68,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <!-- =============Boton Pantalla Completa============== -->
 <!-- Botón de pantalla completa -->
 <button id="boton-pantalla-completa" class="fas fa-expand"></button>
+
 
 
     <nav>
@@ -72,14 +92,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <section class="game-zone">
         <div class="game">
-            <iframe src="juegos/juego-2/index.html"></iframe>
+            <iframe id ="iframe" src="juegos/juego-2/index.html"></iframe>
         </div>
     </section>
 
 
    
     <section class="portada-juego">
-            <h1>TE RETO</h1>
+            <h1>Big Trivia</h1>
     </section>
     <section class="descripcion-game">
         <div class="titulo-catalogo-juegos">
@@ -104,9 +124,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </div>
             
     </section>
+        
+    </section>
 </body>
 
-<script src="main/pantalla-carga.js"></script>
+<script src="main/pantalla-carga.js" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="main/puntaje.js"></script>
 </html>

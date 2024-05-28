@@ -40,8 +40,7 @@
 
 
 #pantalla-carga h1{
-    font-size: 6rem;
-    margin-bottom: 6rem;
+    font-size: 4rem;
     text-align: center;
 }
 
@@ -102,6 +101,52 @@
     background: transparent;
     font-size: 2rem;
 }
+.contenedor-instrucciones img {
+    width: 20% !important;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    animation: parpadeo 4s infinite;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.contenedor-instrucciones-teclas{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.instrucciones-movimiento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.instrucciones-movimiento img{
+    width: 70% !important;
+    height: auto;
+}
+
+.rotacion-telefono{
+    width: 50% !important;
+
+}
+
+.rotacion-telefono img{
+    width: 30% !important;
+}
+
+.contenedor-instrucciones img :hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
 
 @media only screen and (max-width: 600px){
 
@@ -111,5 +156,21 @@
     .contenedor-instrucciones{
         width: 95%;
     }
+
+    .contenedor-instrucciones img{
+        width: 70% !important;
+    }
+
+    .rotacion-telefono{
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .rotacion-telefono img{
+        width: 50% !important;
+    }
+
+
 
 }

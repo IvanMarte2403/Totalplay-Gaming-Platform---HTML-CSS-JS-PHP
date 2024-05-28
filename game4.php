@@ -31,18 +31,31 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <!-- ===============Pantalla de Carga=============== -->
 
 <div id="pantalla-carga">
-        <h1>Big Trivia</h1>
+        <h1>Misión</h1>
         <div class="contenedor-instrucciones">
+
+            <img src="img/recursos/play.png" id="boton-jugar" alt="">
+
             <h2>
-                ¿Cómo Jugar BigTrivia?
+                ¿Cómo Jugar Misión?
                
             </h2>
 
-            <p>¿Estás seguro de conocer todos los secretos del deporte? Demuestra tu conocimiento en las siguientes categorías. Recuerda, ¡solo tienes una oportunidad para participar!</p>
+            <p>¡No permitas que lleguen al suelo, Obten el mayor puntaje, evitando que los objetos toquen el suelo</p>
             
-            <p>Gira la ruleta y selecciona las respuestas correctas </p>
 
-            <button id="boton-jugar">JUGAR</button>
+
+            <div class="contenedor-instrucciones-teclas">
+        
+
+            <div class="instrucciones-movimiento">
+                <img src="img/recursos/instrucciones/left-click.png" alt="">
+                <p>Lanzar Pelota</p>
+            </div>
+            
+            </div>
+            
+
 
         </div>
     </div>
@@ -75,7 +88,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <section class="game-zone">
         <div class="game">
-            <iframe  scrolling="no" height="100vh" src="juegos/juego-4/index.html"></iframe>
+            <iframe  id="iframe" scrolling="no" height="100vh" src="juegos/juego-4/index.html"></iframe>
         </div>
     </section>
 

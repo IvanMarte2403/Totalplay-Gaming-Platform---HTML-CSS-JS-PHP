@@ -391,6 +391,5 @@ $conexion->close();
     </section>
     
 </body>
-
 <script src="main/casousel.js"></script>
 </html>
