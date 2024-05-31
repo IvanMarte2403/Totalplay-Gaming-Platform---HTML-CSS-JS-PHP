@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="style/responsive/responsive-index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300.  .900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300.900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 
@@ -69,7 +69,7 @@
             </div>
 
             <!-- ========Enlace de Registro o Inicio de Sesión============ -->
-            <p id="toggle-text">¿No tienes una cuenta? <a id="toggle-link" href="#" onclick="toggleForm()">Regístrate aquí</a>.</p>
+          
 
             <div class="contenedor-animacion-personaje">
                 <img src="img/recursos/personajes/cono.gif" alt="">
