@@ -35,7 +35,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <h1>Te Reto</h1>
         <div class="contenedor-instrucciones">
 
-            <img src="img/recursos/play.png" id="boton-jugar" alt="">
+        
 
             <h2>
                 ¿Cómo jugar Soccer Invade?
@@ -59,7 +59,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <p>¡Rota tu telefono, para una mejor experiencia!</p>
             </div>
 
-    
+            <img src="img/recursos/play.png" id="boton-jugar" alt="">
 
 
         </div>

@@ -22,7 +22,7 @@
             </div>
 
             <div class="dialogo-texto">
-                ¡Hola, soy Alex! Bienvenido a TotalplayGaming. Tu oportunidad de ganar increibles premios
+                ¡Hola, soy el Tio Totalplay! Bienvenido a TotalplayGaming. Tu oportunidad de ganar increibles premios
             </div>
 
             <div class="phase-totalplay">   
@@ -42,10 +42,7 @@
                     <input type="email" id="email" name="email" required>
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" id="contrasena" name="contrasena" required>
-                    <div class="terminos-condiciones">
-                        <label for="terminos">He leído los términos y condiciones</label>
-                        <input type="checkbox" id="terminos" name="terminos" required>    
-                    </div>
+             
                     
                     <input class="boton-iniciar-sesion" type="submit" value="Iniciar sesión">
                 </form>

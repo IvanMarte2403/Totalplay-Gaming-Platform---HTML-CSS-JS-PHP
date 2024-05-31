@@ -35,7 +35,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <h1>Big Trivia</h1>
         <div class="contenedor-instrucciones">
 
-            <img src="img/recursos/play.png" id="boton-jugar" alt="">
+         
 
             <h2>
                 ¿Cómo Jugar BigTrivia?
@@ -53,8 +53,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <img src="img/recursos/instrucciones/left-click.png" alt="">
                 <p>Girar la Ruleta</p>
             </div>
+
             
             </div>
+
+            
+            <img src="img/recursos/play.png" id="boton-jugar" alt="">
             
 
 

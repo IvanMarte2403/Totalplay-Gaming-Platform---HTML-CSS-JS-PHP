@@ -53,10 +53,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <img src="img/recursos/instrucciones/left-click.png" alt="">
                 <p>Para Seleccionar una tarjeta</p>
             </div>
+
+            
+
             
             </div>
             
-
+            <img src="img/recursos/play.png" id="boton-jugar" alt="">
 
         </div>
     </div>

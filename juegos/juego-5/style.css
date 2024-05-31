@@ -8,6 +8,8 @@
         --background-tarjeta: #722E85;
         --background-tarjeta-gradiente: #C72627;
         --font-size-header: 2rem;
+        --font-secondary: 'Rubik';
+        --font-third: 'Roboto';
     }
 
     /* =======Variables Globales====== */
@@ -27,7 +29,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-family: calibri;
+        font-family: var(--font-secondary) !important;
         background-image: url(img/portada-champions.png);
     }
 
@@ -84,11 +86,12 @@
         background: linear-gradient(var(--background-tarjeta), var(--background-tarjeta));
         border-radius: 50px;
         border: white 5px solid;
-        font-size: 100%;
+        font-size: 90%;
         color: #fff;
         font-weight: 500;
         padding: 0.4rem;
         margin-bottom: 10vh;
+        font-family: var(--font-secondary)
     }
 
     #tablero {
@@ -151,7 +154,7 @@
     }
 
     #boton-jugar:hover{
-        background: #efa94a;
+        background: #060f38;
         color: #fff;
         cursor: pointer;
     }

@@ -34,7 +34,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <h1>Misión</h1>
         <div class="contenedor-instrucciones">
 
-            <img src="img/recursos/play.png" id="boton-jugar" alt="">
 
             <h2>
                 ¿Cómo Jugar Misión?
@@ -55,6 +54,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             
             </div>
             
+            <img src="img/recursos/play.png" id="boton-jugar" alt="">
+
 
 
         </div>

@@ -1,34 +1,44 @@
 const ruleta = document.querySelector('#ruleta');
 
 ruleta.addEventListener('click', girar);
-giros = 0;
+
+let giros = 0;
+let girosDisponibles = 3; 
+var categoriasJugadas = {};
 
 
 
 function girar(){
-  if (giros < 3) {
-    let rand = Math.random() * 7200;
-    calcular(rand);
-    giros++;
-    var sonido = document.querySelector('#audio');
-    sonido.setAttribute('src', 'sonido/ruleta.mp3');
-    // ocument.querySelectdor('.contador').innerHTML = 'TURNOS: ' + giros; 
-  }else{
-    Swal.fire({
-      icon: 'success',
-      title: 'VUELVA PRONTO EL JUEGO TERMINO!!',
-      confirmButtonColor: '#3085d6',
-      confirmButtonText: 'Aceptar',
-      allowOutsideClick: false
-    }).then((result)=>{
-      if (result.value == true) {
-        giros = 0;
-         document.querySelector('.quizzSeleccionado').innerHTML = ' ';
-         document.querySelector('.contador').innerHTML = 'TURNOS: ' + giros;        
-      }
-    })
+
+   // =======Verificar la cantidad de giros=======
+
+   if(giros >= 3){
+    //Verifica si el jugador ya ha jugado antes
+
+  document.querySelector('#contenedor-preguntas').innerText = 'Has terminado el juego';
+  Swal.fire({
+  title: 'Has terminado el juego',
+  text: 'Gracias por jugar!',
+  icon: 'success',
+  confirmButtonText: 'Cool'
+})
+    document.querySelector('.contenedor-imagen').style.display = 'none';
+    document.querySelector('#contador-giros').style.display = 'none';
+    document.querySelector('.vara').style.display = 'none';
+    document.querySelector('.quizzSeleccionado').style.display = 'none';
+    document.querySelector('.premio').style.display = 'none';
+    actualizarEstadoJuego(1);
+    return; 
   }
 
+    
+    // ===========Contador de Giros Disponibles============
+
+    girosDisponibles--;
+    
+      // Actualiza el contenido de #contador-giros con girosDisponibles
+      document.querySelector('#contador-giros').innerText = 'Giros disponibles: ' + girosDisponibles;
+    
 
   function premio(premios){
     var elemento = document.querySelector('.quizzSeleccionado');
@@ -119,6 +129,27 @@ function mostrarPreguntas(categoria) {
 
 
   function mostrarPregunta() {
+
+
+
+    
+    //CONDICIÓN: Si la categoría ya ha sido jugada
+
+    if (categoriasJugadas[categoria]) {
+
+      contenedorPreguntas.innerHTML = 'Esta categoría ya ha sido jugada. </br> Gira Nuevamente';
+    
+      giros = giros -1;
+      girosDisponibles = girosDisponibles + 1; 
+      setTimeout(function() {
+        contenedorPreguntas.innerHTML = ''; // Limpia el mensaje
+        girar();
+      }, 20000);
+      return;
+    }
+    categoriasJugadas[categoria] = true;
+
+
     // Detiene el temporizador anterior si existe
     if (temporizador) {
       clearInterval(temporizador);

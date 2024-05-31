@@ -50,7 +50,6 @@ body{
     width: 100% !important;
     display: flex;
     justify-content: start;
-    height: 30%;
 }
 
 .nav-logo img{
