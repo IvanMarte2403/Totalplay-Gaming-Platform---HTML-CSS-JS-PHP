@@ -66,6 +66,7 @@
             </div>
 
             <!-- ========Enlace de Registro o Inicio de Sesión============ -->
+            <p id="toggle-text">¿No tienes una cuenta? <a id="toggle-link" href="#" onclick="toggleForm()">Regístrate aquí</a>.</p>
           
 
             <div class="contenedor-animacion-personaje">
