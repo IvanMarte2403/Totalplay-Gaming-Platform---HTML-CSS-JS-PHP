@@ -25,6 +25,7 @@ body{
     background-color: var(--background-color);
     cursor: url('../img/recursos/balon-cursor.png'),auto;
     height: auto;
+    font-family: var(--font-secondary);
 }
 
 .container{
@@ -110,6 +111,8 @@ body{
     flex-direction: row;
     width: 100% !important;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 

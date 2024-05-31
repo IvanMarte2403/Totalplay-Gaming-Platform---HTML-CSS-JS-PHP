@@ -42,8 +42,8 @@
                     <input type="email" id="email" name="email" required>
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" id="contrasena" name="contrasena" required>
-             
-                    
+                  
+                    <p id="toggle-text">¿No tienes una cuenta? <a id="toggle-link" href="#" onclick="toggleForm()">Regístrate aquí</a>.</p>
                     <input class="boton-iniciar-sesion" type="submit" value="Iniciar sesión">
                 </form>
                
@@ -66,7 +66,12 @@
             </div>
 
             <!-- ========Enlace de Registro o Inicio de Sesión============ -->
-            <p id="toggle-text">¿No tienes una cuenta? <a id="toggle-link" href="#" onclick="toggleForm()">Regístrate aquí</a>.</p>
+
+            <div class="terminos-condiciones">
+                        <label for="terminos">He leído los términos y condiciones</label>
+                        <input type="checkbox" id="terminos" name="terminos" required>    
+                    </div>
+        
           
 
             <div class="contenedor-animacion-personaje">

@@ -84,7 +84,6 @@ nav a{
     width: 80%;
     height: 120vh;
     overflow: hidden; /* Oculta cualquier contenido que se desborde */
-    background-color: var(--background-color);
 }
 
 .game iframe {
@@ -93,6 +92,7 @@ nav a{
     border: none;
     overflow: hidden;
     min-height: 100vh;
+    background-color:  var(--background-color) !important;
 }
 
 

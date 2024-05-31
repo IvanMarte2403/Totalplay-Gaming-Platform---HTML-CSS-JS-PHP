@@ -12,24 +12,24 @@ function girar(){
 
    // =======Verificar la cantidad de giros=======
 
-   if(giros >= 3){
-    //Verifica si el jugador ya ha jugado antes
+//    if(giros >= 3){
+//     //Verifica si el jugador ya ha jugado antes
 
-  document.querySelector('#contenedor-preguntas').innerText = 'Has terminado el juego';
-  Swal.fire({
-  title: 'Has terminado el juego',
-  text: 'Gracias por jugar!',
-  icon: 'success',
-  confirmButtonText: 'Cool'
-})
-    document.querySelector('.contenedor-imagen').style.display = 'none';
-    document.querySelector('#contador-giros').style.display = 'none';
-    document.querySelector('.vara').style.display = 'none';
-    document.querySelector('.quizzSeleccionado').style.display = 'none';
-    document.querySelector('.premio').style.display = 'none';
-    actualizarEstadoJuego(1);
-    return; 
-  }
+//   document.querySelector('#contenedor-preguntas').innerText = 'Has terminado el juego';
+//   Swal.fire({
+//   title: 'Has terminado el juego',
+//   text: 'Gracias por jugar!',
+//   icon: 'success',
+//   confirmButtonText: 'Cool'
+// })
+//     document.querySelector('.contenedor-imagen').style.display = 'none';
+//     document.querySelector('#contador-giros').style.display = 'none';
+//     document.querySelector('.vara').style.display = 'none';
+//     document.querySelector('.quizzSeleccionado').style.display = 'none';
+//     document.querySelector('.premio').style.display = 'none';
+//     actualizarEstadoJuego(1);
+//     return; 
+//   }
 
     
     // ===========Contador de Giros Disponibles============
