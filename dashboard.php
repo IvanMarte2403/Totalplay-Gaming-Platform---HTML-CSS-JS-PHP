@@ -178,7 +178,7 @@ $conexion->close();
             </div>
             <div class="titulo-dashboard">
                  <h1>JUEGA AHORA</h1>
-                 <p>¡Gana & Vive la experiencia de las Champions con <b>Totalplay!</b></p>
+                 <p>¡Gana & Vive la experiencia con <b>Totalplay!</b></p>
             </div>
            
             <div class="catalogo-juegos">

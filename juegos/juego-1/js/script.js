@@ -6,7 +6,7 @@ ruleta.addEventListener('click', girar);
 giros = 0;
 let girosRestantes  = 3;
 var categoriasJugadas = {};
-var contenedorPreguntas = document.getElementById('contenedor-preguntas');
+var contenedorPreguntas = document.getElementById('contenedor-preguntas     ');
 
 
 

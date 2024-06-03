@@ -36,7 +36,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <h1>Memoria</h1>
         <div class="contenedor-instrucciones">
 
-            <img src="img/recursos/play.png" id="boton-jugar" alt="">
 
             <h2>
                 ¿Cómo Jugar Memoria?

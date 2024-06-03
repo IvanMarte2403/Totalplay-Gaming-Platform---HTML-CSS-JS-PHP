@@ -14,10 +14,10 @@ gdjs.evtsExt__CameraShake__StopShaking.eventsList0 = function(runtimeScene, even
 
 
 let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtsExt__CameraShake__IsShaking.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().get("__CameraShake_ShakeInProgress").setNumber(-(1));
+{
+{runtimeScene.getScene().getVariables().get("__CameraShake").getChild("Time").setNumber(0);
+}{runtimeScene.getScene().getVariables().get("__CameraShake").getChild("Duration").setNumber((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("EaseDuration")) || 0 : 0));
+}{runtimeScene.getScene().getVariables().get("__CameraShake").getChild("StopEaseDuration").setNumber((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("EaseDuration")) || 0 : 0));
 }}
 
 }
@@ -25,7 +25,7 @@ if (isConditionTrue_0) {
 
 };
 
-gdjs.evtsExt__CameraShake__StopShaking.func = function(runtimeScene, parentEventsFunctionContext) {
+gdjs.evtsExt__CameraShake__StopShaking.func = function(runtimeScene, EaseDuration, parentEventsFunctionContext) {
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -70,6 +70,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
     return runtimeScene.getLayer(layerName);
   },
   getArgument: function(argName) {
+if (argName === "EaseDuration") return EaseDuration;
     return "";
   },
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
