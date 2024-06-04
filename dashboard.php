@@ -205,7 +205,7 @@ $conexion->close();
                     </div>
 
                     <h3>
-                        <b class="black-juegos-personaje">¡Personaje Nuevo! </b>   en Te Reto
+                        <b class="black-juegos-personaje">¡Personaje Nuevo! </b>   en Misión
                     </h3>
                     <p>¡No permitas que lleguen al centro!</p>
                 </div>

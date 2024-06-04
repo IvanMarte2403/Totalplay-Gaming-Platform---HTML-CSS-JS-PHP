@@ -31,7 +31,7 @@ body{
 .container{
     display: flex;
     flex-direction: row;
-    background-color: var(--background-color);
+    background-color : var(--background-color);
 }
 
 
@@ -65,7 +65,8 @@ body{
     flex-direction: column;
     background-color: var(--background-color-2);
     border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    font-family: var(--font-secondary) !important; 
 }
 
 .container-register p{
