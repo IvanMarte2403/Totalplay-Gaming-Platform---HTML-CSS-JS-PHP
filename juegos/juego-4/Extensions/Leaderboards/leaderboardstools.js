@@ -206,6 +206,10 @@ var gdjs;
                   : "",
             },
             v = { "Content-Type": "application/json" };
+
+          console.log(s);
+          o.info("Saving score to leaderboard", t, "with data", s);
+          window.localStorage.setItem("leaderboard", r);
           let b = `${s}/game/${S.projectData.properties.projectUuid}/leaderboard/${t}/entry`;
           n
             ? ((v.Authorization = `player-game-token ${n.playerToken}`),
@@ -216,10 +220,9 @@ var gdjs;
           try {
             const y = await fetch(b, { body: L, method: "POST", headers: v });
             if (!y.ok) {
+              console.log("Error", r);
               const E = y.status.toString();
-              throw (
-                (o.error("Server responded with an error:", E, y.statusText), E)
-              );
+              throw (o.error("Server responded with an error:", s, E), E);
             }
             let j = null;
             try {
