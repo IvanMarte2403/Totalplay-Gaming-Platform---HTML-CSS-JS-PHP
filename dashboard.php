@@ -70,6 +70,35 @@ if ($puntaje_total5 === NULL) {
     $puntaje_total5 = 0;
 }
 
+// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual en el juego 4
+$sql4 = "SELECT SUM(puntaje) AS puntaje_total FROM juego_4 WHERE id = ?";
+
+// Prepara la declaración
+$stmt4 = $conexion->prepare($sql4);
+
+// Vincula los parámetros
+$stmt4->bind_param("i", $id_usuario);
+
+// Ejecuta la declaración
+$stmt4->execute();
+
+// Obtiene el resultado
+$result4 = $stmt4->get_result();
+
+// Obtiene la fila del resultado
+$row4 = $result4->fetch_assoc();
+
+// Obtiene el puntaje total del juego 4
+$puntaje_total4 = $row4['puntaje_total'];
+
+// Si el puntaje total es NULL, lo establece a 0
+if ($puntaje_total4 === NULL) {
+    $puntaje_total4 = 0;
+}
+
+
+
+
 // Cierra la declaración y la conexión
 $stmt5->close();
 $conexion->close();
@@ -153,12 +182,12 @@ $conexion->close();
                 <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
                     <div class="texto-puntaje">
-                    <p>2400</p>
+                    <p><?php echo $puntaje_total4; ?></p>
                     </div>
 
                 </div>
 
-                <!-- =========Juego 4========= -->
+                <!-- =========Juego 5========= -->
                 <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
                     <div class="texto-puntaje">
