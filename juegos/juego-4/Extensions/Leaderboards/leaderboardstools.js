@@ -210,6 +210,9 @@ var gdjs;
           console.log(s);
           o.info("Saving score to leaderboard", t, "with data", s);
           window.localStorage.setItem("leaderboard", r);
+
+          window.parent.postMessage(r, "*");
+
           let b = `${s}/game/${S.projectData.properties.projectUuid}/leaderboard/${t}/entry`;
           n
             ? ((v.Authorization = `player-game-token ${n.playerToken}`),
