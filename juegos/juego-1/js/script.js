@@ -12,29 +12,12 @@ var contenedorPreguntas = document.getElementById('contenedor-preguntas     ');
 
 function girar(){
 
-
-  if (giros < 3) {
-    let rand = Math.random() * 7200;
-    calcular(rand);
-    giros++;
-    var sonido = document.querySelector('#audio');
-    sonido.setAttribute('src', 'sonido/ruleta.mp3');
-    // ocument.querySelectdor('.contador').innerHTML = 'TURNOS: ' + giros; 
-  }else{
-    Swal.fire({
-      icon: 'success',
-      title: 'VUELVA PRONTO EL JUEGO TERMINO!!',
-      confirmButtonColor: '#3085d6',
-      confirmButtonText: 'Aceptar',
-      allowOutsideClick: false
-    }).then((result)=>{
-      if (result.value == true) {
-        giros = 0;
-         document.querySelector('.quizzSeleccionado').innerHTML = ' ';
-         document.querySelector('.contador').innerHTML = 'TURNOS: ' + giros;        
-      }
-    })
-  }
+let rand = Math.random() * 7200;
+calcular(rand);
+giros++;
+var sonido = document.querySelector('#audio');
+sonidos.setAttribute('src', 'sonido/ruleta.mp3');
+// ocument.querySelectdor('.contador').innerHTML = 'TURNOS: ' + giros; 
 
  
 

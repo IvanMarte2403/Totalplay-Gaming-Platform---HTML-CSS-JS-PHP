@@ -195,7 +195,6 @@ box-shadow: rgba(0, 128, 0, 0.2) 0 15px 30px -5px !important;
 
 #contenedor-preguntas {
     font-size: 1.5rem;
-    width: 100%;
     margin-top: 2rem;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -301,5 +300,9 @@ box-shadow: rgba(0, 128, 0, 0.2) 0 15px 30px -5px !important;
 
     #temporizador-pregunta{
         font-size: 1.2rem;
+    }
+
+    #contenedor-preguntas{
+        width: 100%;
     }
 }
