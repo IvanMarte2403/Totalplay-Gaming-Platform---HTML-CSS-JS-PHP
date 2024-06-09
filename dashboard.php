@@ -247,7 +247,7 @@ $conexion->close();
                     <h3>
                        <b class="black2-juegos-personaje">¡Nuevo Pool De Preguntas! </b>   
                     </h3>
-                    <p>¡Solo tienes una oportunidad!</p>
+                    <p>Juega en todas las categorías</p>
                 </div>
 
             
@@ -368,7 +368,7 @@ $conexion->close();
                     <h3>Misión</h3>
                     <p>
 
-                        ¡Obten el punta mas alto, golpea y no dejes que lleguen al suelo! 
+                        ¡Obtén el puntaje mas alto, golpea y no dejes que lleguen al suelo! 
                     </p>
 
                     <div class="calificacion-estrellas">

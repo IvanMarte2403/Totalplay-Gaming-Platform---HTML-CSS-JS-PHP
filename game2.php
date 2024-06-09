@@ -43,7 +43,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </h2>
 
             <p>¡No permitas que lleguen al centro! Dispara y acumula puntos para mejorar tu tiro y fuerza <br> <br>
-                ¡Muevete y obtén los cuadros blancos de los enemigos  para aumentar tu nivel! 
+                ¡Muévete y obtén los cuadros blancos de los enemigos  para aumentar tu nivel! 
             </p>
         
             <div class="contenedor-instrucciones-teclas">

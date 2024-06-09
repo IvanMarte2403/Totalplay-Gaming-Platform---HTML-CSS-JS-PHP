@@ -6,7 +6,7 @@ ruleta.addEventListener('click', girar);
 giros = 0;
 let girosRestantes  = 3;
 var categoriasJugadas = {};
-var contenedorPreguntas = document.getElementById('contenedor-preguntas     ');
+var contenedorPreguntas = document.getElementById('contenedor-preguntas');
 
 
 
@@ -18,7 +18,7 @@ giros++;
 var sonido = document.querySelector('#audio');
 sonidos.setAttribute('src', 'sonido/ruleta.mp3');
 // ocument.querySelectdor('.contador').innerHTML = 'TURNOS: ' + giros; 
-
+ 
  
 
 
@@ -59,7 +59,7 @@ sonidos.setAttribute('src', 'sonido/ruleta.mp3');
     }
   
     elemento.innerHTML = premios;
-  }
+  } 
 
 
  function calcular(rand) {
@@ -99,23 +99,23 @@ sonidos.setAttribute('src', 'sonido/ruleta.mp3');
 var puntuacion = 0; 
 
 function mostrarPreguntas(categoria) {
+  console.log(categoriasJugadas);
 
   
-    //CONDICIÓN: Si la categoría ya ha sido jugada
+    //CONDICIÓN: Si la catego ría ya ha sido jugada
 
     if (categoriasJugadas[categoria]) {
-
-      contenedorPreguntas.innerHTML = 'Esta categoría ya ha sido jugada. </br> Gira Nuevamente';
     
       giros = giros -1;
-      girosDisponibles = girosDisponibles + 1; 
+      girosRestantes = girosRestantes + 1; // Corrección: la variable debe ser girosRestantes, no girosDisponibles
       setTimeout(function() {
-        contenedorPreguntas.innerHTML = ''; // Limpia el mensaje
-        girar();
+          contenedorPreguntas.innerHTML = ''; // Limpia el mensaje
+          contenedorPreguntas.innerHTML = 'Esta categoría ya ha sido jugada. </br> Gira Nuevamente';
+          girar();
       }, 2000);
       return;
-    }
-    categoriasJugadas[categoria] = true;
+  }
+  categoriasJugadas[categoria] = true;
 
 
 
