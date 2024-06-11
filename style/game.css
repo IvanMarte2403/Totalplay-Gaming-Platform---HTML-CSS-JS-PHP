@@ -82,7 +82,7 @@ nav a{
     margin-top: 5vh;
     background-color: var(--color-primary) !important;
     width: 80%;
-    height: 120vh;
+    height: auto !important;
     overflow: hidden; /* Oculta cualquier contenido que se desborde */
 }
 

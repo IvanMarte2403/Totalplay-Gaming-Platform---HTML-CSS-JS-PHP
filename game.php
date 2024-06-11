@@ -42,9 +42,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                
             </h2>
 
-            <p>¿Estás seguro de conocer todos los secretos del deporte? Demuestra tu conocimiento en las siguientes categorías</p>
+            <p>¿Estás seguro de conocer todos los secretos del deporte? Demuestra tu conocimiento en las siguientes categorías.</p>
             
-            <p>Gira la ruleta y selecciona las respuestas correctas </p>
+            <p>Gira la ruleta y selecciona las respuestas correctas.</p>
 
             <div class="contenedor-instrucciones-teclas">
         

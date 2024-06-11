@@ -42,7 +42,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                
             </h2>
 
-            <p>¡Es hora de poner en práctica esa Memoria! Encuentra las cartas iguales, en tiempo record y acumula puntos</p>
+            <p>¡Es hora de poner en práctica esa Memoria! Encuentra las cartas iguales, en tiempo record y acumula puntos.</p>
 
             <p>Recuerda darle click en 'Guardar Puntaje' para guardar tus resultados en tu perfil</p>
             <div class="contenedor-instrucciones-teclas">

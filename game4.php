@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                
             </h2>
 
-            <p>¡No permitas que lleguen al suelo, obtén el mayor puntaje, evitando que los objetos toquen el suelo</p>
+            <p>¡No permitas que lleguen al suelo, obtén el mayor puntaje, evitando que los objetos toquen el suelo.</p>
             
 
 
