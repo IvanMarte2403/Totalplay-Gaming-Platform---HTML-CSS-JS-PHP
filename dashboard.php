@@ -9,99 +9,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-// Incluir la conexión a la base de datos
+// Incluir la conexión a la bas e de datos y obtener los puntajes
 include 'db_conexion.php';
+include 'obtener_puntajes.php'; // Importa el archivo que contiene el código para obtener los puntajes
 
-// Obtiene el ID del usuario actual
-$id_usuario = $_SESSION['id'];
-
-// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual en el juego 1
-$sql1 = "SELECT SUM(puntaje) AS puntaje_total FROM juego_1 WHERE id = ?";       
-
-// Prepara la declaración
-$stmt1 = $conexion->prepare($sql1);
-
-// Vincula los parámetros
-$stmt1->bind_param("i", $id_usuario);
-
-// Ejecuta la declaración
-$stmt1->execute();
-
-// Obtiene el resultado
-$result1 = $stmt1->get_result();
-
-// Obtiene la fila del resultado
-$row1 = $result1->fetch_assoc();
-
-// Obtiene el puntaje total del juego 1
-$puntaje_total1 = $row1['puntaje_total'];
-
-// Si el puntaje total es NULL, lo establece a 0
-if ($puntaje_total1 === NULL) {
-    $puntaje_total1 = 0;
-}
-
-// Cierra la declaración
-$stmt1->close();
-
-// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual en el juego 5
-$sql5 = "SELECT SUM(puntaje) AS puntaje_total FROM juego_5 WHERE id = ?";
-
-// Prepara la declaración
-$stmt5 = $conexion->prepare($sql5);
-
-// Vincula los parámetros
-$stmt5->bind_param("i", $id_usuario);
-
-// Ejecuta la declaración
-$stmt5->execute();
-
-// Obtiene el resultado
-$result5 = $stmt5->get_result();
-
-// Obtiene la fila del resultado
-$row5 = $result5->fetch_assoc();
-
-// Obtiene el puntaje total del juego 5
-$puntaje_total5 = $row5['puntaje_total'];
-
-// Si el puntaje total es NULL, lo establece a 0
-if ($puntaje_total5 === NULL) {
-    $puntaje_total5 = 0;
-}
-
-// Prepara la consulta SQL para obtener la suma de los puntajes del usuario actual en el juego 4
-$sql4 = "SELECT SUM(puntaje) AS puntaje_total FROM juego_4 WHERE id = ?";
-
-// Prepara la declaración
-$stmt4 = $conexion->prepare($sql4);
-
-// Vincula los parámetros
-$stmt4->bind_param("i", $id_usuario);
-
-// Ejecuta la declaración
-$stmt4->execute();
-
-// Obtiene el resultado
-$result4 = $stmt4->get_result();
-
-// Obtiene la fila del resultado
-$row4 = $result4->fetch_assoc();
-
-// Obtiene el puntaje total del juego 4
-$puntaje_total4 = $row4['puntaje_total'];
-
-// Si el puntaje total es NULL, lo establece a 0
-if ($puntaje_total4 === NULL) {
-    $puntaje_total4 = 0;
-}
-
-
-
-
-// Cierra la declaración y la conexión
-$stmt5->close();
-$conexion->close();
 ?>
 
 <!DOCTYPE html>
@@ -162,7 +73,7 @@ $conexion->close();
                 <div class="contenedor-puntaje-juego">
                     <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
                     <div class="texto-puntaje">
-                    <p>2500</p>
+                    <p><?php echo $puntaje_total2; ?></p>
                     </div>
 
                 </div>
@@ -207,7 +118,7 @@ $conexion->close();
             </div>
             <div class="titulo-dashboard">
                  <h1>JUEGA AHORA</h1>
-                 <p>¡Gana & Vive la experiencia con <b>Totalplay!</b></p>
+                 <p>¡Gana & vive la experiencia con <b>Totalplay!</b></p>
             </div>
            
             <div class="catalogo-juegos">

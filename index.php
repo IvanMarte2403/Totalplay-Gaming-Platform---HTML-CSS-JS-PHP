@@ -22,7 +22,7 @@
             </div>
 
             <div class="dialogo-texto">
-                ¡Hola, soy Roberto!  Bienvenido a TotalplayGaming. Tu oportunidad de ganar increibles premios.
+                ¡Hola, soy Roberto!  Bienvenido a Totalplay     Gaming. Tu oportunidad de ganar increibles premios.
             </div>
 
             <div class="phase-totalplay">   

@@ -29,6 +29,12 @@ gdjs.MainMenuCode.GDTransitionObjects1= [];
 gdjs.MainMenuCode.GDTransitionObjects2= [];
 gdjs.MainMenuCode.GDDarkenObjects1= [];
 gdjs.MainMenuCode.GDDarkenObjects2= [];
+gdjs.MainMenuCode.GDFloorObjects1= [];
+gdjs.MainMenuCode.GDFloorObjects2= [];
+gdjs.MainMenuCode.GDSpiderEnemyObjects1= [];
+gdjs.MainMenuCode.GDSpiderEnemyObjects2= [];
+gdjs.MainMenuCode.GDPlayerObjects1= [];
+gdjs.MainMenuCode.GDPlayerObjects2= [];
 
 
 gdjs.MainMenuCode.eventsList0 = function(runtimeScene) {
@@ -401,6 +407,12 @@ gdjs.MainMenuCode.GDTransitionObjects1.length = 0;
 gdjs.MainMenuCode.GDTransitionObjects2.length = 0;
 gdjs.MainMenuCode.GDDarkenObjects1.length = 0;
 gdjs.MainMenuCode.GDDarkenObjects2.length = 0;
+gdjs.MainMenuCode.GDFloorObjects1.length = 0;
+gdjs.MainMenuCode.GDFloorObjects2.length = 0;
+gdjs.MainMenuCode.GDSpiderEnemyObjects1.length = 0;
+gdjs.MainMenuCode.GDSpiderEnemyObjects2.length = 0;
+gdjs.MainMenuCode.GDPlayerObjects1.length = 0;
+gdjs.MainMenuCode.GDPlayerObjects2.length = 0;
 
 gdjs.MainMenuCode.eventsList0(runtimeScene);
 

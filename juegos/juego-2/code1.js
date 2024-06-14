@@ -21,16 +21,6 @@ gdjs.Untitled_32sceneCode.forEachObjects3 = [];
 
 gdjs.Untitled_32sceneCode.forEachTotalCount3 = 0;
 
-gdjs.Untitled_32sceneCode.GDFloorObjects1= [];
-gdjs.Untitled_32sceneCode.GDFloorObjects2= [];
-gdjs.Untitled_32sceneCode.GDFloorObjects3= [];
-gdjs.Untitled_32sceneCode.GDFloorObjects4= [];
-gdjs.Untitled_32sceneCode.GDFloorObjects5= [];
-gdjs.Untitled_32sceneCode.GDPlayerObjects1= [];
-gdjs.Untitled_32sceneCode.GDPlayerObjects2= [];
-gdjs.Untitled_32sceneCode.GDPlayerObjects3= [];
-gdjs.Untitled_32sceneCode.GDPlayerObjects4= [];
-gdjs.Untitled_32sceneCode.GDPlayerObjects5= [];
 gdjs.Untitled_32sceneCode.GDGunObjects1= [];
 gdjs.Untitled_32sceneCode.GDGunObjects2= [];
 gdjs.Untitled_32sceneCode.GDGunObjects3= [];
@@ -46,11 +36,6 @@ gdjs.Untitled_32sceneCode.GDGhostEnemyObjects2= [];
 gdjs.Untitled_32sceneCode.GDGhostEnemyObjects3= [];
 gdjs.Untitled_32sceneCode.GDGhostEnemyObjects4= [];
 gdjs.Untitled_32sceneCode.GDGhostEnemyObjects5= [];
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects1= [];
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects2= [];
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects3= [];
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects4= [];
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects5= [];
 gdjs.Untitled_32sceneCode.GDImpEnemyObjects1= [];
 gdjs.Untitled_32sceneCode.GDImpEnemyObjects2= [];
 gdjs.Untitled_32sceneCode.GDImpEnemyObjects3= [];
@@ -146,6 +131,16 @@ gdjs.Untitled_32sceneCode.GDAimingObjects2= [];
 gdjs.Untitled_32sceneCode.GDAimingObjects3= [];
 gdjs.Untitled_32sceneCode.GDAimingObjects4= [];
 gdjs.Untitled_32sceneCode.GDAimingObjects5= [];
+gdjs.Untitled_32sceneCode.GDScoreObjects1= [];
+gdjs.Untitled_32sceneCode.GDScoreObjects2= [];
+gdjs.Untitled_32sceneCode.GDScoreObjects3= [];
+gdjs.Untitled_32sceneCode.GDScoreObjects4= [];
+gdjs.Untitled_32sceneCode.GDScoreObjects5= [];
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects1= [];
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects2= [];
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects3= [];
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects4= [];
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects5= [];
 gdjs.Untitled_32sceneCode.GDTransitionObjects1= [];
 gdjs.Untitled_32sceneCode.GDTransitionObjects2= [];
 gdjs.Untitled_32sceneCode.GDTransitionObjects3= [];
@@ -156,6 +151,21 @@ gdjs.Untitled_32sceneCode.GDDarkenObjects2= [];
 gdjs.Untitled_32sceneCode.GDDarkenObjects3= [];
 gdjs.Untitled_32sceneCode.GDDarkenObjects4= [];
 gdjs.Untitled_32sceneCode.GDDarkenObjects5= [];
+gdjs.Untitled_32sceneCode.GDFloorObjects1= [];
+gdjs.Untitled_32sceneCode.GDFloorObjects2= [];
+gdjs.Untitled_32sceneCode.GDFloorObjects3= [];
+gdjs.Untitled_32sceneCode.GDFloorObjects4= [];
+gdjs.Untitled_32sceneCode.GDFloorObjects5= [];
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects1= [];
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects2= [];
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects3= [];
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects4= [];
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects5= [];
+gdjs.Untitled_32sceneCode.GDPlayerObjects1= [];
+gdjs.Untitled_32sceneCode.GDPlayerObjects2= [];
+gdjs.Untitled_32sceneCode.GDPlayerObjects3= [];
+gdjs.Untitled_32sceneCode.GDPlayerObjects4= [];
+gdjs.Untitled_32sceneCode.GDPlayerObjects5= [];
 
 
 gdjs.Untitled_32sceneCode.eventsList0 = function(runtimeScene) {
@@ -303,7 +313,7 @@ gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDShadowO
 gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDDropObjects3Objects = Hashtable.newFrom({"Drop": gdjs.Untitled_32sceneCode.GDDropObjects3});
 gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDSpiderEnemyObjects4Objects = Hashtable.newFrom({"SpiderEnemy": gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects4});
 gdjs.Untitled_32sceneCode.mapOfGDgdjs_9546Untitled_959532sceneCode_9546GDHealthBar_95959595EnemyObjects4Objects = Hashtable.newFrom({"HealthBar_Enemy": gdjs.Untitled_32sceneCode.GDHealthBar_9595EnemyObjects4});
-gdjs.Untitled_32sceneCode.asyncCallback15968012 = function (runtimeScene, asyncObjectsList) {
+gdjs.Untitled_32sceneCode.asyncCallback16084108 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(asyncObjectsList.getObjects("SpiderSpawnPoints"), gdjs.Untitled_32sceneCode.GDSpiderSpawnPointsObjects4);
 
 gdjs.Untitled_32sceneCode.GDHealthBar_9595EnemyObjects4.length = 0;
@@ -329,7 +339,7 @@ gdjs.Untitled_32sceneCode.eventsList4 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 for (const obj of gdjs.Untitled_32sceneCode.GDSpiderSpawnPointsObjects3) asyncObjectsList.addObject("SpiderSpawnPoints", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Untitled_32sceneCode.asyncCallback15968012(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Untitled_32sceneCode.asyncCallback16084108(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -1007,7 +1017,12 @@ for (var i = 0, k = 0, l = gdjs.Untitled_32sceneCode.GDImpEnemyObjects1.length;i
 }
 gdjs.Untitled_32sceneCode.GDImpEnemyObjects1.length = k;
 if (isConditionTrue_0) {
-
+gdjs.copyArray(runtimeScene.getObjects("score_numero"), gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects1);
+{for(var i = 0, len = gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects1.length ;i < len;++i) {
+    gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1))));
+}
+}{runtimeScene.getGame().getVariables().getFromIndex(1).add(20);
+}
 { //Subevents
 gdjs.Untitled_32sceneCode.eventsList8(runtimeScene);} //End of subevents
 }
@@ -1505,7 +1520,7 @@ gdjs.copyArray(gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects1_1final, gdjs.Unti
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Game Over", false);
 }}
 
 }
@@ -1845,16 +1860,6 @@ if (isConditionTrue_0) {
 gdjs.Untitled_32sceneCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs.Untitled_32sceneCode.GDFloorObjects1.length = 0;
-gdjs.Untitled_32sceneCode.GDFloorObjects2.length = 0;
-gdjs.Untitled_32sceneCode.GDFloorObjects3.length = 0;
-gdjs.Untitled_32sceneCode.GDFloorObjects4.length = 0;
-gdjs.Untitled_32sceneCode.GDFloorObjects5.length = 0;
-gdjs.Untitled_32sceneCode.GDPlayerObjects1.length = 0;
-gdjs.Untitled_32sceneCode.GDPlayerObjects2.length = 0;
-gdjs.Untitled_32sceneCode.GDPlayerObjects3.length = 0;
-gdjs.Untitled_32sceneCode.GDPlayerObjects4.length = 0;
-gdjs.Untitled_32sceneCode.GDPlayerObjects5.length = 0;
 gdjs.Untitled_32sceneCode.GDGunObjects1.length = 0;
 gdjs.Untitled_32sceneCode.GDGunObjects2.length = 0;
 gdjs.Untitled_32sceneCode.GDGunObjects3.length = 0;
@@ -1870,11 +1875,6 @@ gdjs.Untitled_32sceneCode.GDGhostEnemyObjects2.length = 0;
 gdjs.Untitled_32sceneCode.GDGhostEnemyObjects3.length = 0;
 gdjs.Untitled_32sceneCode.GDGhostEnemyObjects4.length = 0;
 gdjs.Untitled_32sceneCode.GDGhostEnemyObjects5.length = 0;
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects1.length = 0;
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects2.length = 0;
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects3.length = 0;
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects4.length = 0;
-gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects5.length = 0;
 gdjs.Untitled_32sceneCode.GDImpEnemyObjects1.length = 0;
 gdjs.Untitled_32sceneCode.GDImpEnemyObjects2.length = 0;
 gdjs.Untitled_32sceneCode.GDImpEnemyObjects3.length = 0;
@@ -1970,6 +1970,16 @@ gdjs.Untitled_32sceneCode.GDAimingObjects2.length = 0;
 gdjs.Untitled_32sceneCode.GDAimingObjects3.length = 0;
 gdjs.Untitled_32sceneCode.GDAimingObjects4.length = 0;
 gdjs.Untitled_32sceneCode.GDAimingObjects5.length = 0;
+gdjs.Untitled_32sceneCode.GDScoreObjects1.length = 0;
+gdjs.Untitled_32sceneCode.GDScoreObjects2.length = 0;
+gdjs.Untitled_32sceneCode.GDScoreObjects3.length = 0;
+gdjs.Untitled_32sceneCode.GDScoreObjects4.length = 0;
+gdjs.Untitled_32sceneCode.GDScoreObjects5.length = 0;
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects1.length = 0;
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects2.length = 0;
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects3.length = 0;
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects4.length = 0;
+gdjs.Untitled_32sceneCode.GDscore_9595numeroObjects5.length = 0;
 gdjs.Untitled_32sceneCode.GDTransitionObjects1.length = 0;
 gdjs.Untitled_32sceneCode.GDTransitionObjects2.length = 0;
 gdjs.Untitled_32sceneCode.GDTransitionObjects3.length = 0;
@@ -1980,6 +1990,21 @@ gdjs.Untitled_32sceneCode.GDDarkenObjects2.length = 0;
 gdjs.Untitled_32sceneCode.GDDarkenObjects3.length = 0;
 gdjs.Untitled_32sceneCode.GDDarkenObjects4.length = 0;
 gdjs.Untitled_32sceneCode.GDDarkenObjects5.length = 0;
+gdjs.Untitled_32sceneCode.GDFloorObjects1.length = 0;
+gdjs.Untitled_32sceneCode.GDFloorObjects2.length = 0;
+gdjs.Untitled_32sceneCode.GDFloorObjects3.length = 0;
+gdjs.Untitled_32sceneCode.GDFloorObjects4.length = 0;
+gdjs.Untitled_32sceneCode.GDFloorObjects5.length = 0;
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects1.length = 0;
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects2.length = 0;
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects3.length = 0;
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects4.length = 0;
+gdjs.Untitled_32sceneCode.GDSpiderEnemyObjects5.length = 0;
+gdjs.Untitled_32sceneCode.GDPlayerObjects1.length = 0;
+gdjs.Untitled_32sceneCode.GDPlayerObjects2.length = 0;
+gdjs.Untitled_32sceneCode.GDPlayerObjects3.length = 0;
+gdjs.Untitled_32sceneCode.GDPlayerObjects4.length = 0;
+gdjs.Untitled_32sceneCode.GDPlayerObjects5.length = 0;
 
 gdjs.Untitled_32sceneCode.eventsList20(runtimeScene);
 
