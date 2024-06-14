@@ -49,7 +49,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
             </div>
 
             <div class="puntaje-player">
-                <p>Mi Puntaje Total : </p>
+                <p>Mi puntaje Total : </p>
                 <h2><?php echo $puntaje_total1 + $puntaje_total5; ?></h2>
             </div>
 
@@ -190,6 +190,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
         <div class="seccion-juegos">
 
         <div class="contenedor-seccion-juegos">
+            
              <!-- ==============Juego 1 ============== -->
              <div class="contenedor-juego-explicacion">
                 <a href="game.php" class="imagen-juego-explicacion">
@@ -197,9 +198,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                 </a>
 
                 <div class="explicacion-texto">
-                    <a href="game.php" class="temporada-game">
-                        <p>JUGAR</p>
-                    </a>
+                  
                     <h3>Big Trivia </h3>
                     <p>
                         Juego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.                    </p>
@@ -212,6 +211,10 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
+
+                    <a href="game.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                 </div>
             </div>
             <!-- ==============Juego 2 ============== -->
@@ -221,9 +224,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                 </a>
 
                 <div class="explicacion-texto">
-                    <a href="game2.php" class="temporada-game">
-                        <p>JUGAR</p>
-                    </a>
+                   
                     <h3>Te Reto</h3>
                     <p>
                        Detén enemigos, mejora cañonazos, acumula puntos.                  
@@ -236,6 +237,10 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
+
+                    <a href="game.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -273,9 +278,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                 </a>
  
                 <div class="explicacion-texto">
-                    <a href="game4.php" class="temporada-game">
-                        <p>JUGAR</p>
-                    </a>
+                   
                     <h3>Misión</h3>
                     <p>
 
@@ -289,6 +292,10 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
+
+                    <a href="game.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                 </div>
             </div>
 
@@ -299,9 +306,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                 </a>
 
                 <div class="explicacion-texto">
-                    <a href="game5.php" class="temporada-game">
-                        <p>JUGAR</p>
-                    </a>
+                 
                     <h3>Memoria</h3>
                     <p>
                     Juego de memoria con tarjetas únicas sobre football soccer  
@@ -313,6 +318,10 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
+
+                    <a href="game.php" class="temporada-game">
+                        <p>JUGAR</p>
+                    </a>
                 </div>
             </div>
 

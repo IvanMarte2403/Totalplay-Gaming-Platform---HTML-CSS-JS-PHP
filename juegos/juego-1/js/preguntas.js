@@ -18,7 +18,7 @@ let preguntas = {
         { pregunta: '¿Cómo influye la física en el vuelo de un balón de fútbol?', respuestas: ['Por la gravedad y la resistencia del aire', 'Solo por la fuerza del impacto', 'Por la gravedad y la resistencia del aire'], respuestaCorrecta: 0 },
         { pregunta: '¿Qué aspecto de la nutrición es crucial para los jugadores de fútbol durante torneos internacionales?', respuestas: ['Hidratación', 'Consumo exclusivo de proteínas', 'Ayuno intermitente'], respuestaCorrecta: 0 },
         { pregunta: '¿Qué papel juega la biomecánica en el entrenamiento de los futbolistas profesionales?', respuestas: ['Mejorar la postura', 'Optimizar los movimientos para prevenir lesiones', 'Incrementar la masa muscular exclusivamente'], respuestaCorrecta: 1 },
-        { pregunta: '¿Cómo contribuye la psicología deportiva al desempeño de los equipos en torneos internacionales?', respuestas: ['Ayudando a mejorar la concentración y el manejo del estrés', 'Permitiendo a los jugadores ignorar al árbitro', 'Aumentando únicamente la agresividad en el campo'], respuestaCorrecta: 0 }
+        { pregunta: '¿Cómo contribuye la psicología deportiva al desempeño de los equipos en torneos internacionales?', respuestas: ['Manejo del estrés', 'Ignorar al árbitro', 'Agresividad en el campo'], respuestaCorrecta: 0 }
     ],
     'arte': [
         { pregunta: '¿Qué estilo artístico predominó en la creación del trofeo de la Copa del Mundo?', respuestas: ['Art Deco', 'Modernismo', 'Surrealismo'], respuestaCorrecta: 0 },
