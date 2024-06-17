@@ -292,10 +292,22 @@ box-shadow: rgba(0, 128, 0, 0.2) 0 15px 30px -5px !important;
 
     #contenedor-preguntas {
         font-size: 1.5rem;
+        
     }
+
+    #contenedor-respuestas{ 
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 80%;
+    }
+
+
+
 
     #contenedor-respuestas p{
         font-size: 1.2rem;
+        text-wrap: wrap;
+
     }
 
     #temporizador-pregunta{

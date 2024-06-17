@@ -3,7 +3,7 @@ let preguntas = {
         { pregunta: '¿En qué año se realizó el primer Mundial de Fútbol?', respuestas: ['1930', '1950', '1970'], respuestaCorrecta: 0 },
         { pregunta: '¿Qué país fue anfitrión del primer Mundial de Fútbol?', respuestas: ['Brasil', 'Italia', 'Uruguay'], respuestaCorrecta: 2 },
         { pregunta: '¿Qué país ganó su primer Mundial en 1966?', respuestas: ['Brasil', 'Inglaterra', 'Argentina'], respuestaCorrecta: 1 },
-        { pregunta: '¿Cuál fue el primer Mundial en utilizar tecnología de línea de gol?', respuestas: ['2010', '2014', '2018'], respuestaCorrecta: 1 },
+        { pregunta: '¿Cuál fue el primer Mundial en utilizar tecnología de línea de gol?', respuestas: ['2010', '2014', '2018'], respuestaCorrecta:  1 },
         { pregunta: '¿Qué equipo ganó la Copa América por primera vez en 1916?', respuestas: ['Uruguay', 'Argentina', 'Brasil'], respuestaCorrecta: 1 }
     ],
     'geografia': [

@@ -49,7 +49,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
             </div>
 
             <div class="puntaje-player">
-                <p>Mi puntaje Total : </p>
+                <p>Mi puntaje total : </p>
                 <h2><?php echo $puntaje_total1 + $puntaje_total5; ?></h2>
             </div>
 
@@ -158,7 +158,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                     <h3>
                        <b class="black2-juegos-personaje">¡Nuevo Pool De Preguntas! </b>   
                     </h3>
-                    <p>Juega en todas las categorías</p>
+                    <p>Juega en todas las categorías.</p>
                 </div>
 
             
@@ -238,7 +238,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                         <i class="fas fa-star"></i>
                     </div>
 
-                    <a href="game.php" class="temporada-game">
+                    <a href="game2.php" class="temporada-game">
                         <p>JUGAR</p>
                     </a>
                 </div>
@@ -282,7 +282,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                     <h3>Misión</h3>
                     <p>
 
-                        ¡Obtén el puntaje mas alto, golpea y no dejes que lleguen al suelo! 
+                        ¡Obtén el puntaje mas alto, golpea y no dejes que lleguen al suelo!.
                     </p>
 
                     <div class="calificacion-estrellas">
@@ -293,7 +293,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                         <i class="fas fa-star"></i>
                     </div>
 
-                    <a href="game.php" class="temporada-game">
+                    <a href="game4.php" class="temporada-game">
                         <p>JUGAR</p>
                     </a>
                 </div>
@@ -309,7 +309,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                  
                     <h3>Memoria</h3>
                     <p>
-                    Juego de memoria con tarjetas únicas sobre football soccer  
+                    Juego de memoria con tarjetas únicas sobre football soccer. 
                     </p>
 
                     <div class="calificacion-estrellas">
@@ -319,11 +319,11 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                         <i class="fas fa-star"></i>
                     </div>
 
-                    <a href="game.php" class="temporada-game">
+                    <a href="game5.php" class="temporada-game">
                         <p>JUGAR</p>
                     </a>
                 </div>
-            </div>
+            </div>  
 
         </div>
            
