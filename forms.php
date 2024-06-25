@@ -9,12 +9,12 @@ $numero_cliente_totalplay = $_POST['numero_cliente_totalplay'];
 
 include 'db_conexion.php';
 
-
-
 $sql = "INSERT INTO usuarios (nombre_apellidos, email, contrasena, genero, celular, fecha_nacimiento, numero_cliente_totalplay) VALUES ('$nombre_apellidos', '$email', '$contrasena', '$genero', '$celular', '$fecha_nacimiento', '$numero_cliente_totalplay')";
 
 if ($conexion->query($sql) === TRUE) {
-    echo "Registro creado exitosamente";
+    // Redirigir al usuario a dashboard.php
+    header('Location: dashboard.php');
+    exit();
 } else {
     echo "Error: " . $sql . "<br>" . $conexion->error;
 }

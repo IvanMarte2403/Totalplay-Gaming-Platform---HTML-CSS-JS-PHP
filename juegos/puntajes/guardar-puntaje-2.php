@@ -21,13 +21,10 @@ $stmt->bind_param("ii", $id_usuario, $puntaje);
 // Ejecuta la declaración
 $stmt->execute();
 
-// Verifica si se insertó el puntaje
 if ($stmt->affected_rows > 0) {
-    // Devuelve el puntaje
-    echo $puntaje;
+    echo json_encode(['success' => true, 'message' => 'Puntaje guardado con éxito.']);
 } else {
-    // Devuelve un error
-    echo 'Error al guardar el puntaje: ' . $conexion->error;
+    echo json_encode(['success' => false, 'message' => 'Error al guardar el puntaje: ' . $conexion->error]);
 }
 
 // Cierra la declaración y la conexión
