@@ -22,7 +22,7 @@ window.addEventListener("message", ev => {
                 if (data.success) {
                     // Si el puntaje se guardó con éxito, muestra una alerta y redirige
                     alert(data.message); // Muestra el mensaje de éxito
-                    window.location.href = '/dashboard.php'; // Redirige al dashboard
+                    window.location.href = '../dashboard.php'; // Redirige al dashboard
                 } else {
                     // Si hubo un error al guardar, muestra una alerta con el mensaje de error
                     alert(data.message);
