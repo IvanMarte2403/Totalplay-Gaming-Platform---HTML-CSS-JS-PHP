@@ -65,7 +65,7 @@ include 'obtener_puntajes.php'; // Importa el archivo que contiene el código pa
                     <div class="texto-puntaje">
                     <p><?php echo $puntaje_total1; ?></p>
                     </div>
-
+                    
                 </div>
 
                 <!-- Puntaje Número 2  -->
