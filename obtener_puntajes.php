@@ -122,4 +122,9 @@ if ($puntaje_total4 === NULL) {
 $stmt4->close(); // Asegúrate de cerrar stmt4 antes de stmt5
 $stmt5->close();
 $conexion->close();
+
+
+//Guarda el puntaje de todos los juegos: 
+
+$puntaje_total_score = $puntaje_total1 + $puntaje_total2 + $puntaje_total4 + $puntaje_total5;
 ?>

@@ -5,7 +5,9 @@
     --background-color-2: #26254f;
     --background-color-3: #1c1b3b;
     --font-secondary: 'Rubik';
-    --font-third: 'Roboto';
+    --font-third: 'Rubik';
+    --bottom-gradient-1: radial-gradient(circle at center, #3f60a7, #0000ff);
+
 }
 
 
@@ -15,6 +17,9 @@
     box-sizing: border-box;
 }   
 
+html,body{
+    height: 100%;
+}
 body{
     background-color: var(--background-color);
     cursor: url('../img/recursos/balon-cursor.png'),auto;
@@ -26,7 +31,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    height: 100%;
 }
 
 .player-container{
@@ -35,29 +40,28 @@ body{
     justify-content: start;
     align-items: center;
     background-color: rgba(38, 37, 79, 0.9); /* 50% de transparencia */
-    width: 20%;
+    width: 25%;
     padding: 1rem;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    
 
 }
 
 .info-player{
     display: flex;
     flex-direction: row;
+    margin-top: 1vh;
 }
 
 /* ======Fotografia de Jugador======= */
 
 .photo-container{
-    width: 50%;
+    width: 35%;
     display: flex;
     flex-direction: column;
 }
 
 .photo-container img{
     width: 100%;
-    border-radius: 2rem;
 }
 
 /* ==========Informacion Jugador======== */
@@ -77,9 +81,10 @@ body{
 }
 
 .info-usuario p{
-    color: gray;
+    color: var(--color-primary);
     font-family: var(--font-third);
     font-size: 1rem;
+    font-weight: 300;
 }
 
 
@@ -103,14 +108,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    background-color: #fff;
     border-radius: 2rem;
     padding: 1rem;
-    margin-top: 10vh;
+    margin-top: 2vh;
+    color: var(--color-primary);
 }
 
 .titulo-puntaje-juego-individual{
-    color: #000;
     font-weight: 600;
     font-family: var(--font-third);
     display: flex;
@@ -120,35 +124,46 @@ body{
     width: 100%;
 }
 
+.titulo-puntaje-juego-individual p{
+    width: 100%;
+    font-weight: 400;
+}
+
 .contenedor-puntaje-juego{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.2vh;
+    margin-top: 4vh;
 }
 
 .contenedor-puntaje-juego img{
-    width: 30%;
+    width: 25%;
     height: auto;
 }
 
 .texto-puntaje{
     display: flex;
-    width: 70%;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    margin-left: 1rem;
 }
 
 .contenedor-puntaje-juego p{
-    color: #000;
-    font-weight: 800;
+    font-weight: 400;
     font-family: var(--font-third);
-    font-size: 1.2rem;
-    padding: 2rem;
+    font-size: 0.9rem;
     text-align: center;
+}
+
+.contenedor-puntaje-juego h2{
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
 }
 
 
@@ -157,12 +172,13 @@ body{
 .dashboard-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 80%;
-    padding: 2rem;
+    padding: 4rem;
     background-image: url(../img/portada/portada-champions.png);
     color: var(--color-primary);
     font-family: var(--font-third);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
@@ -238,6 +254,9 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    flex-direction: column;
     }
 
 

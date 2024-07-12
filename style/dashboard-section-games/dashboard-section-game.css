@@ -1,0 +1,92 @@
+.section_game_principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: spaceg-ar; 
+    width: 100%;
+}
+
+.section_game_image{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-right: 15vh;
+}
+
+.section_game_information{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section_game_image img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+/* ===============Information Section==============*/
+
+.section_game_information h3{
+    font-size: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.estrellas{
+    display: inline-block;
+    color: yellow;
+    margin-bottom: 1rem;
+}	
+
+.section_game_information p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    width: 70%;
+}
+
+.section_game_information a{
+    background-image: var(--bottom-gradient-1);
+    border-radius: 1rem;
+    width: auto;
+    padding: 0.4rem;
+    width: 40% !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;  
+    text-decoration: none !important;
+    color: var(--color-primary);
+    margin-top: 2vh;
+}
+
+
+.section_game_information a:hover {
+    background-image: radial-gradient(circle at center, #add8e6, #0000ff);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+
+
+/* ================section_game_selector=============== */
+
+.section_game_selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+    border-top: var(--color-primary) 1px solid;
+}
+
+
+.section_game_selector a{
+   width: 20%;
+}
+.section_game_selector img{
+    width: 50%;
+    margin-top: 1rem;
+}
