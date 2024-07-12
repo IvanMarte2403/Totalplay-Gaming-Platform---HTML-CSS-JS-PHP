@@ -7,6 +7,14 @@ $nombre_game2 = 'Te Reto';
 $nombre_game4 = 'Misión';
 $nombre_game5    = 'Memoria';
 
+// 2. Modo desarrollo - Conexión Servidor
+//                      en caso de querer modificar ruta es en db_conexion.php
+
+//          1. Prendido
+//          0. Apagado
+
+$dev_mode = 1;
+
 // Beta: Número de Temporada: 
 //Sirve para solo tener activas las fotografías de la temporada disponible
 
