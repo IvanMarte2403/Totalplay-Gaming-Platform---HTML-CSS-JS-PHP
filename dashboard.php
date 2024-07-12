@@ -42,7 +42,7 @@ include 'instructions.php'
             <!-- Sección con la fotografía y el puntaje del usuario -->
             <div class="info-player">
                 <div class="photo-container">
-                    <img src="img/perfil/temporada1-halo.png" alt="">
+                    <img src="<?php echo htmlspecialchars($imagenSrc); ?>" alt="">
                 </div>
 
                 <div id="infoUsuarioContainer" class="info-usuario">
