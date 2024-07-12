@@ -52,8 +52,6 @@ include 'instructions.php'
                 </div>
 
             </div>
-
-
                 <!-- ======Puntajes Individuales de Juego=========== -->
             <div class="puntaje-individual-juego">
                 <div class="titulo-puntaje-juego-individual">

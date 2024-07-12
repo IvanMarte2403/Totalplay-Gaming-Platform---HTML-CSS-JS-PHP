@@ -7,6 +7,9 @@ $nombre_game2 = 'Te Reto';
 $nombre_game4 = 'Misión';
 $nombre_game5    = 'Memoria';
 
+// Beta: Número de Temporada: 
+//Sirve para solo tener activas las fotografías de la temporada disponible
 
+$numero_temporada = 2; 
 
 ?>

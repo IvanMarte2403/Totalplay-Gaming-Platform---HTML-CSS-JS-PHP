@@ -1,3 +1,4 @@
+```php
 <?php
 // Iniciar la sesión
 session_start();
@@ -9,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'db_conexion.php';
 
     $sql = "SELECT * FROM usuarios WHERE email = ? AND contrasena = ?";
-    $stmt = $conexion->prepare($sql );
+    $stmt = $conexion->prepare($sql);
     $stmt->bind_param("ss", $email, $contrasena);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -25,8 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: dashboard.php');
         exit;
     } else {
-        // Error de inicio de sesión
-        echo 'Error de Inicio de Sesion';
+        // Establecer mensaje de error en la variable de sesión
+        $_SESSION['error_login'] = 'Error: Datos de inicio de sesión equivocados.';
+        // Redirigir de nuevo a index.php
+        header('Location: index.php');
+        exit;
     }
 
     $stmt->close();

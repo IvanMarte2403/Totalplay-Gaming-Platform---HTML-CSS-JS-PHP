@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +37,22 @@
 
             <div id="login-form" class="container-forms" >
                 <h2> Iniciar Sesión </h2>
-
+            
                 <form action="login.php" method="post">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" id="contrasena" name="contrasena" required>
+                  
+                    <?php
+                    // Iniciar la sesión
+                    session_start();
+                  if (isset($_SESSION['error_login'])) {
+                        echo '<div class="mensaje-error">' . $_SESSION['error_login'] . '</div>';
+                     
+                        unset($_SESSION['error_login']);
+                    }
+                    ?>
                   
                     <p id="toggle-text">¿No tienes una cuenta? <a id="toggle-link" href="#" onclick="toggleForm()">Regístrate aquí</a>.</p>
                     <input class="boton-iniciar-sesion" type="submit" value="Iniciar sesión">
