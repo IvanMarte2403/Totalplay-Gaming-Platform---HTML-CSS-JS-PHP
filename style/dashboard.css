@@ -1,16 +1,4 @@
 
-:root{
-    --color-primary: #ffff;
-    --background-color: #060f38;
-    --background-color-2: #26254f;
-    --background-color-3: #1c1b3b;
-    --font-secondary: 'Rubik';
-    --font-third: 'Rubik';
-    --bottom-gradient-1: radial-gradient(circle at center, #3f60a7, #0000ff);
-
-}
-
-
 *{
     margin: 0;
     padding: 0;
@@ -63,6 +51,64 @@ body{
 .photo-container img{
     width: 100%;
 }
+
+/* ========Navigation Views=========== */
+
+.navigation-views{
+    color: var(--color-primary);
+    font-family: var(--font-third);
+    font-size: var(--font-size-md);
+    margin-top: var(--spacing-xs);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.navigation-views a {
+    text-decoration: none;
+    color: var(--color-primary);
+    padding: var(--spacing-md);
+    width: 100%;
+    display: flex;
+    position: relative; /* Necesario para el pseudo-elemento */
+    overflow: hidden; /* Para que el pseudo-elemento no se salga del contenedor */
+    transition: transform 0.3s ease-in-out; /* Transición para el skew */
+}
+
+.navigation-views a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color-3); /* Fondo más oscuro */
+    transition: left 0.3s ease-in-out; /* Transición para el sweep */
+    z-index: -1; /* Colocar detrás del texto */
+}
+
+.navigation-views a:hover::before {
+    left: 0; /* Mover el fondo oscuro hacia la izquierda */
+}
+
+.navigation-views a:hover {
+    transform: skewX(10deg); /* Efecto de skew hacia adelante */
+    color: var(--color-primary); /* Asegurar que el texto permanezca visible */
+}
+
+.navigation-views a:hover i {
+    transform: scale(1.2); /* Hacer que el icono crezca */
+    transition: transform 0.3s ease-in-out; /* Añadir transición para suavizar el crecimiento */
+}
+
+.navigation-views i {
+    margin-right: var(--spacing-xl);
+    transition: transform 0.3s ease-in-out; /* Añadir transición para suavizar el crecimiento */
+}
+
+
 
 /* ==========Informacion Jugador======== */
 

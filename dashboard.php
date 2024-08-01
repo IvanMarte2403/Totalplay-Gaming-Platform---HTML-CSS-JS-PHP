@@ -32,8 +32,11 @@ include 'instructions.php'
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    
     <!-- Animations -->
-
     <link rel="stylesheet" href="animations/css/animationDashboardGames.css">
+
+    <!-- Global Class  -->
+
+    <link rel="stylesheet" href="style/global-class.css">
     <title>TotalPlayGaming</title>
     
 </head>
@@ -56,11 +59,18 @@ include 'instructions.php'
                 </div>
 
             </div>
+
+            <!-- Botones de Navegacion entre las vistas -->
+            <div class="navigation-views">
+                <a href=""><i class="fas fa-gamepad"></i> Home</a>
+                <a href=""><i class="fas fa-chart-bar"></i> Dashboard</a>
+            </div>
                 <!-- ======Puntajes Individuales de Juego=========== -->
+
             <div class="puntaje-individual-juego">
                 <button class="dropdown-btn" onclick="toggleDropdown()">
-                <i class="fas fa-chevron-down"></i> Mis Puntajes
-                 </button>
+                    <i class="fas fa-chevron-down"></i> Mis Puntajes
+                </button>
                 
                 <div id="puntajesDropdown" class="dropdown-content">
                     
@@ -115,54 +125,10 @@ include 'instructions.php'
         </div>
         
         <div class="dashboard-container">
-            <div class="nav-dashboard">
-                <a href="logout.php" class="logout-icon">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a>
-            </div>
-            <div class="titulo-dashboard">
-                 <h1>¡JUEGA AHORA!</h1>
-            </div>
-           
-            <div class="catalogo-juegos">
-                <!-- Seccion Principal que muestra el juego activo -->
-                <div class="section_game_principal">
-                    <div id="sectionGameImage" class="section_game_image">
-                        <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
-                    </div>
-                    <div id="sectionGameInformation" class="section_game_information">
-                         <h3>Big Trivia</h3>
-                        <div class="estrellas">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="descripcion-juego">
-                            Juego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.
-                        </p>
-                        <a href="game.php">Jugar</a>
-                    </div>
-                </div>
-
-                <div class="section_game_selector">
-                    <a id="game-1" href=""><img src="img/juegos/portada/juego-portada-general-1.png" alt=""></a>
-                    <a id="game-2" href=""><img src="img/juegos/portada/juego-portada-general-2.png" alt=""></a>
-                    <a id="game-4" href=""><img src="img/juegos/portada/juego-portada-general-4.png" alt=""></a>
-                    <a id="game-5" href=""><img src="img/juegos/portada/juego-portada-general-5.png" alt=""></a>
-                </div>
-               
-
-                    
-            </div>
-
-          
-          
-               
-
-
-            </div>
+            
+            <?php
+                include 'views/home.php'
+            ?>
 
         </div>
 
