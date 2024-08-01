@@ -24,12 +24,16 @@ include 'instructions.php'
     <link rel="stylesheet" href="style/portada-juegos.css">
     <link rel="stylesheet" href="style/dashboard.css">
     <link rel="stylesheet" href="style/responsive/responsive-dashboard.css">
+    <link rel="stylesheet" href="style/responsive/dropdown-score-mobile.css">
     <link rel="stylesheet" href="style/dashboard-section-games/dashboard-section-game.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    <!-- Animations -->
+
+    <link rel="stylesheet" href="animations/css/animationDashboardGames.css">
     <title>TotalPlayGaming</title>
     
 </head>
@@ -54,50 +58,58 @@ include 'instructions.php'
             </div>
                 <!-- ======Puntajes Individuales de Juego=========== -->
             <div class="puntaje-individual-juego">
-                <div class="titulo-puntaje-juego-individual">
-                <p>Mi Score</p>
-                </div>
-
-                <!-- =====Juego 1===== -->
-                <div class="contenedor-puntaje-juego">
-                    <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
-                    <div class="texto-puntaje">
-                    <h2><?php echo $nombre_game1?></h2>
-                    <p><?php echo $puntaje_total1; ?></p>
-                    </div>
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                <i class="fas fa-chevron-down"></i> Mis Puntajes
+                 </button>
+                
+                <div id="puntajesDropdown" class="dropdown-content">
                     
-                </div>
+                    <div class="titulo-puntaje-juego-individual">
+                         <p>Mi Score</p>
+                    </div>
+                    <!-- =====Puntaje Número 1 ===== -->
+                    <div class="contenedor-puntaje-juego">
+                        <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
+                        <div class="texto-puntaje">
+                        <h2><?php echo $nombre_game1?></h2>
+                        <p><?php echo $puntaje_total1; ?></p>
+                        </div>
+                        
+                    </div>
 
-                <!-- Puntaje Número 2  -->
+                    <!-- Puntaje Número 2  -->
 
-                <div class="contenedor-puntaje-juego">
-                    <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
-                    <div class="texto-puntaje">
-                    <h2><?php echo $nombre_game2?></h2>
-                    <p><?php echo $puntaje_total2; ?></p>
+                    <div class="contenedor-puntaje-juego">
+                        <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
+                        <div class="texto-puntaje">
+                        <h2><?php echo $nombre_game2?></h2>
+                        <p><?php echo $puntaje_total2; ?></p>
+                        </div>
+
+                    </div>
+
+                    <!-- ==============Juego 4 ============= -->
+                    <div class="contenedor-puntaje-juego">
+                        <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
+                        <div class="texto-puntaje">
+                        <h2><?php echo $nombre_game4?></h2>
+                        <p><?php echo $puntaje_total4; ?></p>
+                        </div>
+
+                    </div>
+
+                    <!-- =========Juego 5========= -->
+                    <div class="contenedor-puntaje-juego">
+                        <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
+                        <div class="texto-puntaje">
+                        <h2><?php echo $nombre_game5?></h2>
+                        <p><?php echo $puntaje_total5; ?></p>
+                        </div>
+
                     </div>
 
                 </div>
 
-
-                <div class="contenedor-puntaje-juego">
-                    <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
-                    <div class="texto-puntaje">
-                    <h2><?php echo $nombre_game4?></h2>
-                    <p><?php echo $puntaje_total4; ?></p>
-                    </div>
-
-                </div>
-
-                <!-- =========Juego 5========= -->
-                <div class="contenedor-puntaje-juego">
-                    <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
-                    <div class="texto-puntaje">
-                    <h2><?php echo $nombre_game5?></h2>
-                    <p><?php echo $puntaje_total5; ?></p>
-                    </div>
-
-                </div>
             </div>
 
         </div>
@@ -158,6 +170,12 @@ include 'instructions.php'
     
 </body>
 
-<script src="main/sectionGameSelector.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
+<!-- Animations -->
+<script src="animations/animationDashboardGames.js"></script>
+
+<!-- Interacciones -->
+<script src="main/sectionGameSelector.js"></script> 
+<script src="main/mobileTogglePuntajes.js"></script>
 </html>

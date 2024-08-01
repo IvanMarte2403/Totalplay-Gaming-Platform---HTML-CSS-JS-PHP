@@ -1,0 +1,23 @@
+/* Estilos para dispositivos no móviles */
+.dropdown-content {
+    display: block ;
+}
+
+.dropdown-btn {
+    display: none;
+}
+
+
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .dropdown-content {
+        display: none;
+    }
+    .dropdown-btn {
+        display: inline-block;
+        cursor: pointer;
+        /* Añade aquí más estilos para el botón si es necesario */
+    }
+}
