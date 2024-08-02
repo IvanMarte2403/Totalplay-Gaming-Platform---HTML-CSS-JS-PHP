@@ -220,7 +220,7 @@ body{
     flex-direction: column;
     width: 80%;
     padding: 4rem;
-    background-image: url(../img/portada/portada-champions.png);
+    background-image: url(../img/portada/portada-principal.png);
     color: var(--color-primary);
     font-family: var(--font-third);
     padding-top: 0;

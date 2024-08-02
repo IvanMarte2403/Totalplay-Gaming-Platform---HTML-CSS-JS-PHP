@@ -21,12 +21,16 @@ include 'instructions.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos Generales -->
     <link rel="stylesheet" href="style/portada-juegos.css">
     <link rel="stylesheet" href="style/dashboard.css">
     <link rel="stylesheet" href="style/responsive/responsive-dashboard.css">
     <link rel="stylesheet" href="style/responsive/dropdown-score-mobile.css">
     <link rel="stylesheet" href="style/dashboard-section-games/dashboard-section-game.css">
+    <link rel="stylesheet" href="style/views/dashboard-user.css">
 
+    <!-- ---Fonts----- -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -62,8 +66,9 @@ include 'instructions.php'
 
             <!-- Botones de Navegacion entre las vistas -->
             <div class="navigation-views">
-                <a href=""><i class="fas fa-gamepad"></i> Home</a>
-                <a href=""><i class="fas fa-chart-bar"></i> Dashboard</a>
+                <a href="?view=home"><i class="fas fa-gamepad"></i> Home</a>
+                <a href="?view=dashboard"><i class="fas fa-chart-bar"></i> Dashboard</a>
+                <a href="?view=perfil"><i class="fas fa-user"></i> Perfil</a>
             </div>
                 <!-- ======Puntajes Individuales de Juego=========== -->
 
@@ -126,9 +131,23 @@ include 'instructions.php'
         
         <div class="dashboard-container">
             
-            <?php
-                include 'views/home.php'
-            ?>
+        <?php
+        // Determinar qué vista incluir en función del parámetro de URL 'view'
+        $view = isset($_GET['view']) ? $_GET['view'] : 'home';
+
+            switch ($view) {
+                case 'dashboard':
+                    include 'views/dashboard-user.php';
+                    break;
+                case 'perfil':
+                    include 'views/perfil.php';
+                    break;
+                case 'home':
+                default:
+                    include 'views/home.php';
+                    break;
+            }
+    ?>
 
         </div>
 

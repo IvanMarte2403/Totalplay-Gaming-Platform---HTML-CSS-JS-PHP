@@ -1,0 +1,89 @@
+.dashboard-user-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+.dashboard-user-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* ==========Imagen Nueva Temporada========== */
+
+
+.imagen-new-portada{
+    width: 50%;
+}
+
+.imagen-new-portada img {
+    width: 100%;
+    height: auto;
+    
+}
+
+
+/* =============Best-Players============ */
+
+.contenedores-dashboards{
+    background-color: rgba(6, 15, 56, 0.5); /* Fondo con el color #060f38 semi-transparente */
+    border-radius: var(--spacing-md);
+    backdrop-filter: blur(10px); /* Desenfoque para el efecto mate */
+    height: 100%;
+    margin-top: var(--spacing-md);
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
+}
+
+.best-players {
+    width: 50%;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+  
+  
+}
+
+.best-players h2{
+    color: var(--color-primary);
+    font-family: var(--font-third);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+    white-space: pre;
+}
+
+.best-players i{
+    color: green;
+    margin-right: var(--spacing-md);
+}
+
+.contenedor-player{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-top: var(--spacing-md);
+}
+
+
+
+.contenedor-imagen-perfil{
+    width: 10%;
+    margin-right: var(--spacing-xl);
+}
+
+.contenedor-imagen-perfil img{
+    width: 100%;
+    height: auto;
+    border-radius: var(--spacing-sm);
+}
+
+#nombre-jugador{
+    margin-right: var(--spacing-xl);
+    font-size: var(--font-size-lg);
+
+}
