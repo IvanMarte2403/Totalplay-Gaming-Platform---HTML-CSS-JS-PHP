@@ -296,7 +296,7 @@
     flex-direction: column;
     justify-content: start;
     margin-top: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-);
 }
 
 .partidas table{
@@ -309,4 +309,27 @@
 
 .partidas table td{
     padding: var(--spacing-md);
+}
+
+@media only screen and (max-width: 600px){
+
+    .dashboard-user-row{
+        flex-direction: column;
+    }
+
+    .contenedores-dashboards{
+        width: 100%;
+    }
+
+    .contenedor-top-juegos{
+        flex-direction: column;
+    }
+
+    .games-top{
+        width: 100%;
+    }
+
+    .personaje-top{
+        width: 100%;
+    }
 }
