@@ -42,6 +42,7 @@ include 'consultas/top_players.php';
         </div>
     </div>
 
+    <!-- Objetivo Mensual & Top Games  -->
     <div class="dashboard-user-row">
         <!-- ========Objetivo Mensual========= -->
         <div class="dashboard-objetivo-mensual contenedores-dashboards">
@@ -131,8 +132,40 @@ include 'consultas/top_players.php';
 
     </div>
 
+    <!-- Top Partidas -->
     <div class="dashboard-user-row">
-        
+        <div class="top-gameplays contenedores-dashboards">
+            <div class="title-top-gameplays">
+            <h2><i class="fas fa-circle"></i> Top Partidas</h2>
+            </div>
+
+            <div class="partidas">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Juego</th>
+                        <th>Día</th>
+                        <th>Hora</th>
+                        <th>Puntaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><?php echo $juego_partida_1?></td>
+                        <td><?php echo $dia_partida_1?></td>
+                        <td><?php echo $hora_partida_1?></td>
+                        <td><?php echo $puntaje_partida_1?></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $juego_partida_2?></td>
+                        <td><?php echo $dia_partida_2?></td>
+                        <td><?php echo $hora_partida_2?></td>
+                        <td><?php echo $puntaje_partida_2?></td>
+                    </tr>
+                </tbody>
+        </table>
+            </div>
+        </div>
     </div>
 </div>
 

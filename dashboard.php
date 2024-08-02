@@ -80,10 +80,9 @@ include 'instructions.php'
                 
                 <div id="puntajesDropdown" class="dropdown-content">
                     
-                    <div class="titulo-puntaje-juego-individual">
+                    <!-- <div class="titulo-puntaje-juego-individual">
                          <p>Mi Score</p>
                     </div>
-                    <!-- =====Puntaje Número 1 ===== -->
                     <div class="contenedor-puntaje-juego">
                         <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
                         <div class="texto-puntaje">
@@ -93,7 +92,6 @@ include 'instructions.php'
                         
                     </div>
 
-                    <!-- Puntaje Número 2  -->
 
                     <div class="contenedor-puntaje-juego">
                         <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
@@ -104,7 +102,6 @@ include 'instructions.php'
 
                     </div>
 
-                    <!-- ==============Juego 4 ============= -->
                     <div class="contenedor-puntaje-juego">
                         <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
                         <div class="texto-puntaje">
@@ -114,7 +111,6 @@ include 'instructions.php'
 
                     </div>
 
-                    <!-- =========Juego 5========= -->
                     <div class="contenedor-puntaje-juego">
                         <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
                         <div class="texto-puntaje">
@@ -122,7 +118,7 @@ include 'instructions.php'
                         <p><?php echo $puntaje_total5; ?></p>
                         </div>
 
-                    </div>
+                    </div> -->
 
                 </div>
 

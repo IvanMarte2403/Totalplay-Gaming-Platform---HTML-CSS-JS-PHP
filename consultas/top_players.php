@@ -25,8 +25,7 @@ foreach ($tables as $table) {
     $stmt->close();
 }
 
-// Definir la meta
-$meta = 100000;
+
 
 // Calcular el porcentaje de progreso
 $porcentaje = ($progreso / $meta) * 100;
@@ -119,6 +118,40 @@ if ($progreso < 1000) {
     $personaje_dashboard = 'img/dashboard/personajes/' . $table_number . '.png';
     $name_variable = 'nombre_personaje' . $table_number;
     $personaje_nombre = $$name_variable;
+}
+
+// Obtener las partidas con mayor puntaje para el usuario
+$partidas = [];
+foreach ($tables as $table) {
+    $query = "SELECT puntaje, fecha_hora FROM $table WHERE id = ? ORDER BY puntaje DESC LIMIT 2";
+    $stmt = $conexion->prepare($query);
+    $stmt->bind_param('i', $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()) {
+        $partidas[] = [
+            'table' => $table,
+            'puntaje' => $row['puntaje'],
+            'fecha_hora' => $row['fecha_hora']
+        ];
+    }
+    $stmt->close();
+}
+
+// Ordenar las partidas por puntaje en orden descendente y tomar las dos mejores
+usort($partidas, function($a, $b) {
+    return $b['puntaje'] - $a['puntaje'];
+});
+$top_partidas = array_slice($partidas, 0, 2);
+
+// Crear las variables de las partidas
+for ($i = 0; $i < count($top_partidas); $i++) {
+    $table_number = substr($top_partidas[$i]['table'], -1);
+    $name_variable = 'nombre_game' . $table_number;
+    ${'juego_partida_' . ($i + 1)} = $$name_variable;
+    ${'dia_partida_' . ($i + 1)} = date('d', strtotime($top_partidas[$i]['fecha_hora']));
+    ${'hora_partida_' . ($i + 1)} = date('H:i', strtotime($top_partidas[$i]['fecha_hora']));
+    ${'puntaje_partida_' . ($i + 1)} = $top_partidas[$i]['puntaje'];
 }
 
 // Cerrar la conexión a la base de datos
