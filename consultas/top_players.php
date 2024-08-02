@@ -68,6 +68,59 @@ if ($result->num_rows > 0) {
     echo "No se encontraron jugadores.";
 }
 
+// Sumar los puntajes de las tablas juego_1, juego_2, juego_4, juego_5 y encontrar los 3 más altos
+$puntajes = [];
+foreach ($tables as $table) {
+    $query = "SELECT SUM(puntaje) as total_puntaje FROM $table";
+    $result = $conexion->query($query);
+    if ($result) {
+        $row = $result->fetch_assoc();
+        $puntajes[] = [
+            'table' => $table,
+            'total_puntaje' => $row['total_puntaje']
+        ];
+    }
+}
+
+// Ordenar los puntajes de mayor a menor
+usort($puntajes, function($a, $b) {
+    return $b['total_puntaje'] - $a['total_puntaje'];
+});
+
+// Crear las variables de los 3 puntajes más altos
+for ($i = 0; $i < 3; $i++) {
+    $table = $puntajes[$i]['table'];
+    $table_number = substr($table, -1);
+    $name_variable = 'nombre_game' . $table_number;
+    ${'top_name_' . ($i + 1)} = $$name_variable;
+    ${'top_img_' . ($i + 1)} = 'img/juegos/portada/juego-portada-general-' . $table_number . '.png';
+    ${'top_puntaje_' . ($i + 1)} = $puntajes[$i]['total_puntaje'];
+}
+
+// Inicializar variables del personaje
+$personaje_dashboard = '';
+$personaje_nombre = '';
+
+// Asignar el personaje basado en las condiciones dadas
+if ($progreso < 1000) {
+    $personaje_dashboard = 'img/dashboard/personajes/0.png';
+    $personaje_nombre = 'Novato';
+} else {
+    $max_puntaje = 0;
+    $max_table = '';
+    foreach ($puntajes as $puntaje) {
+        if ($puntaje['total_puntaje'] > $max_puntaje) {
+            $max_puntaje = $puntaje['total_puntaje'];
+            $max_table = $puntaje['table'];
+        }
+    }
+
+    $table_number = substr($max_table, -1);
+    $personaje_dashboard = 'img/dashboard/personajes/' . $table_number . '.png';
+    $name_variable = 'nombre_personaje' . $table_number;
+    $personaje_nombre = $$name_variable;
+}
+
 // Cerrar la conexión a la base de datos
 $conexion->close();
 ?>

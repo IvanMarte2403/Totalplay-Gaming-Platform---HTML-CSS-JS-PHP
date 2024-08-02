@@ -1,7 +1,6 @@
 <?php
 include 'consultas/top_players.php';
 
-
 ?>
 
 <div class="dashboard-user-container">
@@ -44,6 +43,7 @@ include 'consultas/top_players.php';
     </div>
 
     <div class="dashboard-user-row">
+        <!-- ========Objetivo Mensual========= -->
         <div class="dashboard-objetivo-mensual contenedores-dashboards">
 
             <h2><i class="fa fa-star"></i> Tu objetivo mensual</h2>
@@ -59,12 +59,80 @@ include 'consultas/top_players.php';
                
 
             </div>
-    </div>
+        </div>
 
+        <!-- ============Top Games============= -->
+         <div class="dashboard-top-games contenedores-dashboards">
+            <div class="top-games-title">
+                <h2><i class="fas fa-trophy"></i> Tus Top Games</h2>            
+            </div>
+            
+            <div class="contenedor-top-juegos">
 
-        <div class="dashboard-total-puntaje contenedores-dashboards">
+                <!-- Contenedor Top Juegos -->
+
+                <div class="games-top">
+                      <!-- ===============Top Game============ -->
+                    <div class="contenedor-juego-top">
+                        <div>
+                            <h2><?php echo $top_name_1?></h2>
+                        </div>
+                        <div class="imagen-juego-top">
+                            <img src="<?php echo $top_img_1?>" alt="">
+                        </div>
+                        <div>
+                            <p><?php echo $top_puntaje_1?></p>
+                        </div>
+                    </div>
+                    
+                    <!-- ===============Top Game 2============ -->
+                    <div class="contenedor-juego-top">
+                        <div>
+                            <h2><?php echo $top_name_2?></h2>
+                        </div>
+                        <div class="imagen-juego-top">
+                            <img src="<?php echo $top_img_2?>" alt="">
+                        </div>
+                        <div>
+                            <p><?php echo $top_puntaje_2?></p>
+                        </div>
+                    </div>
+                    <!-- =============TopGame 3================= -->
+                    <div class="contenedor-juego-top">
+                        <div>
+                            <h2><?php echo $top_name_3?></h2>
+                        </div>
+                        <div class="imagen-juego-top">
+                            <img src="<?php echo $top_img_3?>" alt="">
+                        </div>
+                        <div>
+                            <p><?php echo $top_puntaje_3?></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Personaje Top  -->
+
+                <div class="personaje-top">
+                    <div class="titulo-personaje-top">
+                        <h2><?php echo $personaje_nombre?></h2>
+                    </div>
+                    
+                    <div class="imagen-personaje-top">
+                        <img src="<?php echo $personaje_dashboard?>" alt="">
+                    </div>
+                </div>
+              
+
+            </div>
 
         </div>
+
+    </div>
+
+    <div class="dashboard-user-row">
+        
     </div>
 </div>
 

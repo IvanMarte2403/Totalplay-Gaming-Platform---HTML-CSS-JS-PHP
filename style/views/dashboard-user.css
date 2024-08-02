@@ -112,9 +112,6 @@
 }
 
 
-.dashboard-total-puntaje{
-    width: 75%;
-}
 
 .dashboard-total-puntaje p{
     color: var(--color-primary);
@@ -149,4 +146,110 @@
     text-align: center;
     line-height: 30px; /* Alinea el texto verticalmente */
     color: white;
+}
+
+/* 
+=================Dashboard Top Games================ */
+
+.dashboard-top-games{
+    width: 75%;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================Top Games============ */
+
+.contenedor-top-juegos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.games-top{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.top-games-title{
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top-games-title h2{
+    text-align: left;
+    width: 100%;
+}
+
+.top-games-title i{
+    color: yellow;
+    margin-right: var(--spacing-md);
+}
+.contenedor-juego-top{
+    width: 20%;
+}
+
+
+.conteedor-juego-top div{
+    width: 100%;
+}
+
+.contenedor-juego-top h2{
+    font-size: var(--font-size-md);
+    text-align: center;
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+}
+
+.contenedor-juego-top p{
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.imagen-juego-top{
+    width: 100%;
+}
+
+.imagen-juego-top img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* ===============Imagen-Personaje-Top================ */ 
+
+ .personaje-top{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .imagen-personaje-top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+.imagen-personaje-top img{
+    width: 50%;
+    height: auto;
+    margin-top: var(--spacing-md);
+}
+
+.personaje-top h2{
+    font-size: var(--font-size-lg);
+    margin-top: var(--spacing-md);
+    font-family: var(--font-fourth);
 }
