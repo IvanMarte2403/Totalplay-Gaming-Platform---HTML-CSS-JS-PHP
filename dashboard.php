@@ -29,6 +29,7 @@ include 'instructions.php'
     <link rel="stylesheet" href="style/responsive/dropdown-score-mobile.css">
     <link rel="stylesheet" href="style/dashboard-section-games/dashboard-section-game.css">
     <link rel="stylesheet" href="style/views/dashboard-user.css">
+    <link rel="stylesheet" href="style/views/home.css">
 
     <!-- ---Fonts----- -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -73,56 +74,7 @@ include 'instructions.php'
             </div>
                 <!-- ======Puntajes Individuales de Juego=========== -->
 
-            <div class="puntaje-individual-juego">
-                <button class="dropdown-btn" onclick="toggleDropdown()">
-                    <i class="fas fa-chevron-down"></i> Mis Puntajes
-                </button>
-                
-                <div id="puntajesDropdown" class="dropdown-content">
-                    
-                    <!-- <div class="titulo-puntaje-juego-individual">
-                         <p>Mi Score</p>
-                    </div>
-                    <div class="contenedor-puntaje-juego">
-                        <img src="img/juegos/portada/juego-portada-general-1.png" alt="">
-                        <div class="texto-puntaje">
-                        <h2><?php echo $nombre_game1?></h2>
-                        <p><?php echo $puntaje_total1; ?></p>
-                        </div>
-                        
-                    </div>
-
-
-                    <div class="contenedor-puntaje-juego">
-                        <img src="img/juegos/portada/juego-portada-general-2.png" alt="">
-                        <div class="texto-puntaje">
-                        <h2><?php echo $nombre_game2?></h2>
-                        <p><?php echo $puntaje_total2; ?></p>
-                        </div>
-
-                    </div>
-
-                    <div class="contenedor-puntaje-juego">
-                        <img src="img/juegos/portada/juego-portada-general-4.png" alt="">
-                        <div class="texto-puntaje">
-                        <h2><?php echo $nombre_game4?></h2>
-                        <p><?php echo $puntaje_total4; ?></p>
-                        </div>
-
-                    </div>
-
-                    <div class="contenedor-puntaje-juego">
-                        <img src="img/juegos/portada/juego-portada-general-5.png" alt="">
-                        <div class="texto-puntaje">
-                        <h2><?php echo $nombre_game5?></h2>
-                        <p><?php echo $puntaje_total5; ?></p>
-                        </div>
-
-                    </div> -->
-
-                </div>
-
-            </div>
+            
 
         </div>
         
@@ -158,6 +110,7 @@ include 'instructions.php'
 <script src="animations/animationDashboardGames.js"></script>
 
 <!-- Interacciones -->
+<script src="main/slider-juegos.js"></script>
 <script src="main/sectionGameSelector.js"></script> 
 <script src="main/mobileTogglePuntajes.js"></script>
 </html>

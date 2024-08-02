@@ -1,0 +1,109 @@
+
+.slider-container button{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px){
+    
+    .slider-container button{
+        display: block;
+    }
+    .dashboard-container{
+        padding: var(--spacing-xl);
+    }
+    
+    .catalogo-juegos{
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--spacing-xl);
+    }
+
+
+    .section_game_principal{
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--spacing-xl);
+    }
+
+    .section_game_image{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_game_image img{
+        width: 60%;
+    }
+
+    .section_game_information{
+        width: 100%;
+        margin-top: var(--spacing-xl);
+    }
+
+    .section_game_selector{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .section_game_selector a{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_game_selector img{
+        width: 90%;
+    }
+
+
+    /* =============Slider Catalogo de Juegos ========== */
+
+    .slider-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .slider-arrow {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .left-arrow {
+        left: 0;
+    }
+    
+    .right-arrow {
+        right: 0;
+    }
+    
+    .section_game_selector {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Para un desplazamiento más suave en dispositivos táctiles */
+        width: 100%;
+    }
+    
+    .section_game_selector a {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 10px; /* Espacio entre los elementos, ajusta según sea necesario */
+    }
+    
+    .section_game_selector::-webkit-scrollbar {
+        display: none; /* Ocultar la barra de desplazamiento en navegadores WebKit */
+    }
+}
