@@ -1,0 +1,1 @@
+: Uncaught Error: mysqli object is already closed in
