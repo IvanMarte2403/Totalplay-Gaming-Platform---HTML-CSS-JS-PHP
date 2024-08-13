@@ -138,33 +138,40 @@ include 'consultas/top_players.php';
             <div class="title-top-gameplays">
             <h2><i class="fas fa-circle"></i> Top Partidas</h2>
             </div>
-
             <div class="partidas">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Juego</th>
-                        <th>Día</th>
-                        <th>Hora</th>
-                        <th>Puntaje</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><?php echo $juego_partida_1?></td>
-                        <td><?php echo $dia_partida_1?></td>
-                        <td><?php echo $hora_partida_1?></td>
-                        <td><?php echo $puntaje_partida_1?></td>
-                    </tr>
-                    <tr>
-                        <td><?php echo $juego_partida_2?></td>
-                        <td><?php echo $dia_partida_2?></td>
-                        <td><?php echo $hora_partida_2?></td>
-                        <td><?php echo $puntaje_partida_2?></td>
-                    </tr>
-                </tbody>
-        </table>
-            </div>
+                <?php if (empty($juego_partida_1) && empty($juego_partida_2)): ?>
+                    <p>No hay partidas disponibles. Empieza a jugar para tener score.</p>
+                <?php else: ?>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Juego</th>
+                            <th>Día</th>
+                            <th>Hora</th>
+                            <th>Puntaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (!empty($juego_partida_1)): ?>
+                            <tr>
+                                <td><?php echo $juego_partida_1; ?></td>
+                                <td><?php echo $dia_partida_1; ?></td>
+                                <td><?php echo $hora_partida_1; ?></td>
+                                <td><?php echo $puntaje_partida_1; ?></td>
+                            </tr>
+                        <?php endif; ?>
+                        <?php if (!empty($juego_partida_2)): ?>
+                            <tr>
+                                <td><?php echo $juego_partida_2; ?></td>
+                                <td><?php echo $dia_partida_2; ?></td>
+                                <td><?php echo $hora_partida_2; ?></td>
+                                <td><?php echo $puntaje_partida_2; ?></td>
+                            </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            <?php endif; ?>
+        </div>
         </div>
     </div>
 </div>

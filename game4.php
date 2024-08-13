@@ -9,6 +9,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
+include 'instructions.php'
+
 ?>
 
 <!DOCTYPE html>
@@ -31,16 +33,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <!-- ===============Pantalla de Carga=============== -->
 
 <div id="pantalla-carga">
-        <h1>Misión</h1>
+        <h1><?php
+        echo $nombre_game4
+        ?></h1>
         <div class="contenedor-instrucciones">
 
 
             <h2>
-                ¿Cómo Jugar Misión?
+                ¿Cómo Jugar <?php echo $nombre_game4?>?
                
             </h2>
 
-            <p>¡No permitas que lleguen al suelo, obtén el mayor puntaje, evitando que los objetos toquen el suelo.</p>
+            <p>¡Que la torre mas grande crezca!</p>
             
 
 
@@ -49,7 +53,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <div class="instrucciones-movimiento">
                 <img src="img/recursos/instrucciones/left-click.png" alt="">
-                <p>Lanzar Pelota</p>
+                <p>Apilar Edificio</p>
             </div>
             
             </div>

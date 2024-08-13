@@ -9,6 +9,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
+include 'instructions.php'
+
 ?>
 
 <!DOCTYPE html>
@@ -32,18 +34,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <!-- ===============Pantalla de Carga=============== -->
 
     <div id="pantalla-carga">
-        <h1>Te Reto</h1>
+        <h1><?php 
+            echo $nombre_game2
+        ?></h1>
         <div class="contenedor-instrucciones">
 
         
 
             <h2>
-                ¿Cómo jugar Soccer Invade?
+                ¿Cómo jugar <?php echo $nombre_game2?>?
                
             </h2>
 
-            <p>¡No permitas que lleguen al centro! Dispara y acumula puntos para mejorar tu tiro y fuerza. <br> <br>
-                ¡Muév   ete y obtén los cuadros blancos de los enemigos  para aumentar tu nivel! 
+            <p>¡No permitas que caigan y evita darle al Simi! <br> <br>
+                ¡Muestra tu destreza!
             </p>
         
             <div class="contenedor-instrucciones-teclas">
@@ -51,7 +55,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <div class="instrucciones-movimiento">
                 <img src="img/recursos/instrucciones/left-click.png" alt="">
-                <p>Disparo</p>
+                <p>Mover</p>
             </div>
             
             </div>

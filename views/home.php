@@ -33,10 +33,15 @@
                 <div class="slider-container">
                     <button class="slider-arrow left-arrow">&#9664;</button>
                     <div class="section_game_selector">
-                        <a id="game-1" href=""><img src="img/juegos/portada/juego-portada-general-1.png" alt=""></a>
-                        <a id="game-2" href=""><img src="img/juegos/portada/juego-portada-general-2.png" alt=""></a>
-                        <a id="game-4" href=""><img src="img/juegos/portada/juego-portada-general-4.png" alt=""></a>
-                        <a id="game-5" href=""><img src="img/juegos/portada/juego-portada-general-5.png" alt=""></a>
+                                    <?php
+                    // Define la cantidad de juegos
+                    $cantidad_juegos = 5;
+
+                    // Genera los enlaces dinámicamente
+                    for ($i = 1; $i <= $cantidad_juegos; $i++) {
+                        echo '<a id="game-' . $i . '" href=""><img src="img/juegos/portada/juego-portada-general-' . $i . '.png" alt=""></a>';
+                    }
+    ?>
                     </div>
                     <button class="slider-arrow right-arrow">&#9654;</button>
                 </div>

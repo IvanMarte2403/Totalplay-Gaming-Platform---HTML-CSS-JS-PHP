@@ -11,7 +11,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 // Incluir la conexión a la bas e de datos y obtener los puntajes
 include 'db_conexion.php';
-include 'obtener_puntajes.php'; // Importa el archivo que contiene el código para obtener los puntajes
+include 'consultas/obtener_puntajes.php'; // Importa el archivo que contiene el código para obtener los puntajes
 include 'instructions.php'
 
 ?>

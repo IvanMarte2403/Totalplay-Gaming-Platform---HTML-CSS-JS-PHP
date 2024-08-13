@@ -2,23 +2,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Datos de ejemplo para los juegos, incluyendo el título
     const juegosInfo = {
         'game-1': {
-            titulo: 'BigTrivia',
+            titulo: 'Big Trivia',
             imgSrc: 'img/juegos/portada/juego-portada-general-1.png',
             descripcion: 'Juego de preguntas con ruleta. Cinco categorías. Acumula puntos por respuestas correctas.',
             estrellas: 5,
             href: 'game.php'
         },
         'game-2': {
-            titulo: 'Te Reto',
+            titulo: 'Fruit Ninja',
             imgSrc: 'img/juegos/portada/juego-portada-general-2.png',
             descripcion: 'Detén enemigos, mejora cañonazos, acumula puntos. ¡Diviértete!',
             estrellas: 4,
             href: 'game2.php'
+        }, 
+        
+        'game-3': {
+            titulo: 'Flappy Bird',
+            imgSrc: 'img/juegos/portada/juego-portada-general-3.png',
+            descripcion: 'Juego de habilidad. ¡Diviértete!, presiona ESPACIO para avanzar',
+            estrellas: 5,
+            href: 'game3.php'
         },
         'game-4': {
-            titulo: 'Misión',
+            titulo: 'Tower Stack',
             imgSrc: 'img/juegos/portada/juego-portada-general-4.png',
-            descripcion: '¡Obtén el puntaje mas alto, golpea y no dejes que lleguen al suelo!.',
+            descripcion: '¡Que se apile ese edificio como stack!',
             estrellas: 3,
             href: 'game4.php'
         },
@@ -29,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
             estrellas: 4,
             href: 'game5.php'
         },
-        // Agrega más juegos según sea necesario
     };
 
     // Función para actualizar la información del juego principal

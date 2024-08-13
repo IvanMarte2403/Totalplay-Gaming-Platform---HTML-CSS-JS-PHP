@@ -1,7 +1,7 @@
 <?php
 // Incluir el archivo de conexión a la base de datos
 include 'db_conexion.php';
-
+include 'instructions.php';
 // Obtener el ID del usuario que inició sesión (asumiendo que está almacenado en una variable de sesión)
 $user_id = $_SESSION['id'];
 
@@ -13,7 +13,7 @@ $current_year = date('Y');
 $progreso = 0;
 
 // Consultar y sumar los puntajes de las tablas juego_1, juego_2, juego_4, juego_5
-$tables = ['juego_1', 'juego_2', 'juego_4', 'juego_5'];
+//Configuración de Tablas en instructions
 foreach ($tables as $table) {
     $query = "SELECT SUM(puntaje) as total_puntaje FROM $table WHERE id = ? AND MONTH(fecha_hora) = ? AND YEAR(fecha_hora) = ?";
     $stmt = $conexion->prepare($query);
