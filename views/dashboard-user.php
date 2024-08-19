@@ -12,7 +12,7 @@ include 'consultas/top_players.php';
         </div>
 
         <div class="best-players contenedores-dashboards">
-        <h2><i class="fas fa-lightbulb" "></i> Top   3     Jugadores</h2>            
+        <h2><i class="fas fa-lightbulb"></i> Top   3     Jugadores</h2>            
         
         <!-- Contenedor Best Player -->
             <div class="contenedor-player">

@@ -13,9 +13,10 @@ $sql = "INSERT INTO usuarios (nombre_apellidos, email, contrasena, genero, celul
 
 if ($conexion->query($sql) === TRUE) {
     // Redirigir al usuario a dashboard.php
-    header('Location: dashboard.php');
+    header('Location: registro_exitoso.php');
     exit();
 } else {
+    header('Location: registro_error.php');
     echo "Error: " . $sql . "<br>" . $conexion->error;
 }
 
