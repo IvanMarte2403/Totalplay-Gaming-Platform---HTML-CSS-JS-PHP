@@ -82,7 +82,14 @@ include 'consultas/top_players.php';
                             <img src="<?php echo $top_img_1?>" alt="">
                         </div>
                         <div>
-                            <p><?php echo $top_puntaje_1?></p>
+                            <p><?php 
+                            if ($top_puntaje_1 != NULL){
+                                echo $top_puntaje_1;
+                            }
+                            else{
+                                echo 0;
+                            }
+                            ?></p>
                         </div>
                     </div>
                     
@@ -95,7 +102,14 @@ include 'consultas/top_players.php';
                             <img src="<?php echo $top_img_2?>" alt="">
                         </div>
                         <div>
-                            <p><?php echo $top_puntaje_2?></p>
+                        <p><?php 
+                            if ($top_puntaje_2!= NULL){
+                                echo $top_puntaje_2;
+                            }
+                            else{
+                                echo 0;
+                            }
+                            ?></p>
                         </div>
                     </div>
                     <!-- =============TopGame 3================= -->
@@ -107,7 +121,14 @@ include 'consultas/top_players.php';
                             <img src="<?php echo $top_img_3?>" alt="">
                         </div>
                         <div>
-                            <p><?php echo $top_puntaje_3?></p>
+                        <p><?php 
+                            if ($top_puntaje_3 != NULL){
+                                echo $top_puntaje_3;
+                            }
+                            else{
+                                echo 0;
+                            }
+                            ?></p>
                         </div>
                     </div>
 

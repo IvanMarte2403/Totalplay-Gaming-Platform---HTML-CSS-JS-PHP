@@ -70,7 +70,7 @@ if ($result->num_rows > 0) {
 // Sumar los puntajes de las tablas juego_1, juego_2, juego_4, juego_5 y encontrar los 3 más altos
 $puntajes = [];
 foreach ($tables as $table) {
-    $query = "SELECT SUM(puntaje) as total_puntaje FROM $table";
+    $query = "SELECT SUM(puntaje) as total_puntaje FROM $table WHERE $user_id = id";
     $result = $conexion->query($query);
     if ($result) {
         $row = $result->fetch_assoc();
