@@ -9,7 +9,7 @@ $numero_cliente_totalplay = $_POST['numero_cliente_totalplay'];
 
 include 'db_conexion.php';
 
-$sql = "INSERT INTO usuarios (nombre_apellidos, email, contrasena, genero, celular, fecha_nacimiento, numero_cliente_totalplay) VALUES ('$nombre_apellidos', '$email', '$contrasena', '$genero', '$celular', '$fecha_nacimiento', '$numero_cliente_totalplay')";
+$sql = "INSERT INTO usuarios (nombre_apellidos, email, contrasena, genero, celular, fecha_nacimiento, numero_cliente_totalplay,puntaje) VALUES ('$nombre_apellidos', '$email', '$contrasena', '$genero', '$celular', '$fecha_nacimiento', '$numero_cliente_totalplay',0)";
 
 if ($conexion->query($sql) === TRUE) {
     // Redirigir al usuario a dashboard.php
