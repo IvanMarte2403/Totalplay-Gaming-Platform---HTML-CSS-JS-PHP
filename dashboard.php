@@ -1,5 +1,7 @@
 <?php
-// Iniciar la sesión
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
 // Verificar si el usuario ha iniciado sesión
@@ -9,11 +11,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-// Incluir la conexión a la bas e de datos y obtener los puntajes
-include 'db_conexion.php';
-include 'consultas/obtener_puntajes.php'; // Importa el archivo que contiene el código para obtener los puntajes
-include 'instructions.php'
+// Incluir la conexión a la base de datos y obtener los puntajes
+include __DIR__ . '/db_conexion.php';
+include __DIR__ . '/obtener-puntajes.php'; // Importa el archivo que contiene el código para obtener los puntajes
+include __DIR__ . '/instructions.php'; // Added missing semicolon
 
+$puntaje_total_score = 0;
 ?>
 
 <!DOCTYPE html>
