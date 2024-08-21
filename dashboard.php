@@ -12,9 +12,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 }
 
 // Incluir la conexión a la base de datos y obtener los puntajes
-include __DIR__ . '/db_conexion.php';
-include __DIR__ . '/obtener-puntajes.php'; // Importa el archivo que contiene el código para obtener los puntajes
-include __DIR__ . '/instructions.php'; // Added missing semicolon
+include 'db_conexion.php';
+include 'obtener-puntajes.php'; // Importa el archivo que contiene el código para obtener los puntajes
+include 'instructions.php'; // Added missing semicolon
 
 $puntaje_total_score = 0;
 ?>
@@ -62,8 +62,8 @@ $puntaje_total_score = 0;
                 </div>
 
                 <div id="infoUsuarioContainer" class="info-usuario">
-                    <h2><?php echo $_SESSION['nombre_apellidos']; ?></h2>
-                    <p><?php echo 'Mi puntaje: ' . $puntaje_total_score; ?></p>
+                    <h2><?php echo $nombre; ?></h2>
+                    <p><?php echo $score; ?></p>
                     
                 </div>
 

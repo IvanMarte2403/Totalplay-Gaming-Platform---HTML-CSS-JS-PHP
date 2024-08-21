@@ -10,6 +10,8 @@
 include 'db_conexion.php';
 include 'instructions.php';
 
+
+session_start();
 // Obtiene el ID del usuario actual
 $id_usuario = $_SESSION['id'];
 
@@ -26,9 +28,6 @@ function obtener_puntaje_total($conexion, $id_usuario, $nombre_juego) {
     
     return $puntaje_total === NULL ? 0 : $puntaje_total;
 }
-for ($i = 1; $i < $cantidad_juegos; $i++){
-
-}
 // Obtiene los puntajes totales de los juegos
 $puntaje_total1 = obtener_puntaje_total($conexion, $id_usuario, 'juego_1');
 $puntaje_total2 = obtener_puntaje_total($conexion, $id_usuario, 'juego_2');
@@ -36,15 +35,18 @@ $puntaje_total3 = obtener_puntaje_total($conexion, $id_usuario, 'juego_3');
 $puntaje_total4 = obtener_puntaje_total($conexion, $id_usuario, 'juego_4');
 $puntaje_total5 = obtener_puntaje_total($conexion, $id_usuario, 'juego_5');
 // Guarda el puntaje total de todos los juegos
-$puntaje_total_score = $puntaje_total1 + $puntaje_total2 + $puntaje_total3 + $puntaje_total4 + $puntaje_total5;
-
-// Obtiene la foto de perfil del usuario
-$sql = "SELECT foto_perfil FROM usuarios WHERE id = ?";
+$score=  $puntaje_total1 + $puntaje_total2 + $puntaje_total3 + $puntaje_total4 + $puntaje_total5;
+//Obtienene los valores en tiempo real sin depender de la sesion
+$sql = "SELECT nombre_apellidos, foto_perfil FROM usuarios WHERE id = ?";
 $stmt = $conexion->prepare($sql);
 $stmt->bind_param("i", $id_usuario);
 $stmt->execute();
 $result = $stmt->get_result();
-$fotoPerfil = $result->fetch_assoc()['foto_perfil'] ?? '';
+
+$usuario = $result->fetch_assoc();
+$fotoPerfil = $usuario['foto_perfil'] ?? '';
+$nombre = $usuario['nombre_apellidos'] ?? '';
+
 
 // Ruta de imagen por defecto
 $imagenSrc = "img/perfil/default.png";
