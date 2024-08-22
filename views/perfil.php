@@ -65,21 +65,39 @@
         <label for="nombre_apellidos">Nombre y Apellidos:</label>
         <input type="text" id="nombre_apellidos" name="nombre_apellidos" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <div class="form-box">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+       
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+           
+        </div>
 
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required>
+        <div class="form-box">
+            <div>
+                <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
 
-        <label for="genero">Género:</label>
-        <select id="genero" name="genero" required>
-            <option value="masculino">Masculino</option>
-            <option value="femenino">Femenino</option>
-            <option value="otro">Otro</option>
-        </select>
+            </div>
 
-        <label for="celular">Celular:</label>
-        <input type="tel" id="celular" name="celular" pattern="[0-9]{10}" required>
+            <div>
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular" pattern="[0-9]{10}" required>
+            </div>
+        </div>
+    
+
+     
+       
 
         <div class="image-select-container">
             <label for="foto_perfil">Selecciona tu personaje</label>

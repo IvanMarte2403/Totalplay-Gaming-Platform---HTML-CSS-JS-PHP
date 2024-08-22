@@ -116,4 +116,5 @@ $puntaje_total_score = 0;
 <script src="main/slider-juegos.js"></script>
 <script src="main/sectionGameSelector.js"></script> 
 <script src="main/mobileTogglePuntajes.js"></script>
+<script src="main/gsap-animations/user-interface.js"></script>
 </html>

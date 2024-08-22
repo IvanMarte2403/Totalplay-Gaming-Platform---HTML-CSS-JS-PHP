@@ -3,10 +3,22 @@
  * @date Fri, 20 Jul 2012 16:21:18 UTC
  * @author dron
  */
+var isMobile = window.innerWidth < 990;
+
+
+
+// Escuchar el evento 'resize' del objeto window
+window.addEventListener('resize', function() {
+    // Recargar la página
+    location.reload();
+});
 // ivanMarte = variables creadas para hacer responsive el juego
 var containerWidth = window.innerWidth;
 var containerHeight = window.innerHeight;
-
+window.addEventListener('resize', function() {
+    containerWidth = window.innerWidth;
+    containerHeight = window.innerHeight;
+});
 
 void function(global){
 	var mapping = {}, cache = {};
@@ -214,9 +226,11 @@ define("scripts/game.js", function(exports){
 	var barbette = function(){
 	    if( fruits.length >= volleyNum )
 	        return ;
-	
-	    var startX = random( 640 ), endX = random( 640 ), startY = 600;
-	    var f = fruit.create( startX, startY ).shotOut( 0, endX );
+		
+		xCreateFruit = random( containerWidth );
+
+	    var startX = random( containerHeight ), endX = random( containerWidth ), startY = 600;
+	    var f = fruit.create( xCreateFruit, containerHeight ).shotOut( 0, endX ); // Modifique esto para que las frutas salgan en diferente posición
 	
 	    fruits.push( f );
 	    snd.play();
@@ -648,6 +662,8 @@ define("scripts/sence.js", function(exports){
 		// Calcula las coordenadas para centrar la imagen de sandia
 		var centerX = (containerWidth - sandiaWidth) / 2;
 		var centerY = (containerHeight - sandiaHeight) / 2;
+
+		
 	    peach = fruit.create( "peach", 137, 333, true );
 		sandia = fruit.create("sandia", centerX+40, centerY+40, true);
 		boom = info;
@@ -1367,7 +1383,7 @@ define("scripts/factory/fruit.js", function(exports){
 		    this.flame.remove();
 	};
 	
-	// 分开
+// Separar	
 	ClassFruit.prototype.apart = function( angle ){
 		this.anims.clear();
 		this.image.hide();
@@ -1579,7 +1595,7 @@ define("scripts/factory/fruit.js", function(exports){
 	};
 	
 	exports.create = function( type, originX, originY, isHide, flameStart ){
-		if( typeof type == "number" ) // 缺省 type
+		if( typeof type == "number" ) // Tipo por defecto
 			isHide = originY,
 			originY = originX,
 		    originX = type,
@@ -3454,8 +3470,7 @@ define("scripts/lib/ucren.js", function(exports){
 	};
 	
 	//
-	// [底层操作类]
-	//
+// [Clase de operaciones de bajo nivel]	//
 	
 	// Ucren.BasicDrag
 	Ucren.BasicDrag = Ucren.Class( 
@@ -4173,7 +4188,7 @@ define("scripts/object/dojo.js", function(exports){
 define("scripts/object/flame.js", function(exports){
 	
 	/**
-	 * 火焰模块
+* Módulo de llamas
 	 * @author zswang, dron
 	 */
 	
@@ -4189,7 +4204,7 @@ define("scripts/object/flame.js", function(exports){
 		});
 	*/
 	
-	// 缩写
+// Abreviatura
 	var math = Math, cos = math.cos, sin = math.sin,
 		trunc = parseInt,
 		random = math.random,
@@ -4198,12 +4213,12 @@ define("scripts/object/flame.js", function(exports){
 	var guid = 0;
 	
 	/**
-	 * 添加一个火苗
-	 * @param{Array} center 中心位置 单位像素
-	 * @param{Number} angle 运动方向 单位幅度
-	 * @param{Number} length 运动长度 单位像素
-	 * @param{Number} life 存活时间 单位毫秒
-	 */
+ * Añadir una llama
+ * @param {Array} center Posición central en píxeles
+ * @param {Number} angle Dirección del movimiento en radianes
+ * @param {Number} length Longitud del movimiento en píxeles
+ * @param {Number} life Tiempo de vida en milisegundos
+ */
 	function appendFlame( center, angle, length, life, flames ){
 		return flames[guid] = {
 			id: guid ++,
@@ -4497,8 +4512,7 @@ define("scripts/object/knife.js", function(exports){
 	var Ucren = require("scripts/lib/ucren");
 	
 	/**
-	 * 刀光模块
-	 */
+* Módulo de destello de cuchillo	 */
 	
 	var lastX = null, lastY = null;
 	var abs = Math.abs;
@@ -4605,101 +4619,103 @@ define("scripts/object/knife.js", function(exports){
  */ 
 define("scripts/object/light.js", function(exports){
 	/**
-	 * 炸弹爆炸时的光线
-	 */
+	 * 
+	 * 
+* Luz emitida durante la explosión de la bomba	 */
 	
-	var layer = require("scripts/layer");
-	
-	var maskLayer = layer.getLayer( "mask" );
-		layer = layer.getLayer( "light" );
-	
-	var Ucren = require("scripts/lib/ucren");
-	var timeline = require("scripts/timeline");
-	var message = require("scripts/message");
-	
-	var random = Ucren.randomNumber;
-	var pi = Math.PI;
-	var sin = Math.sin;
-	var cos = Math.cos;
-	
-	var lights = [];
-	var indexs = [];
-	var lightsNum = 10;
-	
-	for(var i = 0; i < lightsNum; i ++)
-		indexs[i] = i;
-	
-	exports.start = function( boom ){
-		var x = boom.ori1nX, y = boom.originY, time = 0, idx = indexs.random();
-	
-		var i = lightsNum, b = function(){
-		    build( x, y, idx[ this ] );
-		};
-	
-		while( i -- )
-			timeline.setTimeout( b.bind( i ), time += 100 );
-	
-		timeline.setTimeout(function(){
-		    this.overWhiteLight();
-		}.bind( this ), time + 100);
-	};
-	
-	exports.overWhiteLight = function(){
-	    message.postMessage( "overWhiteLight.show" );
-	    this.removeLights();
-	
-	    var dur = 4e3;
-	    var mask = maskLayer.rect( 0, 0, 640, 480 ).attr({ fill: "#fff", stroke: "none" });
-	    var control = {
-	    	onTimeUpdate: function( time ){
-	    		mask.attr( "opacity", 1 - time / dur );
-	    	},
-	
-	    	onTimeEnd: function(){
-	    	    mask.remove();
-	    	    message.postMessage( "game.over" );
-	    	}
-	    };
-	
-	    timeline.createTask({
-			start: 0, duration: dur,
-			object: control, onTimeUpdate: control.onTimeUpdate, onTimeEnd: control.onTimeEnd
-		});
-	
-	};
-	
-	exports.removeLights = function(){
-	    for(var i = 0, l = lights.length; i < l; i ++)
-	    	lights[i].remove();
-	    lights.length = 0;
-	};
-	
-	
-	
-	function build( x, y, r ){
-	    var a1, a2, x1, y1, x2, y2;
-	    
-	    a1 = r * 36 + random( 10 );
-	    a2 = a1 + 5;
-	
-	    a1 = pi * a1 / 180;
-	    a2 = pi * a2 / 180;
-	    
-	    x1 = x + 640 * cos( a1 );
-	    y1 = y + 640 * sin( a1 );
-	
-	    x2 = x + 640 * cos( a2 );
-	    y2 = y + 640 * sin( a2 );
-	
-	    var light = layer.path( [ "M", x, y, "L", x1, y1, "L", x2, y2, "Z" ] ).attr({
-	    	stroke: "none",
-	    	fill: "#fff"
-	    });
-	
-	    lights.push( light );
-	};
+    
+var layer = require("scripts/layer");
 
-	return exports;
+var maskLayer = layer.getLayer("mask");
+layer = layer.getLayer("light");
+
+var Ucren = require("scripts/lib/ucren");
+var timeline = require("scripts/timeline");
+var message = require("scripts/message");
+
+var random = Ucren.randomNumber;
+var pi = Math.PI;
+var sin = Math.sin;
+var cos = Math.cos;
+
+var lights = [];
+var indexs = [];
+var lightsNum = 10;
+
+for (var i = 0; i < lightsNum; i++)
+    indexs[i] = i;
+
+exports.start = function (boom) {
+    var x = boom.originX, y = boom.originY, time = 0, idx = indexs.random();
+
+    var i = lightsNum, b = function () {
+        build(x, y, idx[this]);
+    };
+
+    while (i--)
+        timeline.setTimeout(b.bind(i), time += 100);
+
+    timeline.setTimeout(function () {
+        this.overWhiteLight();
+    }.bind(this), time + 100);
+};
+
+exports.overWhiteLight = function () {
+    message.postMessage("overWhiteLight.show");
+    this.removeLights();
+
+    var dur = 4e3;
+    var mask = maskLayer.rect(0, 0, window.innerWidth, window.innerHeight).attr({ fill: "#fff", stroke: "none" });
+    var control = {
+        onTimeUpdate: function (time) {
+            mask.attr("opacity", 1 - time / dur);
+        },
+
+        onTimeEnd: function () {
+            mask.remove();
+            message.postMessage("game.over");
+        }
+    };
+
+    timeline.createTask({
+        start: 0, duration: dur,
+        object: control, onTimeUpdate: control.onTimeUpdate, onTimeEnd: control.onTimeEnd
+    });
+
+};
+
+exports.removeLights = function () {
+    for (var i = 0, l = lights.length; i < l; i++)
+        lights[i].remove();
+    lights.length = 0;
+};
+
+function build(x, y, r) {
+    var a1, a2, x1, y1, x2, y2;
+
+    a1 = r * 36 + random(10);
+    a2 = a1 + 5;
+
+    a1 = pi * a1 / 180;
+    a2 = pi * a2 / 180;
+
+    var radius = Math.max(window.innerWidth, window.innerHeight); // Ajustar el radio según el tamaño de la ventana
+
+    x1 = x + radius * cos(a1);
+    y1 = y + radius * sin(a1);
+
+    x2 = x + radius * cos(a2);
+    y2 = y + radius * sin(a2);
+
+    var light = layer.path(["M", x, y, "L", x1, y1, "L", x2, y2, "Z"]).attr({
+        stroke: "none",
+        fill: "#fff"
+    });
+
+    lights.push(light);
+};
+
+return exports;
 });
 
 // ivanMarte: Diseño adaptable de los logos
@@ -4743,33 +4759,33 @@ define("scripts/object/lose.js", function(exports){
 	
 	var o1, o2, o3, animLength = 500;
 	
-	// ivanMarte: Ajusta las coordenadas para que las imágenes estén en el lado superior derecho
-	var conf1 = { 
-		src: "images/x.png", 
-		sx: containerWidth - 10, 
-		ex: containerWidth - 50, 
-		y: 5, 
-		w: containerWidth * 0.02, 
-		h: containerWidth * 0.02 
-	};
-	
-	var conf2 = { 
-		src: "images/xx.png", 
-		sx: containerWidth - 20, 
-		ex: containerWidth - 70, 
-		y: 5, 
-		w: containerWidth * 0.03, 
-		h: containerWidth * 0.03 
-	};
-	
-	var conf3 = { 
-		src: "images/xxx.png", 
-		sx: containerWidth - 60, 
-		ex: containerWidth - 100, 
-		y: 6, 
-		w: containerWidth * 0.04, 
-		h: containerWidth * 0.04 
-	};
+// Configuración para dispositivos no móviles
+var conf1 = { 
+    src: "images/x.png", 
+    sx: isMobile ? containerWidth - 50 : containerWidth - 100, 
+    ex: isMobile ? containerWidth * 0.90 : containerWidth * 0.85, // Posición Final como porcentaje
+    y: containerHeight * 0.03, // Posición en el eje y como porcentaje	
+    w: isMobile ? containerWidth * 0.05 : containerWidth * 0.03, 
+    h: isMobile ? containerWidth * 0.05 : containerWidth * 0.03 
+};
+
+var conf2 = { 
+    src: "images/xx.png", 
+    sx: isMobile ? containerWidth - 20 : containerWidth - 40,  //Posición Inicial
+    ex: isMobile ? containerWidth * 0.84 : containerWidth * 0.80, //Posición Final
+    y: containerHeight * 0.03, // Posición en el eje y como porcentaje	
+    w: isMobile ? containerWidth * 0.06 : containerWidth * 0.04, 
+    h: isMobile ? containerWidth * 0.06 : containerWidth * 0.04 
+};
+
+var conf3 = { 
+    src: "images/xxx.png", 
+    sx: isMobile ? containerWidth - 30 : containerWidth - 60, //Posición Inicial
+    ex: isMobile ? containerWidth * 0.77 : containerWidth  * 0.75, //Posición Final
+    y: containerHeight * 0.03, // Posición en el eje y como porcentaje	
+    w: isMobile ? containerWidth * 0.07 : containerWidth * 0.05, 
+    h: isMobile ? containerWidth * 0.07 : containerWidth * 0.05 
+};
 	var number = 0;
 	
 	exports.anims = [];
@@ -4906,9 +4922,14 @@ define("scripts/object/new-game.js", function(exports){
 	var rotate = require("scripts/factory/rotate");
 	var tween = require("scripts/lib/tween");
 	
-	// Dimensiones de la imagen
-	var imageWidth = 195;
-	var imageHeight = 195;
+	
+	// Porcentajes deseados para las dimensiones de la imagen
+	//Tiene que tener una diferencia de 
+	var imageWidthPercentage = 0.234; 
+	var imageHeightPercentage = 0.504; 
+	// Dimensiones de la imagen calculadas en función de los porcentajes
+	var imageWidth = containerWidth * imageWidthPercentage;
+	var imageHeight = containerHeight * imageHeightPercentage;
 
 	// Calcula las coordenadas para centrar la imagen
 	var centerX = (containerWidth - imageWidth) / 2;
@@ -5057,19 +5078,44 @@ define("scripts/object/score.js", function(exports){
 	/**
 	 * Módulo de puntuación  	
 	 */
+
+	// Posición x 
+	var imageScoreSxPorcentaje = isMobile ? 0.04 : 0.06; // 4% si es móvil, 3.5% si no
+	var scoreFontSizeSxPorcentaje = isMobile ? 0.088 : 0.11; // 5.5% si es móvil, 3% si no
 	
 	var image, text1, text2, animLength = 500;;
 	
-	var imageSx = -94, imageEx = 6;
-	var text1Sx = -59, text1Ex = 41;
-	var text2Sx = -93, text2Ex = 7;
+	var imageSx = containerWidth * -0.1, imageEx = containerWidth * imageScoreSxPorcentaje; // 10% a la izquierda y 6% a la derecha del ancho del contenedor
+	var text1Sx = containerWidth * 0.1, text1Ex = containerWidth *	scoreFontSizeSxPorcentaje; // 6% a la izquierda y 41% a la derecha del ancho del contenedor
+	var text2Sx = containerWidth * -0.1, text2Ex = containerWidth * 0.07; // 10% a la izquierda y 7% a la derecha del ancho del contenedor
 	
+	// Posición Y 
+	
+	var imageScoreSyPorcentaje; isMobile? 0.40 : 0.02;
+	var scoreFontSyPorcentaje = isMobile? 0.06 : 0.05;
+
+    var imageSy = containerHeight * imageScoreSyPorcentaje, imageEy = containerHeight * imageScoreSyPorcentaje; 
+    var text1Sy = containerHeight * scoreFontSyPorcentaje, text1Ey = containerHeight * -0.2; 
+    var text2Sy = containerHeight * 0.05, text2Ey = containerHeight * 0.06; 
+
+	// Tamaño de fuente y ancho de imagen
+		
+	var imageWidthPercentage = isMobile ? 0.04 : 0.035; // 20% si es móvil, 10% si no
+	var scoreFontSizePercentage = isMobile ? 0.055 : 0.03; // 6% si es móvil, 3% si no
+	
+	var text1FontSize = containerWidth * scoreFontSizePercentage + "px"; // Tamaño de fuente basado en el porcentaje fijo
+	var text2FontSize = containerWidth * 0.0+ "px"; // 2% del ancho del contenedor
+	var imageWidthScore = containerWidth * imageWidthPercentage; // Ancho de la imagen basado en el porcentaje fijo
+	var imageHeightScore = imageWidthScore * (31/29); // Mantener la proporción original de la imagen
 	exports.anims = [];
 	
+
+
+
 	exports.set = function(){
-	    image = layer.createImage( "default", "images/score.png", imageSx, 8, 29, 31 ).hide();
-	    text1 = layer.createText( "default", "0", text1Sx, 24, "90-#fc7f0c-#ffec53", "30px" ).hide();
-	    text2 = layer.createText( "default", "Mejor 999", text2Sx, 48, "#af7c05", "14px" ).hide();
+		image = layer.createImage("default", "images/score.png", imageSx, imageSy, imageWidthScore, imageHeightScore).hide();
+	    text1 = layer.createText("default", "0", text1Sx, text1Sy, "90-#fc7f0c-#ffec53", text1FontSize).hide();
+		text2 = layer.createText("default", "Mejor 999", text2Sx, 48, "#af7c05", text2FontSize).hide();
 	};
 	
 	exports.show = function( start ){
@@ -5094,11 +5140,12 @@ define("scripts/object/score.js", function(exports){
 	    setTimeout(function(){
 	        image.scale( 1, 1 );
 	    }, 60);
+		window.parent.postMessage( {number}, "*" );
 	    // message.postMessage( number, "score.change" );
+		console.log(number);
 	};
 	
-	// 显示/隐藏 相关
-	
+// Mostrar/Ocultar relacionado	
 	exports.onTimeUpdate = function( time, mode, isx, iex, t1sx, t1ex, t2sx, t2ex ){
 	    image.attr( "x", anim( time, isx, iex - isx, animLength ) );
 	    text1.attr( "x", anim( time, t1sx, t1ex - t1sx, animLength ) );
